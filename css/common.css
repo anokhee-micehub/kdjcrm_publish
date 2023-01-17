@@ -14,6 +14,26 @@
   font-family: "Pretendard";
 }
 
+.mt10 {
+  margin-top: 0.6666666667rem;
+}
+
+.mt20 {
+  margin-top: 1.3333333333rem;
+}
+
+.mt30 {
+  margin-top: 2rem;
+}
+
+.mt40 {
+  margin-top: 2.6666666667rem;
+}
+
+.mt50 {
+  margin-top: 3.3333333333rem;
+}
+
 .wrap {
   background-color: #EEEFF1;
 }
@@ -182,6 +202,9 @@
 .btn_m_back {
   background-color: #999;
 }
+.btn_m_cancel {
+  background-color: #666;
+}
 .btn_m_search {
   min-width: 8.6666666667rem;
   color: #fff;
@@ -280,6 +303,10 @@
           align-items: center;
   gap: 0.5333333333rem;
 }
+.inputBox_select {
+  background-color: #fff;
+  border-radius: 3px;
+}
 .inputBox_select::after {
   content: "\f078";
   position: absolute;
@@ -291,6 +318,8 @@
 }
 .inputBox_select .select {
   -webkit-appearance: none;
+  background-color: transparent;
+  z-index: 9;
 }
 
 .inputWrapBox {
@@ -403,6 +432,24 @@
   grid-column: -1/-1;
 }
 
+.popupSubTitleText {
+  position: relative;
+  padding-left: 0.6666666667rem;
+  font-size: 1.0666666667rem;
+}
+.popupSubTitleText::after {
+  content: "";
+  position: absolute;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background-color: #FF6202;
+}
+
 .uploadFileBox-inputWrap {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(0, auto));
@@ -418,9 +465,10 @@
   margin-top: 0.6666666667rem;
   background-color: #F3F7FD;
   border-radius: 3px;
-}
-.uploadFileListBox-item {
   padding: 0.8666666667rem 1rem;
+}
+.uploadFileListBox-item ~ .uploadFileListBox-item {
+  margin-top: 0.8666666667rem;
 }
 
 .chip_excel {
@@ -429,4 +477,22 @@
   border-radius: 3px;
   background-color: #107C41;
   color: #fff;
+}
+
+.addGroupBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2.1333333333rem;
+}
+.addGroupBox-side {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
