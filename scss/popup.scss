@@ -1,0 +1,100 @@
+@import "mixin.scss";
+@import "functions.scss";
+@import "variables.scss";
+
+/* 
+* 클래스명 지정 의미
+* @ 블록
+* @ 블록_구분
+* @ 블록_구분-엘리먼트
+* @ 블록-엘리먼트
+* @ 블록-엘리먼트_구분
+* @ 블록-엘리먼트_구분1_구분2
+* @ 상태(ex:isActive)
+*/
+
+// 팝업창
+.popupBox {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(#000, 0.2);
+  z-index: 10;
+  &-contents {
+    @include position-center;
+    @include wh(100%, auto);
+    max-width: rem(724px);
+    padding: rem(42px) rem(58px);
+    border-radius: rem(24px);
+    background-color: #fff;
+  }
+  // 팝업창용 - 스탭바(간판)
+  .stepBarBox {
+    &-item {
+      clip-path: polygon(0% 0%, 94% 0%, 100% 50%, 94% 100%, 0% 100%) !important;
+      &:first-child:nth-last-child(3),
+      &:first-child:nth-last-child(3) ~ & {
+        clip-path: polygon(0% 0%, 94% 0%, 100% 50%, 94% 100%, 0% 100%);
+      }
+      &:last-child {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 100% 100%, 0% 100%) !important;
+        .stepBarBox-item_title {
+          border-radius: 5px;
+        }
+      }
+      &_title {
+        font-size: rem(14px);
+      }
+    }
+  }
+  // 팝업창용 - 타이틀바
+  .subTitleBox {
+    &-subTitle {
+      font-weight: 700;
+    }
+  }
+}
+
+.popup {
+  &-detail {
+    @include flex-box($fd: column, $ai: stretch) {
+      gap: rem(20px);
+    }
+    .subTitleBox:not(:first-child) {
+      margin-top: rem(40px);
+    }
+  }
+  &-desc {
+    font-size: rem(14px);
+    font-weight: 400;
+    .em {
+      color: $main;
+    }
+    &-btn {
+      @include flex-box($jc: start){
+        gap: rem(19px);
+      }
+    }
+  }
+  &-btnGroup {
+    @include flex-box {
+      gap: rem(6px);
+    }
+  }
+}
+
+.subTitleBox {
+  padding-bottom: rem(20px);
+  border-bottom: 1px solid #E9E9E9;
+}
+
+.btn {
+  &_pop {
+    i {
+      font-size: rem(23px);
+    }
+  }
+}
+

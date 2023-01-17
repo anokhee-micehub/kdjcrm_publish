@@ -1,0 +1,128 @@
+@import "mixin.scss";
+@import "functions.scss";
+@import "variables.scss";
+
+/* 
+* 클래스명 지정 의미
+* @ 블록
+* @ 블록_구분
+* @ 블록_구분-엘리먼트
+* @ 블록-엘리먼트
+* @ 블록-엘리먼트_구분
+* @ 블록-엘리먼트_구분1_구분2
+* @ 상태(ex:isActive)
+*/
+
+// 간판 레이아웃 + 고객정보추가시
+.setFormBox {
+  @include flex-box($ai: stretch) {
+    gap: rem(20px);
+  }
+  &-profile {
+    @include flex-box($fd: column, $jc: between, $ai: stretch);
+    flex: 0 0 320px;
+    background-color: #fff;
+    box-sizing: border-box;
+    padding: rem(32px);
+    border-radius: 10px;
+  }
+  &-contents {
+    flex: 1;
+    background-color: #fff;
+    padding: rem(32px);
+    box-sizing: border-box;
+    border-radius: 10px;
+    gap: rem(10px);
+  }
+}
+.userInfoText {
+  text-align: center
+}
+.imgBox {
+  @include wh(125px, 125px);
+  @include reset-bg;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+.imgBox ~ .lightText {
+  margin-top: rem(19px);
+}
+.lightText ~ .boldText {
+  margin-top: rem(12px);
+}
+
+// 스탭바(간판)
+$colors: (#F7B401, #F89E00, #FF9000, #FF6201, #E83E0B);
+.stepBarBox {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(0, auto));
+  gap: rem(15px);
+  @each $color in $colors {
+    $idx : index($colors, $color);
+    & > &-item:nth-child(#{$idx}) {
+      button {
+        border: none;
+        width: 100%;
+        text-align: left;
+        cursor: pointer;
+      }
+      .stepBarBox-item_title {
+        background-color: $color;
+        box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.1);
+      }
+    }
+  }
+  &-item {
+    clip-path: polygon(0% 0%, 94% 0%, 100% 50%, 94% 100%, 0% 100%);
+    &:first-child:nth-last-child(3),
+    &:first-child:nth-last-child(3) ~ & {
+      clip-path: polygon(0% 0%, 97% 0%, 100% 50%, 97% 100%, 0% 100%);
+    }
+    &:last-child {
+      clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 100% 100%, 0% 100%) !important;
+      .stepBarBox-item_title {
+        border-radius: 5px;
+      }
+    }
+    &_title {
+      position: relative;
+      padding: rem(10px);
+      font-size: rem(16px);
+      font-weight: 600;
+      color: #fff;
+      border-radius: 5px 0 0 5px;
+      &.disable {
+        color: #666;
+        background-color: $disable !important;
+      }
+    }
+  }
+}
+// 간판 하단 텍스트박스
+.textBox {
+  border-radius: 3px;
+  font-size: rem(14px);
+  &-title {
+    margin-bottom: rem(10px);
+    font-weight: 700;
+    i {
+      color: #959595;
+    }
+  }
+  &-desc {
+    font-size: rem(15px);
+    padding-left: rem(20px);
+    &_dot {
+      position: relative;
+      padding-left: rem(35px);
+      &::before {
+        content: '-';
+        @include position-center-y;
+        left: 25px;
+      }
+    }
+  }
+}
+.textBox-desc ~ .textBox-desc {
+  margin-top: rem(5px);
+}

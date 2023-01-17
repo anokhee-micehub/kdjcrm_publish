@@ -1,0 +1,19 @@
+@import "mixin.scss";
+@import "functions.scss";
+@import "variables.scss";
+
+/* 
+* 클래스명 지정 의미
+* @ 블록
+* @ 블록_구분
+* @ 블록_구분-엘리먼트
+* @ 블록-엘리먼트
+* @ 블록-엘리먼트_구분
+* @ 블록-엘리먼트_구분1_구분2
+* @ 상태(ex:isActive)
+*/
+
+article ~ article {
+  margin-top: 30px;
+}
+

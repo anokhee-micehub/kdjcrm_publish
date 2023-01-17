@@ -1,0 +1,47 @@
+@import "mixin.scss";
+@import "functions.scss";
+@import "variables.scss";
+
+/* 
+* 클래스명 지정 의미
+* @ 블록
+* @ 블록_구분
+* @ 블록_구분-엘리먼트
+* @ 블록-엘리먼트
+* @ 블록-엘리먼트_구분
+* @ 블록-엘리먼트_구분1_구분2
+* @ 상태(ex:isActive)
+*/
+
+// 검색 박스
+.searchBox {
+  @include flex-box($jc: between);
+  &_head {
+    padding: rem(20px);
+    background-color: #DFDFDF;
+    border-radius: 5px;
+  }
+  &_body {
+    &-inner {
+      @include flex-box($jc:start) {
+        gap: 5px;
+      }
+      &_left {
+        align-items: flex-end;
+      }
+    }
+  }
+}
+.inputGroup {
+  &-line {
+    @include flex-box($jc: start) {
+      gap: rem(8px);
+    }
+    & ~ .inputGroup-line {
+      margin-top: rem(8px);
+    }
+  }
+}
+.buttonGroup {
+  align-self: flex-end; 
+}

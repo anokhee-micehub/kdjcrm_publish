@@ -1,0 +1,348 @@
+@import "mixin.scss";
+@import "functions.scss";
+@import "variables.scss";
+@import url('https://webfontworld.github.io/pretendard/Pretendard.css');
+
+/* 
+* 클래스명 지정 의미
+* @ 블록
+* @ 블록_구분
+* @ 블록_구분-엘리먼트
+* @ 블록-엘리먼트
+* @ 블록-엘리먼트_구분
+* @ 블록-엘리먼트_구분1_구분2
+* @ 상태(ex:isActive)
+*/
+
+* {
+  font-family: 'Pretendard';
+}
+
+// 레이아웃css
+.wrap {
+  background-color: #EEEFF1;
+}
+
+.main {
+  min-height: calc(100vh - 184px);
+  padding-top: rem(82px);
+}
+
+.main-inner {
+  width: $inner-size;
+  margin: 0 auto;
+}
+
+.commonPageBox_ly {
+  @include flex-box($ai: stretch, $fd: column) {
+    gap: rem(20px);
+  }
+}
+
+.contentsBox_ly {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: rem(20px);
+}
+
+.tableBox_ly {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: rem(15px);
+}
+
+// 카테고리 타이틀 & lnb
+.lnb {
+  @include flex-box($jc: between);
+  &-link {
+    position: relative;
+    font-size: rem(18px);
+    font-weight: 600;
+    &.isActive {
+      color: $main;
+    }
+    &:not(:last-child) {
+      margin-right: rem(15px);
+      &::after {
+        content: '\f105';
+        font-family: fontAwesome;
+        position: absolute;
+        right: -13px;
+        top: 51%;
+        transform: translateY(-50%);
+        font-size: 10px;
+      }
+    }
+  }
+}
+
+// 각 백그라운드 박스 shadow효과
+.box {
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.1);
+}
+
+// 버튼, 셀렉트, 인풋, 라벨 - 단독
+.btn {
+  @include reset-btn;
+  @include inline-flex;
+  height: rem(27px);
+  gap: rem(5px);
+  font-weight: inherit;
+  cursor: pointer;
+  &_xxs {
+    @include wh(rem(22px), rem(22px));
+    border-radius: 3px;
+    font-size: rem(13px);
+    color: #000;
+    background-color: #edeff1;
+  }
+  &_xs {
+    @include wh(rem(30px), rem(30px));
+    background-color: #F5F5F5;
+    border: 1px solid #D2D2D2;
+    border-radius: 3px;
+    font-size: rem(16px);
+    &_tran {
+      background-color: transparent;
+      border: none;
+      color: #494B4C;
+    }
+  }
+  &_s {
+    border-radius: 3px;
+    padding: rem(4px) rem(10px);
+    font-size: rem(10px);
+  }
+  &_m {
+    padding: 0 rem(13px);
+    border-radius: 3px;
+    font-size: rem(13px);
+    color: #fff ;
+    height: 34px;
+    i {
+      padding-top: 4px;
+    }
+    &_primary {
+      background-color: $main;
+    }
+    &_secondary {
+      background-color: $sub1;
+      i {
+        padding-top: 3px;
+      }
+    }
+    &_excel {
+      background-color: #107C41;
+    }
+    &_back {
+      background-color: #999;
+    }
+    &_search {
+      min-width: rem(130px);
+      color: #fff;
+      background-color: $main;
+    }
+    &_align {
+      color: #969495;
+      padding: rem(5px);
+      font-size: 18px;
+      &.isActive {
+        color: $main;
+      }
+    }
+  }
+  &_l { 
+    padding: rem(12px) 0;
+    height: 40px;
+    border-radius: 6px;
+    color: #fff;
+    &_reg {
+      min-width: rem(140px);
+      background-color: $main;
+      font-size: rem(14px);
+    }
+    &_cl {
+      min-width: rem(80px);
+      background-color: #656565;
+    }
+  }
+  &_arrow {
+    @include wh(rem(15px), rem(15px));
+    background-color: #EDEEF2;
+    color: #ADAEAF;
+    border-radius: 6px;
+    font-size: 10px;
+    &.prev {
+      margin-right: rem(10px);
+    }
+    &.next {
+      margin-left: rem(10px);
+    }
+  }
+  &_num {
+    height: rem(18px);
+    line-height: rem(15px);
+    font-size: rem(13px);
+    color: #777777;
+    &.isActive {
+      color: $main;
+      font-weight: 700;
+    }
+  }
+}
+.select,
+.input_text,
+.input_date {
+  padding: 8px 10px;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+}
+.label {
+  font-size: rem(12px);
+  font-weight: 600;
+  strong {
+    font-size: rem(16px);
+  }
+  &_file {
+    margin-right: rem(11px);
+  }
+}
+.input {
+  &_text {
+    min-width: 300px;
+  }
+  &_file {
+    display: none;
+  }
+}
+.select {
+  position: relative;
+  min-width: 200px;
+}
+.inputBox {
+  position: relative;
+  @include flex-box($jc:start) {
+    gap: rem(8px);
+  }
+  &_select {
+    &::after {
+      content: '\f078';
+      @include position-center-y;
+      right: 10px;
+      font-family: fontAwesome;
+    }
+    .select {
+      -webkit-appearance: none;
+    }
+  }
+}
+.inputWrapBox {
+  background-color: #fff;
+  border: 1px solid #D2D2D2;
+  border-radius: 5px;
+  min-width: rem(330px);
+  .input_text {
+    width: calc(100% - 30px);
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    min-width: auto;
+    box-sizing: border-box;
+  }
+  i {
+    font-size: rem(14px);
+  }
+}
+
+// 상세페이지 레이아웃 섹션나누기
+.detailBox {
+  @include flex-box($jc: between, $ai: start);
+  gap: rem(20px);
+  &-half {
+    flex: 1;
+    padding: rem(30px);
+    background-color: #fff;
+    border-radius: 10px;
+  }
+}
+
+// 서브타이틀 제목박스
+.subTitleBox {
+  @include flex-box($ai: end);
+  margin-bottom: 13px;
+  &_bt {
+    justify-content: space-between;
+  }
+  &_st {
+    justify-content: flex-start;
+  }
+  &-subTitle {
+    position: relative;
+    @include flex-box($jc:start) {
+      gap: rem(10px);
+    }
+    font-size: rem(20px);
+    font-weight: 600;
+  }
+  &-descText {
+    font-size: rem(12px);
+    color: #4B4B4B;
+  }
+}
+.subTitleBox-subTitle ~ .subTitleBox-descText {
+  margin-top: rem(10px);
+}
+
+// 텍스트
+.primaryText {
+  font-size: rem(12px);
+  color: #4B4B4B;
+}
+.lightText {
+  font-size: rem(16px);
+  font-weight: 400;
+}
+.boldText {
+  font-size: rem(22px);
+  font-weight: 600;
+}
+.getFileNameText {
+  font-size: rem(13px);
+  font-weight: 600;
+  color: #777;
+  & + .btn {
+    grid-column: -1 / -1;
+  }
+}
+
+// 파일 업로드
+.uploadFileBox {
+  &-inputWrap {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(0, auto));
+    align-items: center;
+    padding: rem(20px) rem(15px);
+    border-radius: 5px;
+    background-color: #f6f6f6;
+  }
+}
+.uploadFileListBox {
+  margin-top: rem(10px);
+  background-color: #F3F7FD;
+  border-radius: 3px;
+  &-item {
+    padding: rem(13px) rem(15px);
+  }
+}
+.chip {
+  &_excel {
+    padding: 5px 4px;
+    font-size: rem(12px);
+    border-radius: 3px;
+    background-color: #107C41;
+    color: #fff;
+  }
+}

@@ -1,0 +1,130 @@
+@charset "UTF-8";
+/* 
+* 클래스명 지정 의미
+* @ 블록
+* @ 블록_구분
+* @ 블록_구분-엘리먼트
+* @ 블록-엘리먼트
+* @ 블록-엘리먼트_구분
+* @ 블록-엘리먼트_구분1_구분2
+* @ 상태(ex:isActive)
+*/
+.header {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 4.4rem;
+  padding: 0 1.4666666667rem 0 2.2666666667rem;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2509803922);
+          box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2509803922);
+}
+
+.gnb {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 6.6666666667rem;
+}
+.gnb_depth2 {
+  display: none;
+  gap: 0;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: #fff;
+  top: 94px;
+  height: 2.6666666667rem;
+  -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  border-radius: 2rem;
+  overflow: hidden;
+}
+
+.gnb-link {
+  font-weight: 600;
+}
+.gnb-link_depth1 {
+  padding: 1.4666666667rem 0 1.3333333333rem;
+  border-radius: 10px 10px 0 0;
+  font-size: 1.0666666667rem;
+  color: #4B4B4B;
+}
+.gnb-link_depth1.isActive {
+  color: #FF6102;
+  border-bottom: 3px solid #FF6102;
+}
+.gnb-link_depth1.isActive i {
+  color: #FF6102;
+}
+.gnb-link_depth1.isActive + .gnb_depth2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.gnb-link_depth1 i {
+  color: #B5B5B5;
+}
+.gnb-link_depth2 {
+  font-size: 1.0666666667rem;
+  color: #555555;
+  padding: 0.8rem 4.6666666667rem;
+}
+.gnb-link_depth2.isActive {
+  background-color: #FF6102;
+  color: #fff;
+  border-radius: 2rem;
+}
+
+.header-userInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.6666666667rem;
+  font-size: 0.9333333333rem;
+  color: #4B4B4B;
+}
+.header-userInfo button {
+  width: 2.2666666667rem;
+  height: 2.2666666667rem;
+  padding: 0;
+  border: none;
+  outline: none;
+  color: #000;
+  background: #B4B4B4;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.header-userInfo button i {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  font-size: 0.9333333333rem;
+}

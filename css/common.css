@@ -1,0 +1,432 @@
+@charset "UTF-8";
+@import url("https://webfontworld.github.io/pretendard/Pretendard.css");
+/* 
+* 클래스명 지정 의미
+* @ 블록
+* @ 블록_구분
+* @ 블록_구분-엘리먼트
+* @ 블록-엘리먼트
+* @ 블록-엘리먼트_구분
+* @ 블록-엘리먼트_구분1_구분2
+* @ 상태(ex:isActive)
+*/
+* {
+  font-family: "Pretendard";
+}
+
+.wrap {
+  background-color: #EEEFF1;
+}
+
+.main {
+  min-height: calc(100vh - 184px);
+  padding-top: 5.4666666667rem;
+}
+
+.main-inner {
+  width: 1670px;
+  margin: 0 auto;
+}
+
+.commonPageBox_ly {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.3333333333rem;
+}
+
+.contentsBox_ly {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  gap: 1.3333333333rem;
+}
+
+.tableBox_ly {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  gap: 1rem;
+}
+
+.lnb {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.lnb-link {
+  position: relative;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.lnb-link.isActive {
+  color: #FF6202;
+}
+.lnb-link:not(:last-child) {
+  margin-right: 1rem;
+}
+.lnb-link:not(:last-child)::after {
+  content: "\f105";
+  font-family: fontAwesome;
+  position: absolute;
+  right: -13px;
+  top: 51%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-size: 10px;
+}
+
+.box {
+  -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+.btn {
+  padding: 0;
+  border: none;
+  outline: none;
+  color: #000;
+  background: none;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 1.8rem;
+  gap: 0.3333333333rem;
+  font-weight: inherit;
+  cursor: pointer;
+}
+.btn_xxs {
+  width: 1.4666666667rem;
+  height: 1.4666666667rem;
+  border-radius: 3px;
+  font-size: 0.8666666667rem;
+  color: #000;
+  background-color: #edeff1;
+}
+.btn_xs {
+  width: 2rem;
+  height: 2rem;
+  background-color: #F5F5F5;
+  border: 1px solid #D2D2D2;
+  border-radius: 3px;
+  font-size: 1.0666666667rem;
+}
+.btn_xs_tran {
+  background-color: transparent;
+  border: none;
+  color: #494B4C;
+}
+.btn_s {
+  border-radius: 3px;
+  padding: 0.2666666667rem 0.6666666667rem;
+  font-size: 0.6666666667rem;
+}
+.btn_m {
+  padding: 0 0.8666666667rem;
+  border-radius: 3px;
+  font-size: 0.8666666667rem;
+  color: #fff;
+  height: 34px;
+}
+.btn_m i {
+  padding-top: 4px;
+}
+.btn_m_primary {
+  background-color: #FF6202;
+}
+.btn_m_secondary {
+  background-color: #FF790D;
+}
+.btn_m_secondary i {
+  padding-top: 3px;
+}
+.btn_m_excel {
+  background-color: #107C41;
+}
+.btn_m_back {
+  background-color: #999;
+}
+.btn_m_search {
+  min-width: 8.6666666667rem;
+  color: #fff;
+  background-color: #FF6202;
+}
+.btn_m_align {
+  color: #969495;
+  padding: 0.3333333333rem;
+  font-size: 18px;
+}
+.btn_m_align.isActive {
+  color: #FF6202;
+}
+.btn_l {
+  padding: 0.8rem 0;
+  height: 40px;
+  border-radius: 6px;
+  color: #fff;
+}
+.btn_l_reg {
+  min-width: 9.3333333333rem;
+  background-color: #FF6202;
+  font-size: 0.9333333333rem;
+}
+.btn_l_cl {
+  min-width: 5.3333333333rem;
+  background-color: #656565;
+}
+.btn_arrow {
+  width: 1rem;
+  height: 1rem;
+  background-color: #EDEEF2;
+  color: #ADAEAF;
+  border-radius: 6px;
+  font-size: 10px;
+}
+.btn_arrow.prev {
+  margin-right: 0.6666666667rem;
+}
+.btn_arrow.next {
+  margin-left: 0.6666666667rem;
+}
+.btn_num {
+  height: 1.2rem;
+  line-height: 1rem;
+  font-size: 0.8666666667rem;
+  color: #777777;
+}
+.btn_num.isActive {
+  color: #FF6202;
+  font-weight: 700;
+}
+
+.select,
+.input_text,
+.input_date {
+  padding: 8px 10px;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+}
+
+.label {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.label strong {
+  font-size: 1.0666666667rem;
+}
+.label_file {
+  margin-right: 0.7333333333rem;
+}
+
+.input_text {
+  min-width: 300px;
+}
+.input_file {
+  display: none;
+}
+
+.select {
+  position: relative;
+  min-width: 200px;
+}
+
+.inputBox {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5333333333rem;
+}
+.inputBox_select::after {
+  content: "\f078";
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 10px;
+  font-family: fontAwesome;
+}
+.inputBox_select .select {
+  -webkit-appearance: none;
+}
+
+.inputWrapBox {
+  background-color: #fff;
+  border: 1px solid #D2D2D2;
+  border-radius: 5px;
+  min-width: 22rem;
+}
+.inputWrapBox .input_text {
+  width: calc(100% - 30px);
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  min-width: auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.inputWrapBox i {
+  font-size: 0.9333333333rem;
+}
+
+.detailBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 1.3333333333rem;
+}
+.detailBox-half {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.subTitleBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin-bottom: 13px;
+}
+.subTitleBox_bt {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.subTitleBox_st {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.subTitleBox-subTitle {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.6666666667rem;
+  font-size: 1.3333333333rem;
+  font-weight: 600;
+}
+.subTitleBox-descText {
+  font-size: 0.8rem;
+  color: #4B4B4B;
+}
+
+.subTitleBox-subTitle ~ .subTitleBox-descText {
+  margin-top: 0.6666666667rem;
+}
+
+.primaryText {
+  font-size: 0.8rem;
+  color: #4B4B4B;
+}
+
+.lightText {
+  font-size: 1.0666666667rem;
+  font-weight: 400;
+}
+
+.boldText {
+  font-size: 1.4666666667rem;
+  font-weight: 600;
+}
+
+.getFileNameText {
+  font-size: 0.8666666667rem;
+  font-weight: 600;
+  color: #777;
+}
+.getFileNameText + .btn {
+  grid-column: -1/-1;
+}
+
+.uploadFileBox-inputWrap {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(0, auto));
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1.3333333333rem 1rem;
+  border-radius: 5px;
+  background-color: #f6f6f6;
+}
+
+.uploadFileListBox {
+  margin-top: 0.6666666667rem;
+  background-color: #F3F7FD;
+  border-radius: 3px;
+}
+.uploadFileListBox-item {
+  padding: 0.8666666667rem 1rem;
+}
+
+.chip_excel {
+  padding: 5px 4px;
+  font-size: 0.8rem;
+  border-radius: 3px;
+  background-color: #107C41;
+  color: #fff;
+}

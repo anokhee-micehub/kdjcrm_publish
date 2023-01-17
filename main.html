@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/header.css">
+  <link rel="stylesheet" href="./css/footer.css">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/form.css">
+  <link rel="stylesheet" href="./css/search.css">
+  <link rel="stylesheet" href="./css/table.css">
+  <link rel="stylesheet" href="./css/signboard.css">
+  <link rel="stylesheet" href="./css/popup.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <link href="https://demo-custom.micehub-gov.com/css/v6/all.css" rel="stylesheet">
+  <link href="https://demo-custom.micehub-gov.com/css/v6/sharp-solid.css" rel="stylesheet">
+  <title>kdjcrm_publish</title>
+</head>
+<body>
+  <div class="wrap">
+    <header class="header">
+      <h1 class="logo">
+        <img src="/assets/logo.png" alt="로고">
+      </h1>
+      <ul class="gnb gnb_depth1">
+        <li>
+          <a href="#" class="gnb-link gnb-link_depth1 isActive"><i class="fa-solid fa-user"></i> 고객</a>
+          <ul class="gnb gnb_depth2">
+            <li><a href="#" class="gnb-link gnb-link_depth2 isActive">보고</a></li>
+            <li><a href="#" class="gnb-link gnb-link_depth2">잠재</a></li>
+            <li><a href="#" class="gnb-link gnb-link_depth2">고객</a></li>
+            <li><a href="#" class="gnb-link gnb-link_depth2">기회</a></li>
+            <li><a href="#" class="gnb-link gnb-link_depth2">참관객</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="gnb-link gnb-link_depth1"><i class="fa-solid fa-megaphone"></i> 마케팅</a>
+          <ul class="gnb gnb_depth2">
+            <li><a href="#" class="gnb-link gnb-link_depth2">보고</a></li>
+            <li><a href="#" class="gnb-link gnb-link_depth2">캠페인</a></li>
+            <li><a href="#" class="gnb-link gnb-link_depth2">메시지</a></li>
+            <li><a href="#" class="gnb-link gnb-link_depth2">대화</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="gnb-link gnb-link_depth1"><i class="fa-solid fa-location-plus"></i> 대관</a>
+          <ul class="gnb gnb_depth2">
+            <li><a href="#" class="gnb-link gnb-link_depth2">보고</a></li>
+            <li><a href="#" class="gnb-link gnb-link_depth2">전시장</a></li>
+            <li><a href="#" class="gnb-link gnb-link_depth2">행사장</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="gnb-link gnb-link_depth1"><i class="fa-solid fa-calendar-check"></i> 행사</a>
+          <ul class="gnb gnb_depth2">
+            <li><a href="#" class="gnb-link gnb-link_depth2">보고</a></li>
+            <li><a href="#" class="gnb-link gnb-link_depth2">전시등록</a></li>
+            <li><a href="#" class="gnb-link gnb-link_depth2">행사등록</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="gnb-link gnb-link_depth1"><i class="fa-solid fa-list-check"></i> 관리</a>
+          <ul class="gnb gnb_depth2">
+            <li><a href="#" class="gnb-link gnb-link_depth2">회원</a></li>
+            <li><a href="#" class="gnb-link gnb-link_depth2">분류</a></li>
+            <li><a href="#" class="gnb-link gnb-link_depth2">시설</a></li>
+            <li><a href="#" class="gnb-link gnb-link_depth2">기기</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="header-userInfo">
+        <span>안녕하세요! 홍길동님</span>
+        <button type="button"><i class="fa-solid fa-arrow-right-from-bracket"></i></button>
+      </div>
+    </header>
+    <main class="main">
+      <section class="main-inner">
+        <article class="commonPageBox_ly">
+          <div class="lnb">
+            <div class="lnb-side">
+              <a class="lnb-link">홈</a>
+              <a class="lnb-link">고객</a>
+              <a class="lnb-link isActive">보고</a>
+            </div>
+          </div>
+          <div class="searchBox searchBox_head">
+            <div class="inputGroup">
+              <div class="inputGroup-line">
+                <div class="inputBox inputBox_select">
+                  <select class="select" name="" id="">
+                    <option value="">잠재 단계</option>
+                    <option value="value1">value1</option>
+                    <option value="value2">value2</option>
+                  </select>
+                </div>
+                <div class="inputBox inputBox_select">
+                  <select class="select" name="" id="">
+                    <option value="">잠재 단계</option>
+                    <option value="value1">value1</option>
+                    <option value="value2">value2</option>
+                  </select>
+                </div>
+                <div class="inputBox inputBox_select">
+                  <select class="select" name="" id="">
+                    <option value="">잠재 단계</option>
+                    <option value="value1">value1</option>
+                    <option value="value2">value2</option>
+                  </select>
+                </div>
+                <div class="inputBox inputBox_calendar">
+                  <label class="label" for="regDate">등록 일자</label>
+                  <input class="input_date" type="date" value="2023-01-10"> ~
+                  <input class="input_date" type="date" value="2023-01-10">
+                </div>
+              </div>
+              <div class="inputGroup-line">
+                <div class="inputBox inputBox_select">
+                  <select class="select" name="" id="">
+                    <option value="">이름</option>
+                    <option value="value1">value1</option>
+                    <option value="value2">value2</option>
+                  </select>
+                </div>
+                <div class="inputBox inputBox_input">
+                  <input class="input_text" type="text">
+                  <button type="button" class="btn btn_m btn_m_search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    검색
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="buttonGroup">
+              <button type="button" class="btn btn_m btn_m_primary"><i class="fa-solid fa-file-arrow-up"></i> 일괄 등록</button>
+              <button type="button" class="btn btn_m btn_m_primary"><i class="fa-solid fa-user-plus"></i> 개별 등록</button>
+              <button type="button" class="btn btn_m btn_m_excel"><i class="fa-regular fa-file-excel"></i></button>
+            </div>
+          </div>
+          <div class="contentsBox_ly">
+            <div class="tableBox_ly">
+              <div class="searchBox searchBox_body">
+                <div class="searchBox_body-inner searchBox_body-inner_left">
+                  <label class="label">검색 결과 <strong>1-15 / 500</strong>개</label>
+                  <button type="button" class="btn btn_m btn_m_secondary"><i class="fa-solid fa-arrow-right-arrow-left"></i> 잠재 상태 변경</button>
+                  <button type="button" class="btn btn_m btn_m_primary"><i class="fa-solid fa-file-export"></i> 고객으로 이동</button>
+                </div>
+                <div class="searchBox_body-inner searchBox_body-inner_right">
+                  <button class="btn btn_m btn_m_align isActive"><i class="fa-solid fa-list"></i></button>
+                  <button class="btn btn_m btn_m_align"><i class="fa-solid fa-grid-2"></i></button>
+                  <div class="inputBox inputBox_select">
+                    <select class="select" name="" id="">
+                      <option value="">- 정렬순서 -</option>
+                      <option value="value1">value1</option>
+                      <option value="value2">value2</option>
+                    </select>
+                  </div>
+                  <div class="inputBox inputBox_select">
+                    <select class="select" name="" id="">
+                      <option value="">- 15개씩 보기 -</option>
+                      <option value="value1">value1</option>
+                      <option value="value2">value2</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="tableWrapBox box">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th></th>
+                      <th>#</th>
+                      <th>이름</th>
+                      <th>직위</th>
+                      <th>소속</th>
+                      <th>유선전화</th>
+                      <th>휴대전화</th>
+                      <th>이메일</th>
+                      <th>잠재 단계</th>
+                      <th>정보 수집 경로</th>
+                      <th>최초 수집자</th>
+                      <th>등록일자</th>
+                      <th>최종수정일자</th>
+                      <th>관리</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><input type="checkbox"></td>
+                      <td>515</td>
+                      <td>홍길동</td>
+                      <td>사원</td>
+                      <td>주식회사 마이스허브</td>
+                      <td>02-1234-5678</td>
+                      <td>010-2233-5555</td>
+                      <td>hgd@gmail.com</td>
+                      <td>신규</td>
+                      <td>미디어</td>
+                      <td>김철수</td>
+                      <td>2022-12-07 15:51</td>
+                      <td>2022-12-07 15:51</td>
+                      <td>
+                        <button type="button" class="btn btn_xxs" title="권한 부여"><i class="fa-solid fa-user-check"></i></button>
+                        <button type="button" class="btn btn_xxs" title="수정"><i class="fa-solid fa-pen"></i></button>
+                        <button type="button" class="btn btn_xxs" title="이력"><i class="fa-solid fa-rotate-right"></i></button>
+                        <button type="button" class="btn btn_xxs" title="삭제"><i class="fa-solid fa-trash"></i></button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox"></td>
+                      <td>515</td>
+                      <td>홍길동</td>
+                      <td>사원</td>
+                      <td>주식회사 마이스허브</td>
+                      <td>02-1234-5678</td>
+                      <td>010-2233-5555</td>
+                      <td>hgd@gmail.com</td>
+                      <td>신규</td>
+                      <td>미디어</td>
+                      <td>김철수</td>
+                      <td>2022-12-07 15:51</td>
+                      <td>2022-12-07 15:51</td>
+                      <td>
+                        <button type="button" class="btn btn_xxs" title="권한 부여"><i class="fa-solid fa-user-check"></i></button>
+                        <button type="button" class="btn btn_xxs" title="수정"><i class="fa-solid fa-pen"></i></button>
+                        <button type="button" class="btn btn_xxs" title="이력"><i class="fa-solid fa-rotate-right"></i></button>
+                        <button type="button" class="btn btn_xxs" title="삭제"><i class="fa-solid fa-trash"></i></button>
+                      </td>
+                    </tr>
+                    <tr class="disable">
+                      <td><input type="checkbox"></td>
+                      <td>515</td>
+                      <td>홍길동</td>
+                      <td>사원</td>
+                      <td>주식회사 마이스허브</td>
+                      <td>02-1234-5678</td>
+                      <td>010-2233-5555</td>
+                      <td>hgd@gmail.com</td>
+                      <td>신규</td>
+                      <td>미디어</td>
+                      <td>김철수</td>
+                      <td>2022-12-07 15:51</td>
+                      <td>2022-12-07 15:51</td>
+                      <td>
+                        <button type="button" class="btn btn_xxs" title="권한 부여"><i class="fa-solid fa-user-check"></i></button>
+                        <button type="button" class="btn btn_xxs" title="수정"><i class="fa-solid fa-pen"></i></button>
+                        <button type="button" class="btn btn_xxs" title="이력"><i class="fa-solid fa-rotate-right"></i></button>
+                        <button type="button" class="btn btn_xxs" title="삭제"><i class="fa-solid fa-trash"></i></button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="pageBox">
+                  <a class="btn btn_arrow prev"><i class="fa-solid fa-chevron-left"></i></a>
+                  <a class="btn btn_num isActive">1</a>
+                  <a class="btn btn_num">2</a>
+                  <a class="btn btn_num">3</a>
+                  <a class="btn btn_num">4</a>
+                  <a class="btn btn_num">5</a>
+                  <a class="btn btn_num">6</a>
+                  <a class="btn btn_num">7</a>
+                  <a class="btn btn_num">8</a>
+                  <a class="btn btn_num">9</a>
+                  <a class="btn btn_num">10</a>
+                  <a class="btn btn_arrow next"><i class="fa-solid fa-chevron-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="commonPageBox_ly">
+          <div class="lnb">
+            <div class="lnb-side">
+              <a class="lnb-link">홈</a>
+              <a class="lnb-link">고객</a>
+              <a class="lnb-link isActive">보고</a>
+            </div>
+          </div>
+          <div class="contentsBox_ly">
+            <div class="setFormBox">
+              <div class="contentsBox_ly setFormBox-contents box">
+                <div class="subTitleBox subTitleBox_bt">
+                  <div class="subTitleBox-inner subTitleBox-inner_left">
+                    <h3 class="subTitleBox-subTitle">잠재 고객 상태</h3>
+                    <p class="subTitleBox-descText">단계를 클릭하여 고객 상태를 바꿀 수 있습니다.</p>
+                  </div>
+                </div>
+                <ul class="stepBarBox">
+                  <li class="stepBarBox-item">
+                    <h4 class="stepBarBox-item_title">신규</h4>
+                  </li>
+                  <li class="stepBarBox-item">
+                    <h4 class="stepBarBox-item_title disable">신규</h4>
+                  </li>
+                  <li class="stepBarBox-item">
+                    <h4 class="stepBarBox-item_title disable">신규</h4>
+                  </li>
+                </ul>
+                <dl class="textBox">
+                  <dt class="textBox-title"><i class="fa-solid fa-circle-info"></i> 관리 지침</dt>
+                  <dd class="textBox-desc">여기에 단계별 지침을 입력할 수 있습니다.</dd>
+                  <dd class="textBox-desc">여기에 단계별 지침을 입력할 수 있습니다.여기에 단계별 지침을 입력할 수 있습니다.</dd>
+                  <dd class="textBox-desc textBox-desc_dot">여기에 단계별 지침을 입력할 수 있습니다.</dd>
+                  <dd class="textBox-desc textBox-desc_dot">여기에 단계별 지침을 입력할 수 있습니다.</dd>
+                </dl>
+              </div>
+            </div>
+            <div class="detailBox">
+              <div class="detailBox-half detailBox-half_left box">
+                <div class="sectionBox">
+                  <div class="subTitleBox subTitleBox_st">
+                    <div class="subTitleBox-inner">
+                      <h3 class="subTitleBox-subTitle">
+                        고객정보
+                        <button type="button" class="btn btn_xxs"><i class="fa-solid fa-pen"></i></button>
+                      </h3>
+                    </div>
+                  </div>
+                  <ul class="infoBox">
+                    <li class="infoBox-inner infoBox-inner_half">
+                      <strong class="infoBox-cate">이름</strong>
+                      <div class="infoBox-info infoBox-info_form">
+                        <div class="inputBox inputBox_input">
+                          <input class="input_text" type="text">
+                        </div>
+                      </div>
+                    </li>
+                    <li class="infoBox-inner infoBox-inner_half">
+                      <strong class="infoBox-cate">이름</strong>
+                      <div class="infoBox-info infoBox-info_form">
+                        <div class="inputBox inputBox_input">
+                          <input class="input_text" type="text">
+                        </div>
+                      </div>
+                    </li>
+                    <li class="infoBox-inner infoBox-inner_half">
+                      <strong class="infoBox-cate">이름</strong>
+                      <div class="infoBox-info infoBox-info_form">
+                        <div class="inputBox inputBox_input">
+                          <input class="input_text" type="text">
+                        </div>
+                      </div>
+                    </li>
+                    <li class="infoBox-inner infoBox-inner_half">
+                      <strong class="infoBox-cate">이름</strong>
+                      <div class="infoBox-info infoBox-info_form">
+                        <div class="inputBox inputBox_select">
+                          <select class="select" name="" id="">
+                            <option value="">잠재 단계</option>
+                            <option value="value1">value1</option>
+                            <option value="value2">value2</option>
+                          </select>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="infoBox-inner infoBox-inner_half">
+                      <strong class="infoBox-cate">이름</strong>
+                      <div class="infoBox-info">홍길동</div>
+                    </li>
+                    <li class="infoBox-inner infoBox-inner_half">
+                      <strong class="infoBox-cate">직위</strong>
+                      <div class="infoBox-info">사원</div>
+                    </li>
+                    <li class="infoBox-inner infoBox-inner_half">
+                      <strong class="infoBox-cate">유선전화</strong>
+                      <div class="infoBox-info">02-1234-5678</div>
+                    </li>
+                    <li class="infoBox-inner infoBox-inner_half">
+                      <strong class="infoBox-cate">휴대전화</strong>
+                      <div class="infoBox-info">010-1234-5678</div>
+                    </li>
+                    <li class="infoBox-inner infoBox-inner_half">
+                      <strong class="infoBox-cate">이메일</strong>
+                      <div class="infoBox-info">hong@mail.com</div>
+                    </li>
+                    <li class="infoBox-inner infoBox-inner_half">
+                      <strong class="infoBox-cate">소속</strong>
+                      <div class="infoBox-info">주식회사 마이스허브</div>
+                    </li>
+                    <li class="infoBox-inner infoBox-inner_full">
+                      <strong class="infoBox-cate">소속</strong>
+                      <div class="infoBox-info">주식회사 마이스허브</div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="sectionBox">
+                  <div class="subTitleBox subTitleBox_st">
+                    <div class="subTitleBox-inner">
+                      <h3 class="subTitleBox-subTitle">
+                        정보 수집
+                        <button type="button" class="btn btn_xxs"><i class="fa-solid fa-pen"></i></button>
+                      </h3>
+                    </div>
+                  </div>
+                  <ul class="infoBox">
+                    <li class="infoBox-inner infoBox-inner_half">
+                      <strong class="infoBox-cate">최초 수집자</strong>
+                      <div class="infoBox-info">홍길동</div>
+                    </li>
+                    <li class="infoBox-inner infoBox-inner_half">
+                      <strong class="infoBox-cate">수집 경로</strong>
+                      <div class="infoBox-info">미디어</div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="detailBox-half detailBox-half_right box">
+                <div class="sectionBox">
+                  <div class="subTitleBox subTitleBox_st">
+                    <div class="subTitleBox-inner">
+                      <h3 class="subTitleBox-subTitle">
+                        컨택 이력
+                      </h3>
+                    </div>
+                  </div>
+                  <ul class="infoBox">
+                    <li class="infoBox-inner infoBox-inner_full">
+                      <strong class="infoBox-cate">총평</strong>
+                      <div class="infoBox-info infoBox-info_bt">
+                        <div class="evalSelectBox">
+                          <div class="customSelectBox">
+                            <button class="evalSelectBox-btn btn evalSelectBox-btn_value">
+                              <i class="fa-solid fa-face-smile"></i>
+                            </button>
+                            <div class="customSelectBox-options">
+                              <button class="evalSelectBox-btn btn evalSelectBox-btn_option" data-val="fa-face-smile">
+                                <i class="fa-solid fa-face-smile"></i>
+                              </button>
+                              <button class="evalSelectBox-btn btn evalSelectBox-btn_option" data-val="fa-face-meh">
+                                <i class="fa-solid fa-face-meh"></i>
+                              </button>
+                              <button class="evalSelectBox-btn btn evalSelectBox-btn_option" data-val="fa-face-frown">
+                                <i class="fa-solid fa-face-frown"></i>
+                              </button>
+                              <button class="evalSelectBox-btn btn evalSelectBox-btn_option" data-val="fa-circle-xmark">
+                                <i class="fa-solid fa-circle-xmark"></i>
+                              </button>
+                            </div>
+                          </div>
+                          <span class="customSelectBox-textVal">
+                            MICE 솔루션을 제공하는 기업으로 강력한 전시, 상담, 포럼 기능을 제공하고 있음
+                          </span>
+                        </div>
+                        <button type="button" class="btn btn_xxs"><i class="fa-solid fa-pen"></i></button>
+                      </div>
+                    </li>
+                    <li class="infoBox-inner infoBox-inner_full infoBox-inner_full_col">
+                      <strong class="infoBox-cate infoBox-cate_search">
+                        <div class="innerSearchBox">
+                          <div class="inputWrapBox">
+                            <input type="text" class="input_text">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                          </div>
+                          <button class="btn btn_xs btn_xs_tran"><i class="fa-solid fa-filter"></i></button>
+                          <button class="btn btn_xs btn_xs_tran"><i class="fa-regular fa-calendar"></i></button>
+                        </div>
+                        <button type="button" class="btn btn_m btn_m_secondary"><i class="fa-solid fa-plus"></i> 개별 등록</button>
+                        <ul class="stickersBox">
+                          <li class="sticker">
+                            <button class="btn">X</button>
+                            통화
+                          </li>
+                          <li class="sticker">
+                            <button class="btn">X</button>
+                            메일
+                          </li>
+                          <li class="sticker">
+                            <button class="btn">X</button>
+                            2022.12.31~2023.01.31
+                          </li>
+                        </ul>
+                      </strong>
+                      <div class="infoBox-info infoBox-info_desc">
+                        <dl class="timelineBox">
+                          <dt class="timelineBox-title">
+                            2022년 12월
+                          </dt>
+                          <dd class="timelineBox-desc">
+                            <i class="fa-solid fa-phone timelineBox-desc_icon blue"></i>
+                            <span class="timelineBox-desc_time">12-14 16:55</span>
+                            <em class="timelineBox-desc_cate">통화</em>
+                            <span class="timelineBox-desc_text">(이보나) [SWEET, ICEF] 홍길동 담당자와 통화했음. 참여 의지 있음. </span>
+                          </dd>
+                          <dd class="timelineBox-desc">
+                            <i class="fa-solid fa-phone timelineBox-desc_icon red"></i>
+                            <span class="timelineBox-desc_time">12-14 16:55</span>
+                            <em class="timelineBox-desc_cate">통화</em>
+                            <span class="timelineBox-desc_text">(이보나) [SWEET, ICEF] 홍길동 담당자와 통화했음. 참여 의지 있음. </span>
+                          </dd>
+                          <dd class="timelineBox-desc">
+                            <i class="fa-solid fa-envelope timelineBox-desc_icon yellow"></i>
+                            <span class="timelineBox-desc_time">12-14 16:55</span>
+                            <em class="timelineBox-desc_cate">메일</em>
+                            <span class="timelineBox-desc_text">(이보나) [SWEET, ICEF] 홍길동 담당자와 통화했음. 참여 의지 있음. </span>
+                          </dd>
+                          <dd class="timelineBox-desc">
+                            <i class="fa-solid fa-message timelineBox-desc_icon yellow"></i>
+                            <span class="timelineBox-desc_time">12-14 16:55</span>
+                            <em class="timelineBox-desc_cate">SMS</em>
+                            <span class="timelineBox-desc_text">(이보나) [SWEET, ICEF] 홍길동 담당자와 통화했음. 참여 의지 있음. </span>
+                          </dd>
+                          <dt class="timelineBox-title">
+                            2022년 12월
+                          </dt>
+                          <dd class="timelineBox-desc">
+                            <i class="fa-solid fa-phone-missed timelineBox-desc_icon gray"></i>
+                            <span class="timelineBox-desc_time">12-14 16:55</span>
+                            <em class="timelineBox-desc_cate">통화</em>
+                            <span class="timelineBox-desc_text">(이보나) [SWEET, ICEF] 홍길동 담당자와 통화했음. 참여 의지 있음. </span>
+                          </dd>
+                        </dl>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="commonPageBox_ly">
+          <div class="lnb">
+            <div class="lnb-side">
+              <a class="lnb-link">홈</a>
+              <a class="lnb-link">고객</a>
+              <a class="lnb-link isActive">보고</a>
+            </div>
+            <div class="lnb-side">
+              <button class="btn btn_m btn_m_back"><i class="fa-regular fa-arrow-left"></i> 목록으로</button>
+            </div>
+          </div>
+          <div class="contentsBox_ly">
+            <div class="setFormBox">
+              <div class="setFormBox-profile box">
+                <div class="subTitleBox subTitleBox_bt">
+                  <div class="subTitleBox-inner subTitleBox-inner_left">
+                    <h3 class="subTitleBox-subTitle">고객 정보</h3>
+                  </div>
+                  <div class="subTitleBox-inner subTitleBox-inner_right">
+                    <button class="btn">
+                      <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="imgBox imgBox_circle" style="background-image: url('https://audition.hanbiton.com/images/common/img_default.jpg');"></div>
+                <ul class="userInfoText">
+                  <li class="lightText">
+                    주식회사 마이스허브
+                  </li>
+                  <li class="boldText">홍길동</li>
+                </ul>
+              </div>
+              <div class="contentsBox_ly setFormBox-contents box">
+                <div class="subTitleBox subTitleBox_bt">
+                  <div class="subTitleBox-inner subTitleBox-inner_left">
+                    <h3 class="subTitleBox-subTitle">잠재 고객 상태</h3>
+                    <p class="subTitleBox-descText">단계를 클릭하여 고객 상태를 바꿀 수 있습니다.</p>
+                  </div>
+                </div>
+                <ul class="stepBarBox">
+                  <li class="stepBarBox-item">
+                    <button class="stepBarBox-item_title">신규</button>
+                  </li>
+                  <li class="stepBarBox-item">
+                    <button class="stepBarBox-item_title disable">신규</button>
+                  </li>
+                  <li class="stepBarBox-item">
+                    <button class="stepBarBox-item_title disable">신규</button>
+                  </li>
+                  <li class="stepBarBox-item">
+                    <button class="stepBarBox-item_title disable">신규</button>
+                  </li>
+                  <li class="stepBarBox-item">
+                    <button class="stepBarBox-item_title disable">신규</button>
+                  </li>
+                </ul>
+                <dl class="textBox">
+                  <dt class="textBox-title"><i class="fa-solid fa-circle-info"></i> 관리 지침</dt>
+                  <dd class="textBox-desc">여기에 단계별 지침을 입력할 수 있습니다.</dd>
+                  <dd class="textBox-desc">여기에 단계별 지침을 입력할 수 있습니다.여기에 단계별 지침을 입력할 수 있습니다.</dd>
+                  <dd class="textBox-desc textBox-desc_dot">여기에 단계별 지침을 입력할 수 있습니다.</dd>
+                  <dd class="textBox-desc textBox-desc_dot">여기에 단계별 지침을 입력할 수 있습니다.</dd>
+                </dl>
+              </div>
+            </div>
+            <div class="detailBox">
+              <div class="detailBox-half detailBox-half_left box">
+                <div class="sectionBox">
+                  <div class="subTitleBox subTitleBox_st">
+                    <div class="subTitleBox-inner">
+                      <h3 class="subTitleBox-subTitle">
+                        고객정보
+                        <button type="button" class="btn btn_xxs"><i class="fa-solid fa-pen"></i></button>
+                      </h3>
+                    </div>
+                  </div>
+                  <ul class="infoBox">
+                    <li class="infoBox-inner infoBox-inner_half">
+                      <strong class="infoBox-cate">이름</strong>
+                      <div class="infoBox-info">홍길동</div>
+                    </li>
+                    <li class="infoBox-inner infoBox-inner_half">
+                      <strong class="infoBox-cate">직위</strong>
+                      <div class="infoBox-info">사원</div>
+                    </li>
+                    <li class="infoBox-inner infoBox-inner_half">
+                      <strong class="infoBox-cate">유선전화</strong>
+                      <div class="infoBox-info">02-1234-5678</div>
+                    </li>
+                    <li class="infoBox-inner infoBox-inner_half">
+                      <strong class="infoBox-cate">휴대전화</strong>
+                      <div class="infoBox-info">010-1234-5678</div>
+                    </li>
+                    <li class="infoBox-inner infoBox-inner_half">
+                      <strong class="infoBox-cate">이메일</strong>
+                      <div class="infoBox-info">hong@mail.com</div>
+                    </li>
+                    <li class="infoBox-inner infoBox-inner_half">
+                      <strong class="infoBox-cate">소속</strong>
+                      <div class="infoBox-info">주식회사 마이스허브</div>
+                    </li>
+                    <li class="infoBox-inner infoBox-inner_full">
+                      <strong class="infoBox-cate">소속</strong>
+                      <div class="infoBox-info">주식회사 마이스허브</div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="sectionBox">
+                  <div class="subTitleBox subTitleBox_st">
+                    <div class="subTitleBox-inner">
+                      <h3 class="subTitleBox-subTitle">
+                        정보 수집
+                        <button type="button" class="btn btn_xxs"><i class="fa-solid fa-pen"></i></button>
+                      </h3>
+                    </div>
+                  </div>
+                  <ul class="infoBox">
+                    <li class="infoBox-inner infoBox-inner_half">
+                      <strong class="infoBox-cate">최초 수집자</strong>
+                      <div class="infoBox-info">홍길동</div>
+                    </li>
+                    <li class="infoBox-inner infoBox-inner_half">
+                      <strong class="infoBox-cate">수집 경로</strong>
+                      <div class="infoBox-info">미디어</div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="detailBox-half detailBox-half_right box">
+                <div class="sectionBox">
+                  <div class="subTitleBox subTitleBox_st">
+                    <div class="subTitleBox-inner">
+                      <h3 class="subTitleBox-subTitle">
+                        컨택 이력
+                      </h3>
+                    </div>
+                  </div>
+                  <ul class="infoBox">
+                    <li class="infoBox-inner infoBox-inner_full">
+                      <strong class="infoBox-cate">총평</strong>
+                      <div class="infoBox-info infoBox-info_bt">
+                        <div class="evalSelectBox">
+                          <div class="customSelectBox">
+                            <button class="evalSelectBox-btn btn evalSelectBox-btn_value">
+                              <i class="fa-solid fa-face-smile"></i>
+                            </button>
+                            <div class="customSelectBox-options">
+                              <button class="evalSelectBox-btn btn evalSelectBox-btn_option" data-val="fa-face-smile">
+                                <i class="fa-solid fa-face-smile"></i>
+                              </button>
+                              <button class="evalSelectBox-btn btn evalSelectBox-btn_option" data-val="fa-face-meh">
+                                <i class="fa-solid fa-face-meh"></i>
+                              </button>
+                              <button class="evalSelectBox-btn btn evalSelectBox-btn_option" data-val="fa-face-frown">
+                                <i class="fa-solid fa-face-frown"></i>
+                              </button>
+                              <button class="evalSelectBox-btn btn evalSelectBox-btn_option" data-val="fa-circle-xmark">
+                                <i class="fa-solid fa-circle-xmark"></i>
+                              </button>
+                            </div>
+                          </div>
+                          <span class="customSelectBox-textVal">
+                            MICE 솔루션을 제공하는 기업으로 강력한 전시, 상담, 포럼 기능을 제공하고 있음
+                          </span>
+                        </div>
+                        <button type="button" class="btn btn_xxs"><i class="fa-solid fa-pen"></i></button>
+                      </div>
+                    </li>
+                    <li class="infoBox-inner infoBox-inner_full infoBox-inner_full_col">
+                      <strong class="infoBox-cate infoBox-cate_search">
+                        <div class="innerSearchBox">
+                          <div class="inputWrapBox">
+                            <input type="text" class="input_text">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                          </div>
+                          <button class="btn btn_xs btn_xs_tran"><i class="fa-solid fa-filter"></i></button>
+                          <button class="btn btn_xs btn_xs_tran"><i class="fa-regular fa-calendar"></i></button>
+                        </div>
+                        <button type="button" class="btn btn_m btn_m_secondary"><i class="fa-solid fa-plus"></i> 개별 등록</button>
+                        <ul class="stickersBox">
+                          <li class="sticker">
+                            <button class="btn">X</button>
+                            통화
+                          </li>
+                          <li class="sticker">
+                            <button class="btn">X</button>
+                            메일
+                          </li>
+                          <li class="sticker">
+                            <button class="btn">X</button>
+                            2022.12.31~2023.01.31
+                          </li>
+                        </ul>
+                      </strong>
+                      <div class="infoBox-info infoBox-info_desc">
+                        <dl class="timelineBox">
+                          <dt class="timelineBox-title">
+                            2022년 12월
+                          </dt>
+                          <dd class="timelineBox-desc">
+                            <i class="fa-solid fa-phone timelineBox-desc_icon blue"></i>
+                            <span class="timelineBox-desc_time">12-14 16:55</span>
+                            <em class="timelineBox-desc_cate">통화</em>
+                            <span class="timelineBox-desc_text">(이보나) [SWEET, ICEF] 홍길동 담당자와 통화했음. 참여 의지 있음. </span>
+                          </dd>
+                          <dd class="timelineBox-desc">
+                            <i class="fa-solid fa-phone timelineBox-desc_icon red"></i>
+                            <span class="timelineBox-desc_time">12-14 16:55</span>
+                            <em class="timelineBox-desc_cate">통화</em>
+                            <span class="timelineBox-desc_text">(이보나) [SWEET, ICEF] 홍길동 담당자와 통화했음. 참여 의지 있음. </span>
+                          </dd>
+                          <dd class="timelineBox-desc">
+                            <i class="fa-solid fa-envelope timelineBox-desc_icon yellow"></i>
+                            <span class="timelineBox-desc_time">12-14 16:55</span>
+                            <em class="timelineBox-desc_cate">메일</em>
+                            <span class="timelineBox-desc_text">(이보나) [SWEET, ICEF] 홍길동 담당자와 통화했음. 참여 의지 있음. </span>
+                          </dd>
+                          <dd class="timelineBox-desc">
+                            <i class="fa-solid fa-message timelineBox-desc_icon yellow"></i>
+                            <span class="timelineBox-desc_time">12-14 16:55</span>
+                            <em class="timelineBox-desc_cate">SMS</em>
+                            <span class="timelineBox-desc_text">(이보나) [SWEET, ICEF] 홍길동 담당자와 통화했음. 참여 의지 있음. </span>
+                          </dd>
+                          <dt class="timelineBox-title">
+                            2022년 12월
+                          </dt>
+                          <dd class="timelineBox-desc">
+                            <i class="fa-solid fa-phone-missed timelineBox-desc_icon gray"></i>
+                            <span class="timelineBox-desc_time">12-14 16:55</span>
+                            <em class="timelineBox-desc_cate">통화</em>
+                            <span class="timelineBox-desc_text">(이보나) [SWEET, ICEF] 홍길동 담당자와 통화했음. 참여 의지 있음. </span>
+                          </dd>
+                        </dl>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 잠재 단계 변경 -->
+          <div class="popupBox" style="display: none;">
+            <div class="popupBox-contents">
+              <div class="popup-title">
+                <div class="subTitleBox subTitleBox_bt">
+                  <div class="subTitleBox-inner">
+                    <h3 class="subTitleBox-subTitle">
+                      잠재 단계 변경
+                    </h3>
+                  </div>
+                  <button class="btn btn_pop"><i class="fa-light fa-xmark"></i></button>
+                </div>
+              </div>
+              <div class="popup-detail">
+                <p class="popup-desc">
+                  체크한 잠재고객 <em class="em">10</em>명의 잠재단계를 아래 선택한 단계와 같이 변경합니다.
+                </p>
+                <ul class="stepBarBox">
+                  <li class="stepBarBox-item">
+                    <h4 class="stepBarBox-item_title disable">분류</h4>
+                  </li>
+                  <li class="stepBarBox-item">
+                    <h4 class="stepBarBox-item_title disable">크리닝</h4>
+                  </li>
+                  <li class="stepBarBox-item">
+                    <h4 class="stepBarBox-item_title disable">유치</h4>
+                  </li>
+                </ul>
+                <div class="popup-btnGroup">
+                  <button type="button" class="btn btn_l btn_l_reg">등록</button>
+                  <button type="button" class="btn btn_l btn_l_cl">취소</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 일괄 등록 -->
+          <div class="popupBox" style="display:;">
+            <div class="popupBox-contents">
+              <div class="popup-title">
+                <div class="subTitleBox subTitleBox_bt">
+                  <div class="subTitleBox-inner">
+                    <h3 class="subTitleBox-subTitle">
+                      일괄 등록
+                    </h3>
+                  </div>
+                  <button class="btn btn_pop"><i class="fa-light fa-xmark"></i></button>
+                </div>
+              </div>
+              <div class="popup-detail">
+                <p class="popup-desc popup-desc-btn">
+                  양식에 맞춰 파일을 업로드하면 잠재고객이 일괄 등록됩니다.
+                  <button class="btn btn_m btn_m_secondary">양식 다운로드</button>
+                </p>
+                <div class="uploadFileBox">
+                  <div class="uploadFileBox-inputWrap">
+                    <input class="input input_file" type="file" id="file"></input>
+                    <label for="file" class="label_file btn btn_m btn_m_back">
+                      파일 선택
+                    </label>
+                    <span class="getFileNameText">선택된 파일 없음</span>
+                    <button type="button" class="btn btn_m btn_m_primary">업로드</button>
+                  </div>
+                  <ul class="uploadFileListBox">
+                    <li class="uploadFileListBox-item">
+                      <i class="chip chip_excel fa-regular fa-file-excel"></i>
+                      <span class="getFileNameText">단체등록파일.xlsx</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="popup-btnGroup">
+                  <button type="button" class="btn btn_l btn_l_reg">등록</button>
+                  <button type="button" class="btn btn_l btn_l_cl">취소</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+    <footer class="footer">
+      <p>Copyright © <strong>2022 김대중컨벤션센터</strong> All rights reserved.</p>
+    </footer>
+  </div>
+  <script>
+
+    // 총평 셀렉트박스 커스텀
+    const evalSelectBoxBtnValue = document.querySelector('.evalSelectBox-btn_value');
+    const evalSelectBoxBtnValueChild = document.querySelector('.evalSelectBox-btn_value > .fa-solid');
+    const evalSelectBoxBtnOption = document.querySelectorAll('.evalSelectBox-btn_option');
+    evalSelectBoxBtnValue.addEventListener('click', function(e) {
+      e.target.classList.toggle('active');
+    });
+    evalSelectBoxBtnOption.forEach((e)=> {
+      e.addEventListener('click', function(t) {
+        const emotionCode = t.target.getAttribute('data-val');
+        evalSelectBoxBtnValueChild.className = `fa-solid ${emotionCode}`
+        evalSelectBoxBtnValue.classList.remove('active');
+      });
+    })
+  </script>
+</body>
+</html>

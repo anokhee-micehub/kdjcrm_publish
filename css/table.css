@@ -1,0 +1,52 @@
+@charset "UTF-8";
+/* 
+* 클래스명 지정 의미
+* @ 블록
+* @ 블록_구분
+* @ 블록_구분-엘리먼트
+* @ 블록-엘리먼트
+* @ 블록-엘리먼트_구분
+* @ 블록-엘리먼트_구분1_구분2
+* @ 상태(ex:isActive)
+*/
+.tableWrapBox {
+  padding: 2.3333333333rem 2rem;
+  border-radius: 0.6666666667rem;
+  background-color: #fff;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8rem;
+}
+.table tr.disable td {
+  background-color: #e6e4e4;
+}
+.table th,
+.table td {
+  text-align: center;
+  padding: 0.6666666667rem;
+}
+.table th {
+  color: #fff;
+  background-color: #666666;
+  font-weight: 300;
+}
+.table td {
+  border-bottom: 1px solid #ddd;
+}
+
+.pageBox {
+  margin-top: 1.4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}

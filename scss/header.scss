@@ -1,0 +1,92 @@
+@import "mixin.scss";
+@import "functions.scss";
+@import "variables.scss";
+
+/* 
+* 클래스명 지정 의미
+* @ 블록
+* @ 블록_구분
+* @ 블록_구분-엘리먼트
+* @ 블록-엘리먼트
+* @ 블록-엘리먼트_구분
+* @ 블록-엘리먼트_구분1_구분2
+* @ 상태(ex:isActive)
+*/
+
+.header {
+  position: relative;
+  @include flex-box($jc:between);
+  height: rem(66px);
+  padding: 0 rem(22px) 0 rem(34px);
+  background-color: #fff;
+  box-shadow: 0px 2px 4px 0px #00000040;
+}
+
+.gnb {
+  @include flex-box {
+    gap: rem(100px);
+  }
+  &_depth2 {
+    display: none;
+    gap: 0;
+    @include position-center-x;
+    background-color: #fff;
+    top: 94px;
+    height: rem(40px);
+    box-shadow: 0px 2px 4px 0px rgb(0 0 0 / 15%);
+    border-radius: rem(30px);
+    overflow: hidden;
+  }
+}
+
+.gnb-link {
+  font-weight: 600;
+  &_depth1 {
+    padding: rem(22px) 0 rem(20px);
+    border-radius: 10px 10px 0 0;
+    font-size: rem(16px);
+    color: #4B4B4B;
+    &.isActive {
+      color: #FF6102;
+      border-bottom: 3px solid #FF6102;
+      i {
+        color: #FF6102;
+      }
+    }
+    &.isActive + .gnb_depth2 {
+      display: flex;
+    }
+    i {
+      color: #B5B5B5;
+    }
+  }
+  &_depth2 {
+    font-size: rem(16px);
+    color: #555555;
+    padding: rem(12px) rem(70px);
+    &.isActive {
+      background-color: #FF6102;
+      color: #fff;
+      border-radius: rem(30px);
+    }
+  }
+}
+
+.header-userInfo {
+  @include flex-box {
+    gap: rem(10px);
+    font-size: rem(14px);
+    color: #4B4B4B;
+  }
+  button {
+    @include wh(rem(34px), rem(34px));
+    @include reset-btn($bg-color: #B4B4B4);
+    border-radius: 50%;
+    cursor: pointer;
+    i {
+      @include inline-flex;
+      color: #fff;
+      font-size: rem(14px);
+    }
+  }
+}

@@ -1,0 +1,247 @@
+@import "mixin.scss";
+@import "functions.scss";
+@import "variables.scss";
+
+/* 
+* 클래스명 지정 의미
+* @ 블록
+* @ 블록_구분
+* @ 블록_구분-엘리먼트
+* @ 블록-엘리먼트
+* @ 블록-엘리먼트_구분
+* @ 블록-엘리먼트_구분1_구분2
+* @ 상태(ex:isActive)
+*/
+
+// 폼박스
+.infoBox {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-top: 1px solid #D2D2D2;
+  &-cate,
+  &-info {
+    @include inline-flex;
+  }
+  &-inner {
+    border-bottom: 1px solid #D2D2D2;
+    background-color: #fff;
+    &_full {
+      grid-column: 1 / 3;
+    }
+    &_full_col {
+      @include flex-box($fd: column);
+      margin-top: 16px;
+      border-bottom: none;
+    }
+  }
+  &-info {
+    width: calc(100% - 140px);
+    padding-left: rem(15px);
+    justify-content: flex-start;
+    &_bt {
+      justify-content: space-between;
+    }
+    &_desc {
+      width: 100%;
+      padding: rem(15px);
+      box-sizing: border-box;
+      border: none;
+      background-color: #f4f4f4;
+      overflow-y: auto;
+    }
+    &_form {
+      padding-left: 5px;
+      width: calc(100% - 155px);
+      .inputBox {
+        width: 100%;
+        .select,
+        .input_text {
+          border-radius: 5px;
+        }
+        &_select {
+          width: 167px;
+          height: 53px;
+          border: 1px solid #D2D2D2;
+          border-radius: 5px;
+        }
+        .select {
+          min-width: 100%;
+        }
+        .input {
+          &_text {
+            min-width: unset;
+            @include wh(100%, 35px);
+            border: 1px solid #D2D2D2;
+          }
+        }
+      }
+    }
+  }
+  &-cate {
+    min-width: rem(100px);
+    flex: 0 0 125px;
+    padding: rem(20px) 0;
+    background-color: #f4f4f4;
+    font-size: rem(14px);
+    color: #666666;
+    &_search {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: rem(10px);
+      width: 100%;
+      padding: 18px 0;
+      flex: unset;
+      box-sizing: border-box;
+      background-color: transparent;
+      & > .btn {
+        max-width: 100px;
+        justify-self: flex-end;
+      }
+    }
+  }
+}
+// 폼박스 카테고리별 분리시
+.sectionBox ~ .sectionBox {
+  margin-top: rem(34px);
+}
+// 폼박스 내부 검색박스
+.innerSearchBox {
+  @include flex-box($jc:flex-start) {
+    gap: rem(10px);
+  }
+}
+// 폼박스 - 총평 셀렉트박스 커스텀
+.evalSelectBox {
+  position: relative;
+  @include flex-box($jc:start) {
+    gap: rem(10px);
+  }
+  &-btn {
+    font-size: 16px;
+    &_value {
+      padding: rem(10px);
+      border: 1px solid #E3E3E3;
+      border-radius: 3px;
+      &::after {
+        content: '\f078';
+        font-family: fontAwesome;
+        font-size: 10px;
+      }
+      &.active + .customSelectBox-options {
+        display: flex;
+      }
+    }
+    &_option {
+      i {
+        pointer-events: none;
+      }
+    }
+  }
+}
+.customSelectBox {
+  &-options {
+    @include flex-box($fd: column);
+    position: absolute;
+    top: 35px;
+    width: 50px;
+    padding: rem(5px) 0;
+    border: 1px solid #E3E3E3;
+    background-color: #fff;
+    display: none;
+  }
+  &-textVal {
+    font-size: rem(12px);
+  }
+}
+.fa {
+  &-face-smile {
+    color: #0084e9;
+  }
+  &-face-meh {
+    color: #ffcc00;
+  }
+  &-face-frown {
+    color: #ff4734;
+  }
+  &-circle-xmark {
+    color: #959595;
+  }
+}
+// 폼박스 - 이력확인
+.timelineBox {
+  width: 100%;
+  height: rem(200px);
+  &-title {
+    @include inline-flex;
+    padding: rem(4px) rem(23px);
+    border-radius: rem(30px);
+    color: #000;
+    background-color: #dfdfdf;
+    font-size: rem(12px);
+    font-weight: 600;
+  }
+  &-desc {
+    @include flex-box($jc: start){
+      gap: 8px;
+    }
+    &_icon {
+      font-size: rem(10px);
+      color: #fff;
+      &.blue {
+        color: #387BC9;
+      }
+      &.yellow {
+        color: #F9C541;
+      }
+      &.gray {
+        color: #8C8C8C;
+      }
+      &.red {
+        color: red;
+      }
+    }
+    &_time {
+      flex-shrink: 0;
+      font-size: rem(12px);
+      font-weight: 600;
+    }
+    &_cate {
+      flex-shrink: 0;
+      padding: 2px 5px;
+      color:#4B4B4B;
+      background-color: #fff;
+      border: 1px solid #959595;
+      font-size: rem(9px);
+    }
+    &_text {
+      flex-grow: 0;
+      @include ellipsis;
+      font-size: rem(12px);
+    }
+  }
+  &-title ~ &-desc,
+  &-desc ~ &-title,
+  &-desc ~ &-desc {
+    margin-top: 15px;
+  }
+}
+// 폼박스-이력내부 스티커박스
+.stickersBox {
+  grid-column: 1 / 3;
+  @include flex-box($jc: start) {
+    gap: 5px;
+    flex-wrap: wrap;
+  }
+}
+.sticker {
+  @include flex-box($jc: start) {
+    gap: 10px;
+  }
+  padding: 0 11px;
+  background-color: #fff;
+  border: 1px solid $main;
+  border-radius: rem(30px);
+  font-size: rem(12px);
+  font-weight: 600;
+  color: #4B4B4B;
+}

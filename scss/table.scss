@@ -1,0 +1,54 @@
+@import "mixin.scss";
+@import "functions.scss";
+@import "variables.scss";
+
+/* 
+* 클래스명 지정 의미
+* @ 블록
+* @ 블록_구분
+* @ 블록_구분-엘리먼트
+* @ 블록-엘리먼트
+* @ 블록-엘리먼트_구분
+* @ 블록-엘리먼트_구분1_구분2
+* @ 상태(ex:isActive)
+*/
+
+
+// 리스트 테이블
+.tableWrapBox {
+  padding: rem(35px) rem(30px);
+  border-radius: rem(10px);
+  background-color: #fff;
+}
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: rem(12px);
+  tr {
+    &.disable {
+      td {
+        background-color: #e6e4e4;
+      }
+    }
+  }
+  th,
+  td {
+    text-align: center;
+    padding: rem(10px);
+  }
+  th {
+    color: #fff;
+    background-color: #666666;
+    font-weight: 300;
+  }
+  td {
+    border-bottom: 1px solid #ddd;
+  }
+}
+// 리스트페이지버튼
+.pageBox {
+  margin-top: rem(21px);
+  @include flex-box {
+    gap: 10px;
+  }
+}

@@ -1,0 +1,22 @@
+@charset "UTF-8";
+/* 
+* 클래스명 지정 의미
+* @ 블록
+* @ 블록_구분
+* @ 블록_구분-엘리먼트
+* @ 블록-엘리먼트
+* @ 블록-엘리먼트_구분
+* @ 블록-엘리먼트_구분1_구분2
+* @ 상태(ex:isActive)
+*/
+.footer {
+  padding: 2rem 0 1.3333333333rem;
+  text-align: center;
+}
+.footer p {
+  font-size: 0.6666666667rem;
+  color: #777;
+}
+.footer p strong {
+  color: #ff6102;
+}
