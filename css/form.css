@@ -14,6 +14,12 @@
   grid-template-columns: repeat(2, 1fr);
   border-top: 1px solid #D2D2D2;
 }
+.infoBox ~ .infoBox {
+  margin-top: 0.8666666667rem;
+}
+.infoBox.addDelBtn .btn_s_del {
+  display: block;
+}
 .infoBox-cate, .infoBox-info {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -29,6 +35,15 @@
   background-color: #F3F7FD;
 }
 .infoBox-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border-bottom: 1px solid #D2D2D2;
   background-color: #fff;
 }
@@ -44,16 +59,8 @@
       -ms-flex-align: center;
           align-items: center;
 }
-.infoBox-inner_full .infoBox-info {
-  width: 100%;
-  padding: 8px;
-}
 .infoBox-inner_full .infoBox-info .inputBox {
   width: 100%;
-}
-.infoBox-inner_full_row .infoBox-cate {
-  min-width: 106px;
-  max-width: 106px;
 }
 .infoBox-inner_full_col {
   display: -webkit-box;
@@ -77,8 +84,8 @@
       align-self: stretch;
 }
 .infoBox-info {
-  width: calc(100% - 140px);
-  padding-left: 1rem;
+  width: calc(100% - 150px);
+  padding: 8px 0 8px 15px;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -98,8 +105,11 @@
   overflow-y: auto;
 }
 .infoBox-info_form {
-  padding-left: 5px;
-  width: calc(100% - 155px);
+  padding-left: 15px;
+  width: calc(100% - 152px);
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .infoBox-info_form .inputBox {
   width: 100%;
@@ -397,4 +407,25 @@
   font-size: 0.8rem;
   font-weight: 600;
   color: #4B4B4B;
+}
+
+.codeListBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+  padding: 1.0666666667rem;
+  font-size: 0.9333333333rem;
+  font-weight: 600;
+  border-radius: 3px;
+  background-color: #F3F7FD;
+}
+.codeListBox ~ .infoBox {
+  margin-top: 1rem;
 }

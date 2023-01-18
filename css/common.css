@@ -183,6 +183,18 @@
   padding: 0.2666666667rem 0.6666666667rem;
   font-size: 0.6666666667rem;
 }
+.btn_s_del {
+  background-color: #F4F4F4;
+  border: 1px solid #D7D7D7;
+  padding: 0.2rem 0.5333333333rem;
+  font-size: 0.8rem;
+  color: #4B4B4B;
+  display: none;
+}
+.btn_s_del.start {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
 .btn_m {
   padding: 0 0.8666666667rem;
   border-radius: 3px;
@@ -238,6 +250,16 @@
 .btn_l_cl {
   min-width: 5.3333333333rem;
   background-color: #656565;
+}
+.btn_full {
+  width: 100%;
+  height: 50px;
+  background-color: #F3F7FD;
+  border-radius: 3px;
+  border: 1px solid #D2D2D2;
+  font-size: 1.0666666667rem;
+  font-weight: 600;
+  color: #4B4B4B;
 }
 .btn_arrow {
   width: 1rem;
@@ -325,6 +347,28 @@
   height: 2.3333333333rem;
   border: 1px solid #D2D2D2;
 }
+.input_checkbox {
+  display: none;
+}
+.input_checkbox:checked + .checkboxChk::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 7px;
+  height: 7px;
+  background-color: #FF6202;
+}
+.input_checkbox + .checkboxChk {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 13px;
+  height: 13px;
+  -webkit-box-shadow: 0 0 0 1px inset #D2D2D2;
+          box-shadow: 0 0 0 1px inset #D2D2D2;
+}
 
 .select {
   position: relative;
@@ -333,6 +377,19 @@
 
 .radioBox ~ .radioBox {
   margin-left: 0.6666666667rem;
+}
+
+.inputLabelGroupBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.3333333333rem;
 }
 
 .inputBox {
@@ -564,4 +621,8 @@
 .flex_shrink {
   -ms-flex-negative: 0;
       flex-shrink: 0;
+}
+.flex_wrap {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
