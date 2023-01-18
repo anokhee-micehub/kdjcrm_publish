@@ -22,16 +22,44 @@
   &-info {
     @include inline-flex;
   }
+  &-cate {
+    &.em {
+      background-color: #F3F7FD;
+    }
+  }
   &-inner {
     border-bottom: 1px solid #D2D2D2;
     background-color: #fff;
     &_full {
       grid-column: 1 / 3;
+      @include flex-box($jc: start);
+      .infoBox {
+        &-info {
+          width: 100%;
+          padding: 8px;
+          .inputBox {
+            width: 100%;
+          }
+        }
+      }
+      &_row {
+        .infoBox {
+          &-cate {
+            min-width: 106px;
+            max-width: 106px;
+          }
+        }
+      }
+      &_col {
+        @include flex-box($fd: column);
+        margin-top: 16px;
+        border-bottom: none;
+      }
     }
-    &_full_col {
-      @include flex-box($fd: column);
-      margin-top: 16px;
-      border-bottom: none;
+    .infoBox {
+      &-cate {
+        align-self: stretch;
+      }
     }
   }
   &-info {
@@ -76,6 +104,21 @@
         }
       }
     }
+    &.offInput {
+      .customSelectBox_wrap {
+        width: calc(100% - 30px);
+        .customSelectBox-textVal {
+          width: 100%;
+          @include ellipsis;
+        }
+      }
+      .inputBox {
+        display: none;
+      }
+      .subTitleBox_st {
+        display: none;
+      }
+    }
     &.onInput {
       & > .btn {
         display: none;
@@ -83,7 +126,7 @@
       .customSelectBox-textVal {
         display: none;
       }
-      .evalSelectBox {
+      .customSelectBox_wrap {
         width: calc(100% - 120px);
       }
       & .inputBox {
@@ -99,12 +142,7 @@
         gap: rem(5px);
       }
     }
-    .inputBox {
-      display: none;
-    }
-    .subTitleBox_st {
-      display: none;
-    }
+    
   }
   &-cate {
     min-width: rem(100px);
@@ -115,10 +153,11 @@
     color: #666666;
     &_search {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(2, minmax(0, auto));
+      justify-content: stretch;
       gap: rem(10px);
       width: 100%;
-      padding: 18px 0;
+      padding: 0 0 18px 0;
       flex: unset;
       box-sizing: border-box;
       background-color: transparent;
@@ -136,26 +175,30 @@
 // 폼박스 내부 검색박스
 .innerSearchBox {
   @include flex-box($jc:flex-start) {
-    gap: rem(10px);
+    gap: rem(5px);
   }
 }
 // 폼박스 - 총평 셀렉트박스 커스텀
-.evalSelectBox {
-  position: relative;
-  @include flex-box($jc:start) {
-    gap: rem(10px);
+.customSelectBox {
+  &_wrap {
+    position: relative;
+    @include flex-box($jc:start) {
+      gap: rem(10px);
+    }
   }
   &-btn {
     font-size: 16px;
     &_value {
-      height: rem(36px);
+      height: rem(31px);
       padding: rem(10px);
       border: 1px solid #E3E3E3;
       border-radius: 3px;
       &::after {
         content: '\f078';
+        color: #BCBCBC;
         font-family: fontAwesome;
         font-size: 10px;
+        font-weight: 600;
       }
       &.active + .customSelectBox-options {
         display: flex;
@@ -201,6 +244,7 @@
 .timelineBox {
   width: 100%;
   height: rem(200px);
+  padding: rem(8px);
   &-title {
     @include inline-flex;
     padding: rem(4px) rem(23px);

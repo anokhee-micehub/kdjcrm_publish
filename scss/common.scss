@@ -126,6 +126,12 @@
       border: none;
       color: #494B4C;
     }
+    &_gray {
+      border: none;
+      font-size: rem(13px);
+      color: #fff;
+      background-color: #666;
+    }
   }
   &_s {
     border-radius: 3px;
@@ -229,18 +235,59 @@
   &_file {
     margin-right: rem(11px);
   }
+  &_form {
+    font-size: inherit;
+    font-weight: inherit;
+  }
 }
 .input {
   &_text {
     min-width: 300px;
+    &:disabled {
+      background-color: #f1f1f1;
+      border: 1px solid $btn2;
+    }
   }
   &_file {
     display: none;
+  }
+  &_radio {
+    display: none;
+    &:checked + .radioChk {
+      &::after {
+        content: '';
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        @include wh(7px, 7px);
+        border-radius: 50%;
+        background-color: $main;
+      }
+    }
+    & + .radioChk {
+      position: relative;
+      display: inline-block;
+      @include wh(13px, 13px);
+      border-radius: 50%;
+      box-shadow: 0 0 0 1px inset $btn2;
+      vertical-align: middle;
+    }
+  }
+  &_date {
+    &_time {
+      height: rem(35px);
+      border: 1px solid $btn2;
+    }
   }
 }
 .select {
   position: relative;
   min-width: 200px;
+}
+.radioBox {
+  & ~ & {
+    margin-left: rem(10px);
+  }
 }
 .inputBox {
   position: relative;
@@ -262,6 +309,18 @@
       z-index: 9;
     }
   }
+  &_textarea {
+    .input_textarea {
+      resize: none;
+      width: calc(100% - 10px);
+      height: rem(115px);
+      padding: 15px;
+      border: 1px solid #D2D2D2;
+      border-radius: 3px;
+      outline: none;
+      box-sizing: border-box;
+    }
+  }
 }
 .inputWrapBox {
   background-color: #fff;
@@ -269,7 +328,7 @@
   border-radius: 5px;
   min-width: rem(330px);
   .input_text {
-    width: calc(100% - 30px);
+    width: calc(100% - 38px);
     height: 30px;
     background-color: transparent;
     border: none;
@@ -297,6 +356,16 @@
 .subTitleBox {
   @include flex-box($ai: end);
   margin-bottom: 13px;
+  &.sectionTitle {
+    border-bottom: none;
+    padding-bottom: rem(30px);
+    .subTitleBox {
+      &-subTitle {
+        font-size: rem(23px);
+        font-weight: 700;
+      }
+    }
+  }
   &_bt {
     justify-content: space-between;
   }
@@ -393,5 +462,12 @@
   }
   &-side {
     flex: 1;
+  }
+}
+
+// 플렉스shrink
+.flex {
+  &_shrink {
+    flex-shrink: 0;
   }
 }
