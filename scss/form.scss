@@ -76,6 +76,35 @@
         }
       }
     }
+    &.onInput {
+      & > .btn {
+        display: none;
+      }
+      .customSelectBox-textVal {
+        display: none;
+      }
+      .evalSelectBox {
+        width: calc(100% - 120px);
+      }
+      & .inputBox {
+        display: block;
+        flex: 1;
+        .input_text {
+          width: calc(100% - 20px);
+          border: 1px solid #D2D2D2;
+        }
+      }
+      & > .subTitleBox_st {
+        display: flex;
+        gap: rem(5px);
+      }
+    }
+    .inputBox {
+      display: none;
+    }
+    .subTitleBox_st {
+      display: none;
+    }
   }
   &-cate {
     min-width: rem(100px);
@@ -119,6 +148,7 @@
   &-btn {
     font-size: 16px;
     &_value {
+      height: rem(36px);
       padding: rem(10px);
       border: 1px solid #E3E3E3;
       border-radius: 3px;
