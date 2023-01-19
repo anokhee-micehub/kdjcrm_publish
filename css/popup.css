@@ -31,19 +31,17 @@
   border-radius: 1.6rem;
   background-color: #fff;
 }
-.popupBox .stepBarBox-item {
+.popupBox .stepBarBox-item .stepBarBox-item_title {
   -webkit-clip-path: polygon(0% 0%, 94% 0%, 100% 50%, 94% 100%, 0% 100%) !important;
           clip-path: polygon(0% 0%, 94% 0%, 100% 50%, 94% 100%, 0% 100%) !important;
 }
-.popupBox .stepBarBox-item:first-child:nth-last-child(3), .popupBox .stepBarBox-item:first-child:nth-last-child(3) ~ .popupBox .stepBarBox-item {
+.popupBox .stepBarBox-item:first-child:nth-last-child(3) .stepBarBox-item_title, .popupBox .stepBarBox-item:first-child:nth-last-child(3) ~ .popupBox .stepBarBox-item .stepBarBox-item_title {
   -webkit-clip-path: polygon(0% 0%, 94% 0%, 100% 50%, 94% 100%, 0% 100%);
           clip-path: polygon(0% 0%, 94% 0%, 100% 50%, 94% 100%, 0% 100%);
 }
-.popupBox .stepBarBox-item:last-child {
+.popupBox .stepBarBox-item:last-child .stepBarBox-item_title {
   -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 100% 100%, 0% 100%) !important;
           clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 100% 100%, 0% 100%) !important;
-}
-.popupBox .stepBarBox-item:last-child .stepBarBox-item_title {
   border-radius: 5px;
 }
 .popupBox .stepBarBox-item_title {

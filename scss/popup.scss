@@ -33,14 +33,18 @@
   // 팝업창용 - 스탭바(간판)
   .stepBarBox {
     &-item {
-      clip-path: polygon(0% 0%, 94% 0%, 100% 50%, 94% 100%, 0% 100%) !important;
+      .stepBarBox-item_title {
+        clip-path: polygon(0% 0%, 94% 0%, 100% 50%, 94% 100%, 0% 100%) !important;
+      }
       &:first-child:nth-last-child(3),
       &:first-child:nth-last-child(3) ~ & {
-        clip-path: polygon(0% 0%, 94% 0%, 100% 50%, 94% 100%, 0% 100%);
+        .stepBarBox-item_title {
+          clip-path: polygon(0% 0%, 94% 0%, 100% 50%, 94% 100%, 0% 100%);
+        }
       }
       &:last-child {
-        clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 100% 100%, 0% 100%) !important;
         .stepBarBox-item_title {
+          clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 100% 100%, 0% 100%) !important;
           border-radius: 5px;
         }
       }

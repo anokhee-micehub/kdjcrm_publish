@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="./css/search.css">
   <link rel="stylesheet" href="./css/table.css">
   <link rel="stylesheet" href="./css/signboard.css">
+  <link rel="stylesheet" href="./css/card.css">
   <link rel="stylesheet" href="./css/popup.css">
   <link rel="stylesheet" href="./css/main.css">
   <link href="https://demo-custom.micehub-gov.com/css/v6/all.css" rel="stylesheet">
@@ -77,6 +78,135 @@
     </header>
     <main class="main">
       <section class="main-inner">
+        <article class="commonPageBox_ly">
+          <div class="lnb">
+            <div class="lnb-side">
+              <a class="lnb-link">홈</a>
+              <a class="lnb-link">고객</a>
+              <a class="lnb-link isActive">보고</a>
+            </div>
+          </div>
+          <div class="searchBox searchBox_head">
+            <div class="inputGroup">
+              <div class="inputGroup-line">
+                <div class="inputBox inputBox_select">
+                  <select class="select" name="" id="">
+                    <option value="">잠재 단계</option>
+                    <option value="value1">value1</option>
+                    <option value="value2">value2</option>
+                  </select>
+                </div>
+                <div class="inputBox inputBox_select">
+                  <select class="select" name="" id="">
+                    <option value="">잠재 단계</option>
+                    <option value="value1">value1</option>
+                    <option value="value2">value2</option>
+                  </select>
+                </div>
+                <div class="inputBox inputBox_select">
+                  <select class="select" name="" id="">
+                    <option value="">잠재 단계</option>
+                    <option value="value1">value1</option>
+                    <option value="value2">value2</option>
+                  </select>
+                </div>
+                <div class="inputBox inputBox_select">
+                  <select class="select" name="" id="">
+                    <option value="">잠재 단계</option>
+                    <option value="value1">value1</option>
+                    <option value="value2">value2</option>
+                  </select>
+                </div>
+                <div class="inputBox inputBox_calendar">
+                  <label class="label" for="regDate">기회마감일</label>
+                  <input class="input_date" type="date" value="2023-01-10">
+                </div>
+                <div class="inputBox inputBox_calendar">
+                  <label class="label" for="regDate">등록 일자</label>
+                  <input class="input_date" type="date" value="2023-01-10"> ~
+                  <input class="input_date" type="date" value="2023-01-10">
+                </div>
+              </div>
+              <div class="inputGroup-line">
+              </div>
+              <div class="inputGroup-line">
+                <div class="inputBox inputBox_select">
+                  <select class="select" name="" id="">
+                    <option value="">이름</option>
+                    <option value="value1">value1</option>
+                    <option value="value2">value2</option>
+                  </select>
+                </div>
+                <div class="inputBox inputBox_input">
+                  <input class="input_text" type="text">
+                  <button type="button" class="btn btn_m btn_m_search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    검색
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="buttonGroup">
+              <button type="button" class="btn btn_m btn_m_excel"><i class="fa-regular fa-file-excel"></i></button>
+            </div>
+          </div>
+          <div class="tableBox_ly">
+            <div class="searchBox searchBox_body">
+              <div class="searchBox_body-inner searchBox_body-inner_left">
+                <label class="label">검색 결과 <strong>1-15 / 500</strong>개</label>
+                <button type="button" class="btn btn_m btn_m_secondary"><i class="fa-solid fa-arrow-right-arrow-left"></i> 잠재 상태 변경</button>
+                <button type="button" class="btn btn_m btn_m_primary"><i class="fa-solid fa-file-export"></i> 고객으로 이동</button>
+              </div>
+              <div class="searchBox_body-inner searchBox_body-inner_right">
+                <button class="btn btn_m btn_m_align isActive"><i class="fa-solid fa-list"></i></button>
+                <button class="btn btn_m btn_m_align"><i class="fa-solid fa-grid-2"></i></button>
+                <div class="inputBox inputBox_select">
+                  <select class="select" name="" id="">
+                    <option value="">- 정렬순서 -</option>
+                    <option value="value1">value1</option>
+                    <option value="value2">value2</option>
+                  </select>
+                </div>
+                <div class="inputBox inputBox_select">
+                  <select class="select" name="" id="">
+                    <option value="">- 15개씩 보기 -</option>
+                    <option value="value1">value1</option>
+                    <option value="value2">value2</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="signboadWrapBox">
+              <ul class="stepBarBox">
+                <li class="stepBarBox-item">
+                  <h4 class="stepBarBox-item_title">신규</h4>
+                  <ul class="cardWrapBox">
+                    <li class="cardBox box">
+                      <div class="cardBox-inner">
+                        
+                      </div>
+                      <div class="cardBox-inner">
+
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+                <li class="stepBarBox-item">
+                  <h4 class="stepBarBox-item_title">분석</h4>
+                </li>
+                <li class="stepBarBox-item">
+                  <h4 class="stepBarBox-item_title">제안</h4>
+                </li>
+                <li class="stepBarBox-item">
+                  <h4 class="stepBarBox-item_title">협상</h4>
+                </li>
+                <li class="stepBarBox-item">
+                  <h4 class="stepBarBox-item_title">완료</h4>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </article>
         <article class="commonPageBox_ly">
           <div class="lnb">
             <div class="lnb-side">
@@ -749,6 +879,26 @@
                           <dt class="timelineBox-title">
                             2022년 12월
                           </dt>
+                          <dd class="timelineBox-desc">
+                            <i class="fa-solid fa-phone timelineBox-desc_icon blue"></i>
+                            <span class="timelineBox-desc_time">12-14 16:55</span>
+                            <em class="timelineBox-desc_cate">통화</em>
+                            <span class="timelineBox-desc_text">(이보나) [SWEET, ICEF] 홍길동 담당자와 통화했음. 참여 의지 있음. 참여 의지 있음. 참여 의지 있음. 참여 의지 있음. </span>
+                            <div class="flex_shrink">
+                              <button type="button" class="btn btn_xxs" title="수정"><i class="fa-solid fa-pen"></i></button>
+                              <button type="button" class="btn btn_xxs" title="삭제"><i class="fa-solid fa-trash"></i></button>
+                            </div>
+                          </dd>
+                          <dd class="timelineBox-desc">
+                            <i class="fa-solid fa-phone timelineBox-desc_icon blue"></i>
+                            <span class="timelineBox-desc_time">12-14 16:55</span>
+                            <em class="timelineBox-desc_cate">통화</em>
+                            <span class="timelineBox-desc_text">(이보나) [SWEET, ICEF] 홍길동 담당자와 통화했음. 참여 의지 있음. 참여 의지 있음. 참여 의지 있음. 참여 의지 있음. </span>
+                            <div class="flex_shrink">
+                              <button type="button" class="btn btn_xxs" title="수정"><i class="fa-solid fa-pen"></i></button>
+                              <button type="button" class="btn btn_xxs" title="삭제"><i class="fa-solid fa-trash"></i></button>
+                            </div>
+                          </dd>
                           <dd class="timelineBox-desc">
                             <i class="fa-solid fa-phone timelineBox-desc_icon blue"></i>
                             <span class="timelineBox-desc_time">12-14 16:55</span>

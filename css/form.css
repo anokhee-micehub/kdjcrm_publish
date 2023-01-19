@@ -97,12 +97,11 @@
 }
 .infoBox-info_desc {
   width: 100%;
-  padding: 1rem;
+  padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border: none;
   background-color: #f4f4f4;
-  overflow-y: auto;
 }
 .infoBox-info_form {
   padding-left: 15px;
@@ -297,8 +296,10 @@
 
 .timelineBox {
   width: 100%;
-  height: 13.3333333333rem;
-  padding: 0.5333333333rem;
+  max-height: 20.1333333333rem;
+  padding: 1.0666666667rem;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 .timelineBox-title {
   display: -webkit-inline-box;

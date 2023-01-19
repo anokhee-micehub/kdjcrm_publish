@@ -73,14 +73,15 @@ $colors: (#F7B401, #F89E00, #FF9000, #FF6201, #E83E0B);
     }
   }
   &-item {
-    clip-path: polygon(0% 0%, 94% 0%, 100% 50%, 94% 100%, 0% 100%);
     &:first-child:nth-last-child(3),
     &:first-child:nth-last-child(3) ~ & {
-      clip-path: polygon(0% 0%, 97% 0%, 100% 50%, 97% 100%, 0% 100%);
+      .stepBarBox-item_title {
+        clip-path: polygon(0% 0%, 97% 0%, 100% 50%, 97% 100%, 0% 100%);
+      }
     }
     &:last-child {
-      clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 100% 100%, 0% 100%) !important;
       .stepBarBox-item_title {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 100% 100%, 0% 100%) !important;
         border-radius: 5px;
       }
     }
@@ -91,6 +92,7 @@ $colors: (#F7B401, #F89E00, #FF9000, #FF6201, #E83E0B);
       font-weight: 600;
       color: #fff;
       border-radius: 5px 0 0 5px;
+      clip-path: polygon(0% 0%, 94% 0%, 100% 50%, 94% 100%, 0% 100%);
       &.disable {
         color: #666;
         background-color: $disable !important;
@@ -125,4 +127,9 @@ $colors: (#F7B401, #F89E00, #FF9000, #FF6201, #E83E0B);
 }
 .textBox-desc ~ .textBox-desc {
   margin-top: rem(5px);
+}
+
+// 간판+네임카드 박스
+.signboadWrapBox {
+  padding-top: rem(15px);
 }

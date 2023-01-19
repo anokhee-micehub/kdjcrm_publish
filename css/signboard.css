@@ -138,19 +138,13 @@
   -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
 }
-.stepBarBox-item {
-  -webkit-clip-path: polygon(0% 0%, 94% 0%, 100% 50%, 94% 100%, 0% 100%);
-          clip-path: polygon(0% 0%, 94% 0%, 100% 50%, 94% 100%, 0% 100%);
-}
-.stepBarBox-item:first-child:nth-last-child(3), .stepBarBox-item:first-child:nth-last-child(3) ~ .stepBarBox-item {
+.stepBarBox-item:first-child:nth-last-child(3) .stepBarBox-item_title, .stepBarBox-item:first-child:nth-last-child(3) ~ .stepBarBox-item .stepBarBox-item_title {
   -webkit-clip-path: polygon(0% 0%, 97% 0%, 100% 50%, 97% 100%, 0% 100%);
           clip-path: polygon(0% 0%, 97% 0%, 100% 50%, 97% 100%, 0% 100%);
 }
-.stepBarBox-item:last-child {
+.stepBarBox-item:last-child .stepBarBox-item_title {
   -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 100% 100%, 0% 100%) !important;
           clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 100% 100%, 0% 100%) !important;
-}
-.stepBarBox-item:last-child .stepBarBox-item_title {
   border-radius: 5px;
 }
 .stepBarBox-item_title {
@@ -160,6 +154,8 @@
   font-weight: 600;
   color: #fff;
   border-radius: 5px 0 0 5px;
+  -webkit-clip-path: polygon(0% 0%, 94% 0%, 100% 50%, 94% 100%, 0% 100%);
+          clip-path: polygon(0% 0%, 94% 0%, 100% 50%, 94% 100%, 0% 100%);
 }
 .stepBarBox-item_title.disable {
   color: #666;
@@ -196,4 +192,8 @@
 
 .textBox-desc ~ .textBox-desc {
   margin-top: 0.3333333333rem;
+}
+
+.signboadWrapBox {
+  padding-top: 1rem;
 }
