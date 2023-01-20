@@ -14,10 +14,27 @@
 */
 
 .cardWrapBox {
-  margin-top: rem(15px);
+  margin-top: rem(10px);
 }
 
 .cardBox {
-  width: calc(100% - 20px);
-  background-color: #fff;
+  display: grid;
+  grid-template-columns: 1fr 23px;
+  gap: rem(13px);
+  padding: rem(20px);
+  border-radius: 5px;
+  &-inner {
+    &_bottom {
+      grid-column: 1 / 3;
+      padding-top: rem(13px);
+      border-top: 1px solid #edeff1;
+      @include ellipsis(3);
+    }
+  }
+  &-title {
+    &_text {
+      color: $main;
+      font-size: rem(18px);
+    }
+  }
 }

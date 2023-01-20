@@ -36,6 +36,7 @@
 
 .wrap {
   background-color: #EEEFF1;
+  overflow-x: hidden;
 }
 
 .main {
@@ -44,7 +45,7 @@
 }
 
 .main-inner {
-  width: 1670px;
+  width: 1820px;
   margin: 0 auto;
 }
 
@@ -127,6 +128,7 @@
 }
 
 .box {
+  background-color: #fff;
   -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
 }
@@ -471,7 +473,6 @@
       -ms-flex: 1;
           flex: 1;
   padding: 2rem;
-  background-color: #fff;
   border-radius: 10px;
 }
 
@@ -488,8 +489,9 @@
   margin-bottom: 13px;
 }
 .subTitleBox.sectionTitle {
-  border-bottom: none;
-  padding-bottom: 2rem;
+  border-bottom: 1px dashed #e9e9e9;
+  padding-bottom: 10px;
+  margin-bottom: 2rem;
 }
 .subTitleBox.sectionTitle .subTitleBox-subTitle {
   font-size: 1.5333333333rem;
@@ -625,4 +627,15 @@
 .flex_wrap {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+.flex_jc_st {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }

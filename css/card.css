@@ -10,10 +10,27 @@
 * @ 상태(ex:isActive)
 */
 .cardWrapBox {
-  margin-top: 1rem;
+  margin-top: 0.6666666667rem;
 }
 
 .cardBox {
-  width: calc(100% - 20px);
-  background-color: #fff;
+  display: grid;
+  grid-template-columns: 1fr 23px;
+  gap: 0.8666666667rem;
+  padding: 1.3333333333rem;
+  border-radius: 5px;
+}
+.cardBox-inner_bottom {
+  grid-column: 1/3;
+  padding-top: 0.8666666667rem;
+  border-top: 1px solid #edeff1;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+.cardBox-title_text {
+  color: #FF6202;
+  font-size: 1.2rem;
 }

@@ -9,79 +9,10 @@
 * @ 블록-엘리먼트_구분1_구분2
 * @ 상태(ex:isActive)
 */
-.setFormBox {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-  gap: 1.3333333333rem;
-}
-.setFormBox-profile {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 320px;
-          flex: 0 0 320px;
-  background-color: #fff;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 2.1333333333rem;
-  border-radius: 10px;
-}
-.setFormBox-contents {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  background-color: #fff;
-  padding: 2.1333333333rem;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border-radius: 10px;
-  gap: 0.6666666667rem;
-}
-
-.userInfoText {
-  text-align: center;
-}
-
-.imgBox {
-  width: 125px;
-  height: 125px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  border-radius: 50%;
-  margin: 0 auto;
-}
-
-.imgBox ~ .lightText {
-  margin-top: 1.2666666667rem;
-}
-
-.lightText ~ .boldText {
-  margin-top: 0.8rem;
-}
-
 .stepBarBox {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(0, auto));
-  gap: 1rem;
+  gap: 2.5333333333rem;
 }
 .stepBarBox > .stepBarBox-item:nth-child(1) button {
   border: none;
@@ -138,14 +69,35 @@
   -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
 }
+.stepBarBox-item:first-child:nth-last-child(3), .stepBarBox-item:first-child:nth-last-child(3) ~ .stepBarBox-item {
+  min-width: 574px;
+}
 .stepBarBox-item:first-child:nth-last-child(3) .stepBarBox-item_title, .stepBarBox-item:first-child:nth-last-child(3) ~ .stepBarBox-item .stepBarBox-item_title {
+  -webkit-clip-path: polygon(0% 0%, 97% 0%, 100% 50%, 97% 100%, 0% 100%);
+          clip-path: polygon(0% 0%, 97% 0%, 100% 50%, 97% 100%, 0% 100%);
+}
+.stepBarBox-item:first-child:nth-last-child(4), .stepBarBox-item:first-child:nth-last-child(4) ~ .stepBarBox-item {
+  min-width: 408px;
+}
+.stepBarBox-item:first-child:nth-last-child(4) .stepBarBox-item_title, .stepBarBox-item:first-child:nth-last-child(4) ~ .stepBarBox-item .stepBarBox-item_title {
+  -webkit-clip-path: polygon(0% 0%, 97% 0%, 100% 50%, 97% 100%, 0% 100%);
+          clip-path: polygon(0% 0%, 97% 0%, 100% 50%, 97% 100%, 0% 100%);
+}
+.stepBarBox-item:first-child:nth-last-child(5), .stepBarBox-item:first-child:nth-last-child(5) ~ .stepBarBox-item {
+  min-width: 334px;
+}
+.stepBarBox-item:first-child:nth-last-child(5) .stepBarBox-item_title, .stepBarBox-item:first-child:nth-last-child(5) ~ .stepBarBox-item .stepBarBox-item_title {
   -webkit-clip-path: polygon(0% 0%, 97% 0%, 100% 50%, 97% 100%, 0% 100%);
           clip-path: polygon(0% 0%, 97% 0%, 100% 50%, 97% 100%, 0% 100%);
 }
 .stepBarBox-item:last-child .stepBarBox-item_title {
   -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 100% 100%, 0% 100%) !important;
           clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 100% 100%, 0% 100%) !important;
-  border-radius: 5px;
+  border-radius: 5px 15px 15px 5px;
+  width: unset;
+}
+.stepBarBox-item:not(:last-child) .stepBarBox-item_title {
+  width: calc(100% - 7px);
 }
 .stepBarBox-item_title {
   position: relative;
@@ -160,38 +112,6 @@
 .stepBarBox-item_title.disable {
   color: #666;
   background-color: #f4f4f4 !important;
-}
-
-.textBox {
-  border-radius: 3px;
-  font-size: 0.9333333333rem;
-}
-.textBox-title {
-  margin-bottom: 0.6666666667rem;
-  font-weight: 700;
-}
-.textBox-title i {
-  color: #959595;
-}
-.textBox-desc {
-  font-size: 1rem;
-  padding-left: 1.3333333333rem;
-}
-.textBox-desc_dot {
-  position: relative;
-  padding-left: 2.3333333333rem;
-}
-.textBox-desc_dot::before {
-  content: "-";
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  left: 25px;
-}
-
-.textBox-desc ~ .textBox-desc {
-  margin-top: 0.3333333333rem;
 }
 
 .signboadWrapBox {

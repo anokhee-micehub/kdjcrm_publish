@@ -13,50 +13,12 @@
 * @ 상태(ex:isActive)
 */
 
-// 간판 레이아웃 + 고객정보추가시
-.setFormBox {
-  @include flex-box($ai: stretch) {
-    gap: rem(20px);
-  }
-  &-profile {
-    @include flex-box($fd: column, $jc: between, $ai: stretch);
-    flex: 0 0 320px;
-    background-color: #fff;
-    box-sizing: border-box;
-    padding: rem(32px);
-    border-radius: 10px;
-  }
-  &-contents {
-    flex: 1;
-    background-color: #fff;
-    padding: rem(32px);
-    box-sizing: border-box;
-    border-radius: 10px;
-    gap: rem(10px);
-  }
-}
-.userInfoText {
-  text-align: center
-}
-.imgBox {
-  @include wh(125px, 125px);
-  @include reset-bg;
-  border-radius: 50%;
-  margin: 0 auto;
-}
-.imgBox ~ .lightText {
-  margin-top: rem(19px);
-}
-.lightText ~ .boldText {
-  margin-top: rem(12px);
-}
-
 // 스탭바(간판)
 $colors: (#F7B401, #F89E00, #FF9000, #FF6201, #E83E0B);
 .stepBarBox {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(0, auto));
-  gap: rem(15px);
+  gap: rem(38px);
   @each $color in $colors {
     $idx : index($colors, $color);
     & > &-item:nth-child(#{$idx}) {
@@ -75,6 +37,21 @@ $colors: (#F7B401, #F89E00, #FF9000, #FF6201, #E83E0B);
   &-item {
     &:first-child:nth-last-child(3),
     &:first-child:nth-last-child(3) ~ & {
+      min-width: 574px;
+      .stepBarBox-item_title {
+        clip-path: polygon(0% 0%, 97% 0%, 100% 50%, 97% 100%, 0% 100%);
+      }
+    }
+    &:first-child:nth-last-child(4),
+    &:first-child:nth-last-child(4) ~ & {
+      min-width: 408px;
+      .stepBarBox-item_title {
+        clip-path: polygon(0% 0%, 97% 0%, 100% 50%, 97% 100%, 0% 100%);
+      }
+    }
+    &:first-child:nth-last-child(5),
+    &:first-child:nth-last-child(5) ~ & {
+      min-width: 334px;
       .stepBarBox-item_title {
         clip-path: polygon(0% 0%, 97% 0%, 100% 50%, 97% 100%, 0% 100%);
       }
@@ -82,7 +59,13 @@ $colors: (#F7B401, #F89E00, #FF9000, #FF6201, #E83E0B);
     &:last-child {
       .stepBarBox-item_title {
         clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 100% 100%, 0% 100%) !important;
-        border-radius: 5px;
+        border-radius: 5px 15px 15px 5px;
+        width: unset;
+      }
+    }
+    &:not(:last-child) {
+      .stepBarBox-item_title {
+        width: calc(100% + -7px);
       }
     }
     &_title {
@@ -99,34 +82,6 @@ $colors: (#F7B401, #F89E00, #FF9000, #FF6201, #E83E0B);
       }
     }
   }
-}
-// 간판 하단 텍스트박스
-.textBox {
-  border-radius: 3px;
-  font-size: rem(14px);
-  &-title {
-    margin-bottom: rem(10px);
-    font-weight: 700;
-    i {
-      color: #959595;
-    }
-  }
-  &-desc {
-    font-size: rem(15px);
-    padding-left: rem(20px);
-    &_dot {
-      position: relative;
-      padding-left: rem(35px);
-      &::before {
-        content: '-';
-        @include position-center-y;
-        left: 25px;
-      }
-    }
-  }
-}
-.textBox-desc ~ .textBox-desc {
-  margin-top: rem(5px);
 }
 
 // 간판+네임카드 박스
