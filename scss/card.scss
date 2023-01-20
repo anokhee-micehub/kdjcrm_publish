@@ -23,18 +23,66 @@
   gap: rem(13px);
   padding: rem(20px);
   border-radius: 5px;
+  cursor: pointer;
+  & ~ & {
+    margin-top: 6px;
+  }
   &-inner {
+    &_right {
+      @include flex-box($fd: column, $jc: start) {
+        gap: 3px;
+      }
+    }
     &_bottom {
       grid-column: 1 / 3;
       padding-top: rem(13px);
       border-top: 1px solid #edeff1;
+      font-size: rem(14px);
+      line-height: 1.3;
       @include ellipsis(3);
     }
   }
   &-title {
+    margin-bottom: rem(17px);
     &_text {
       color: $main;
-      font-size: rem(18px);
+      font-size: rem(17px);
     }
+    &_chk {
+      .label {
+        font-size: rem(15px);
+      }
+      .em {
+        color: $main;
+      }
+    }
+  }
+  &-listItem {
+    @include flex-box($jc: start, $ai: start) {
+      gap: rem(10px);
+    }
+    font-size: rem(13px);
+    color: #666;
+    i {
+      color: #ccc;
+      padding-top: 2px;
+    }
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+}
+
+// 고객정보 카드
+.cardWrap {
+  .cardBox {
+    border: 1px solid #D2D2D2;
+    box-shadow: none;
+    &.isActive {
+      border: 1px solid $main;
+    }
+  }
+  .cardBox ~ .cardBox {
+    margin-top: 0;
   }
 }

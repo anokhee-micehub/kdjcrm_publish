@@ -19,18 +19,82 @@
   gap: 0.8666666667rem;
   padding: 1.3333333333rem;
   border-radius: 5px;
+  cursor: pointer;
+}
+.cardBox ~ .cardBox {
+  margin-top: 6px;
+}
+.cardBox-inner_right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 3px;
 }
 .cardBox-inner_bottom {
   grid-column: 1/3;
   padding-top: 0.8666666667rem;
   border-top: 1px solid #edeff1;
+  font-size: 0.9333333333rem;
+  line-height: 1.3;
   display: -webkit-box;
   overflow: hidden;
   text-overflow: ellipsis;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
 }
+.cardBox-title {
+  margin-bottom: 1.1333333333rem;
+}
 .cardBox-title_text {
   color: #FF6202;
-  font-size: 1.2rem;
+  font-size: 1.1333333333rem;
+}
+.cardBox-title_chk .label {
+  font-size: 1rem;
+}
+.cardBox-title_chk .em {
+  color: #FF6202;
+}
+.cardBox-listItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 0.6666666667rem;
+  font-size: 0.8666666667rem;
+  color: #666;
+}
+.cardBox-listItem i {
+  color: #ccc;
+  padding-top: 2px;
+}
+.cardBox-listItem:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.cardWrap .cardBox {
+  border: 1px solid #D2D2D2;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.cardWrap .cardBox.isActive {
+  border: 1px solid #FF6202;
+}
+.cardWrap .cardBox ~ .cardBox {
+  margin-top: 0;
 }

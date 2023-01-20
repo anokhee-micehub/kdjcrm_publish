@@ -392,8 +392,14 @@
   gap: rem(20px);
   &-half {
     flex: 1;
-    padding: rem(30px);
     border-radius: 10px;
+  }
+}
+.innerBox {
+  padding: rem(30px);
+  border-radius: 10px;
+  & ~ & {
+    margin-top: rem(20px);
   }
 }
 
@@ -511,7 +517,7 @@
   }
 }
 
-// 플렉스shrink
+// 플렉스속성
 .flex {
   &_shrink {
     flex-shrink: 0;
@@ -521,5 +527,17 @@
   }
   &_jc_st {
     @include flex-box($jc:start);
+  }
+  &_jc_bt {
+    @include flex-box($jc:between);
+  }
+}
+
+// 그리드속성
+.grid {
+  &_col2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: rem(20px);
   }
 }
