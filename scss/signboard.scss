@@ -13,7 +13,7 @@
 * @ 상태(ex:isActive)
 */
 
-// 스탭바(간판)
+// 스탭바(간판) - 드래그앤드롭용
 $colors: (#F7B401, #F89E00, #FF9000, #FF6201, #E83E0B);
 .stepBarBox {
   display: grid;
@@ -53,7 +53,7 @@ $colors: (#F7B401, #F89E00, #FF9000, #FF6201, #E83E0B);
     &:first-child:nth-last-child(5) ~ & {
       min-width: 334px;
       .stepBarBox-item_title {
-        clip-path: polygon(0% 0%, 97% 0%, 100% 50%, 97% 100%, 0% 100%);
+        clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%);
       }
     }
     &:last-child {

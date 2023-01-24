@@ -25,40 +25,39 @@
   &-contents {
     @include position-center;
     @include wh(100%, auto);
-    max-width: rem(724px);
+    max-width: rem(924px);
     padding: rem(42px) rem(58px);
     border-radius: rem(24px);
     background-color: #fff;
   }
-  // 팝업창용 - 스탭바(간판)
-  .stepBarBox {
-    &-item {
-      .stepBarBox-item_title {
-        clip-path: polygon(0% 0%, 94% 0%, 100% 50%, 94% 100%, 0% 100%) !important;
-      }
-      &:first-child:nth-last-child(3),
-      &:first-child:nth-last-child(3) ~ & {
-        .stepBarBox-item_title {
-          clip-path: polygon(0% 0%, 94% 0%, 100% 50%, 94% 100%, 0% 100%);
-        }
-      }
-      &:last-child {
-        .stepBarBox-item_title {
-          clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 100% 100%, 0% 100%) !important;
-          border-radius: 5px;
-        }
-      }
-      &_title {
-        font-size: rem(14px);
-      }
-    }
-  }
   // 팝업창용 - 타이틀바
   .subTitleBox {
+    padding-bottom: rem(20px);
+    margin-bottom: rem(18px);
+    border-bottom: 1px solid #E9E9E9;
     &-subTitle {
       font-size: rem(20px);
       font-weight: 700;
     }
+  }
+
+  // 팝업창용 에로우버튼
+  .arrowBtns:first-child:nth-last-child(3),
+  .arrowBtns:first-child:nth-last-child(3) ~ .arrowBtns {
+    clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%);
+  }
+  .arrowBtns:first-child:nth-last-child(4),
+  .arrowBtns:first-child:nth-last-child(4) ~ .arrowBtns {
+    clip-path: polygon(0% 0%, 94% 0%, 100% 50%, 94% 100%, 0% 100%);
+  }
+  .arrowBtns:first-child:nth-last-child(5),
+  .arrowBtns:first-child:nth-last-child(5) ~ .arrowBtns {
+    clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%);
+  }
+
+  // 팝업창용 간격 조정
+  .infoBox ~ .infoBox {
+    margin-top: 0;
   }
 }
 
@@ -87,6 +86,14 @@
     @include flex-box {
       gap: rem(6px);
     }
+  }
+}
+
+.popupDetailTitle {
+  padding-left: rem(10px);
+  border-left: 3px solid $main;
+  &:not(:first-child) {
+    margin-top: rem(20px);
   }
 }
 

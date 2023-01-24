@@ -119,7 +119,7 @@
   }
   &_xs {
     @include wh(rem(30px), rem(30px));
-    background-color: #F5F5F5;
+    background-color: #fff;
     border: 1px solid #D2D2D2;
     border-radius: 3px;
     font-size: rem(16px);
@@ -149,6 +149,9 @@
       &.start {
         align-self: flex-start;
       }
+    }
+    &_outline {
+      border: 1px solid #E9E9E9;
     }
   }
   &_m {

@@ -26,30 +26,37 @@
           transform: translate(-50%, -50%);
   width: 100%;
   height: auto;
-  max-width: 48.2666666667rem;
+  max-width: 61.6rem;
   padding: 2.8rem 3.8666666667rem;
   border-radius: 1.6rem;
   background-color: #fff;
 }
-.popupBox .stepBarBox-item .stepBarBox-item_title {
-  -webkit-clip-path: polygon(0% 0%, 94% 0%, 100% 50%, 94% 100%, 0% 100%) !important;
-          clip-path: polygon(0% 0%, 94% 0%, 100% 50%, 94% 100%, 0% 100%) !important;
-}
-.popupBox .stepBarBox-item:first-child:nth-last-child(3) .stepBarBox-item_title, .popupBox .stepBarBox-item:first-child:nth-last-child(3) ~ .popupBox .stepBarBox-item .stepBarBox-item_title {
-  -webkit-clip-path: polygon(0% 0%, 94% 0%, 100% 50%, 94% 100%, 0% 100%);
-          clip-path: polygon(0% 0%, 94% 0%, 100% 50%, 94% 100%, 0% 100%);
-}
-.popupBox .stepBarBox-item:last-child .stepBarBox-item_title {
-  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 100% 100%, 0% 100%) !important;
-          clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 100% 100%, 0% 100%) !important;
-  border-radius: 5px;
-}
-.popupBox .stepBarBox-item_title {
-  font-size: 0.9333333333rem;
+.popupBox .subTitleBox {
+  padding-bottom: 1.3333333333rem;
+  margin-bottom: 1.2rem;
+  border-bottom: 1px solid #E9E9E9;
 }
 .popupBox .subTitleBox-subTitle {
   font-size: 1.3333333333rem;
   font-weight: 700;
+}
+.popupBox .arrowBtns:first-child:nth-last-child(3),
+.popupBox .arrowBtns:first-child:nth-last-child(3) ~ .arrowBtns {
+  -webkit-clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%);
+          clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%);
+}
+.popupBox .arrowBtns:first-child:nth-last-child(4),
+.popupBox .arrowBtns:first-child:nth-last-child(4) ~ .arrowBtns {
+  -webkit-clip-path: polygon(0% 0%, 94% 0%, 100% 50%, 94% 100%, 0% 100%);
+          clip-path: polygon(0% 0%, 94% 0%, 100% 50%, 94% 100%, 0% 100%);
+}
+.popupBox .arrowBtns:first-child:nth-last-child(5),
+.popupBox .arrowBtns:first-child:nth-last-child(5) ~ .arrowBtns {
+  -webkit-clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%);
+          clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%);
+}
+.popupBox .infoBox ~ .infoBox {
+  margin-top: 0;
 }
 
 .popup-detail {
@@ -101,6 +108,14 @@
       -ms-flex-align: center;
           align-items: center;
   gap: 0.4rem;
+}
+
+.popupDetailTitle {
+  padding-left: 0.6666666667rem;
+  border-left: 3px solid #FF6202;
+}
+.popupDetailTitle:not(:first-child) {
+  margin-top: 1.3333333333rem;
 }
 
 .btn_pop i {

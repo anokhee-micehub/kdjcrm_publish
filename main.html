@@ -210,9 +210,11 @@
                       <div class="cardBox-inner cardBox-inner_left">
                         <h5 class="cardBox-title cardBox-title_chk">
                           <div class="inputLabelGroupBox">
-                            <input class="input_checkbox" type="checkbox" id="chk1" checked="">
-                            <span class="checkboxChk"></span>
-                            <label class="label" for="chk1"><em class="em">홍길동 사원</em> (주식회사 마이스허브)</label>
+                            <label class="label" for="chk1">
+                              <input class="input_checkbox" type="checkbox" id="chk1" checked="">
+                              <span class="checkboxChk"></span>
+                              <em class="em">홍길동 사원</em> (주식회사 마이스허브)
+                            </label>
                           </div>
                         </h5>
                         <ul class="cardBox-list">
@@ -272,43 +274,6 @@
                           <li class="cardBox-listItem">
                             <i class="fa-solid fa-circle-dollar"></i>
                             2023.03.31
-                          </li>
-                        </ul>
-                      </div>
-                      <div class="cardBox-inner cardBox-inner_right">
-                        <button type="button" class="btn btn_xxs" title="수정"><i class="fa-solid fa-pen"></i></button>
-                        <button type="button" class="btn btn_xxs" title="이력"><i class="fa-solid fa-rotate-right"></i></button>
-                        <button type="button" class="btn btn_xxs" title="삭제"><i class="fa-solid fa-trash"></i></button>
-                      </div>
-                      <div class="cardBox-inner cardBox-inner_bottom">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam harum consectetur eius, alias dolor facilis. Amet, voluptatem praesentium autem delectus rem adipisci architecto voluptates reprehenderit vitae cupiditate fugit quo repellendus.
-                      </div>
-                    </li>
-                    <li class="cardBox box">
-                      <div class="cardBox-inner cardBox-inner_left">
-                        <h5 class="cardBox-title cardBox-title_chk">
-                          <div class="inputLabelGroupBox">
-                            <input class="input_checkbox" type="checkbox" id="chk1" checked="">
-                            <span class="checkboxChk"></span>
-                            <label class="label" for="chk1"><em class="em">홍길동 사원</em> (주식회사 마이스허브)</label>
-                          </div>
-                        </h5>
-                        <ul class="cardBox-list">
-                          <li class="cardBox-listItem">
-                            <i class="fa-solid fa-phone"></i>
-                            02-1234-5678
-                          </li>
-                          <li class="cardBox-listItem">
-                            <i class="fa-solid fa-envelope"></i>
-                            hgd@mail.com
-                          </li>
-                          <li class="cardBox-listItem">
-                            <i class="fa-solid fa-user"></i>
-                            홍길동 (주식회사 마이스허브)
-                          </li>
-                          <li class="cardBox-listItem">
-                            <i class="fa-solid fa-circle-question"></i>
-                            미디어 - 김철수 수집
                           </li>
                         </ul>
                       </div>
@@ -533,11 +498,12 @@
                 <h3 class="subTitleBox-subTitle">잠재 고객 상태</h3>
                 <p class="subTitleBox-descText">단계를 클릭하여 고객 상태를 바꿀 수 있습니다.</p>
               </div>
+              <!-- disable이 지워지면 액티브됨 -->
               <div class="tabWrapBox">
-                <button type="button" class="arrowBtns btn">분류</button>
-                <button type="button" class="arrowBtns btn">분류</button>
-                <button type="button" class="arrowBtns btn">분류</button>
-                <button type="button" class="arrowBtns btn">분류</button>
+                <button type="button" class="arrowBtns btn disable">분류</button>
+                <button type="button" class="arrowBtns btn disable">분류</button>
+                <button type="button" class="arrowBtns btn disable">분류</button>
+                <button type="button" class="arrowBtns btn disable">분류</button>
                 <button type="button" class="arrowBtns btn disable">분류</button>
               </div>
               <dl class="textBox">
@@ -745,14 +711,18 @@
                         <div class="infoBox-info">
                           <div class="inputBox flex_wrap">
                             <div class="inputLabelGroupBox">
-                              <input class="input_checkbox" type="checkbox" id="chk1" checked>
-                              <span class="checkboxChk"></span>
-                              <label for="chk1">초청장</label>
+                              <label for="chk11">
+                                <input class="input_checkbox" type="checkbox" id="chk11" checked>
+                                <span class="checkboxChk"></span>
+                                초청장
+                              </label>
                             </div>
                             <div class="inputLabelGroupBox">
-                              <input class="input_checkbox" type="checkbox" id="chk2">
-                              <span class="checkboxChk"></span>
-                              <label for="chk2">초청장</label>
+                              <label for="chk22">
+                                <input class="input_checkbox" type="checkbox" id="chk22">
+                                <span class="checkboxChk"></span>
+                                초청장
+                              </label>
                             </div>
                           </div>
                         </div>
@@ -837,14 +807,18 @@
                         <div class="infoBox-info">
                           <div class="inputBox flex_wrap">
                             <div class="inputLabelGroupBox">
-                              <input class="input_checkbox" type="checkbox" id="chk1" checked>
-                              <span class="checkboxChk"></span>
-                              <label for="chk1">초청장</label>
+                              <label for="chk33">
+                                <input class="input_checkbox" type="checkbox" id="chk33" checked>
+                                <span class="checkboxChk"></span>
+                                초청장
+                              </label>
                             </div>
                             <div class="inputLabelGroupBox">
-                              <input class="input_checkbox" type="checkbox" id="chk2">
-                              <span class="checkboxChk"></span>
-                              <label for="chk2">초청장</label>
+                              <label for="chk44">
+                                <input class="input_checkbox" type="checkbox" id="chk44">
+                                <span class="checkboxChk"></span>
+                                초청장
+                              </label>
                             </div>
                           </div>
                         </div>
@@ -898,6 +872,7 @@
                     </div>
                   </div>
                   <div class="grid_col2 cardWrap">
+                    <!-- isActive 가 들어오면 선이 강조됨 -->
                     <div class="cardBox cardBox_btn box">
                       <div class="cardBox-inner cardBox-inner_left">
                         <h5 class="cardBox-title cardBox-title_text">홍길동 사원</h5>
@@ -945,10 +920,12 @@
                   <ul class="infoBox">
                     <li class="infoBox-inner infoBox-inner_full">
                       <strong class="infoBox-cate">총평</strong>
+                      <!-- offInput이 onInput로 바뀌면 총평텍스트를 입력할 수 있음 -->
                       <div class="infoBox-info infoBox-info_bt offInput">
                         <div class="customSelectBox_wrap">
                           <div class="customSelectBox">
-                            <button class="customSelectBox-btn btn customSelectBox-btn_value">
+                            <!-- active가 들어오면 셀렉트박스가 열림 -->
+                            <button class="customSelectBox-btn btn customSelectBox-btn_value active">
                               <i class="fa-solid fa-face-smile"></i>
                             </button>
                             <div class="customSelectBox-options">
@@ -988,32 +965,82 @@
                             <button class="btn btn_xs btn_xs_tran"><i class="fa-solid fa-magnifying-glass"></i></button>
                           </div>
                           <div class="customSelectBox">
-                            <div class="customSelectBox">
-                              <button class="customSelectBox-btn btn customSelectBox-btn_value">
-                                <i class="fa-solid fa-filter"></i>
-                              </button>
-                              <div class="customSelectBox-options">
-                                <button class="customSelectBox-btn btn customSelectBox-btn_option" data-val="fa-face-smile">
-                                  <i class="fa-solid fa-face-smile"></i>
-                                </button>
-                                <button class="customSelectBox-btn btn customSelectBox-btn_option" data-val="fa-face-meh">
-                                  <i class="fa-solid fa-face-meh"></i>
-                                </button>
-                                <button class="customSelectBox-btn btn customSelectBox-btn_option" data-val="fa-face-frown">
-                                  <i class="fa-solid fa-face-frown"></i>
-                                </button>
-                                <button class="customSelectBox-btn btn customSelectBox-btn_option" data-val="fa-circle-xmark">
-                                  <i class="fa-solid fa-circle-xmark"></i>
-                                </button>
+                            <!-- active가 들어오면 셀렉트박스가 열림 -->
+                            <button class="customSelectBox-btn btn customSelectBox-btn_value">
+                              <i class="fa-solid fa-filter"></i>
+                            </button>
+                            <div class="customSelectBox-options">
+                              <div class="filterChkListBox">
+                                <dl class="filterChkListBox-inner">
+                                  <dt class="filterChkListBox-title">TM 담당자</dt>
+                                  <dd class="inputLabelGroupBox">
+                                    <label for="chk100">
+                                      <input class="input_checkbox" type="checkbox" id="chk100" checked="">
+                                      <span class="checkboxChk"></span>
+                                      성이름
+                                    </label>
+                                  </dd>
+                                  <dd class="inputLabelGroupBox">
+                                    <label for="chk200">
+                                      <input class="input_checkbox" type="checkbox" id="chk200" checked="">
+                                      <span class="checkboxChk"></span>
+                                      성이름
+                                    </label>
+                                  </dd>
+                                  <dd class="inputLabelGroupBox">
+                                    <label for="chk300">
+                                      <input class="input_checkbox" type="checkbox" id="chk300" checked="">
+                                      <span class="checkboxChk"></span>
+                                      성이름
+                                    </label>
+                                  </dd>
+                                </dl>
+                                <dl class="filterChkListBox-inner">
+                                  <dt class="filterChkListBox-title">분류</dt>
+                                  <dd class="inputLabelGroupBox">
+                                    <label for="chk400">
+                                      <input class="input_checkbox" type="checkbox" id="chk400" checked="">
+                                      <span class="checkboxChk"></span>
+                                      통화
+                                    </label>
+                                  </dd>
+                                  <dd class="inputLabelGroupBox">
+                                    <label for="chk500">
+                                      <input class="input_checkbox" type="checkbox" id="chk500" checked="">
+                                      <span class="checkboxChk"></span>
+                                      메일
+                                    </label>
+                                  </dd>
+                                  <dd class="inputLabelGroupBox">
+                                    <label for="chk600">
+                                      <input class="input_checkbox" type="checkbox" id="chk600" checked="">
+                                      <span class="checkboxChk"></span>
+                                      SMS
+                                    </label>
+                                  </dd>
+                                </dl>
+                                <button type="button" class="btn btn_m btn_m_secondary">필터 적용</button>
                               </div>
                             </div>
+                          </div>
+                          <div class="customSelectBox">
+                            <button class="customSelectBox-btn btn btn_xs active"><i class="fa-regular fa-calendar-day"></i></i></button>
                             <div class="customSelectBox-options">
-                              <button class="evalSelectBox-btn btn evalSelectBox-btn_option" data-val="fa-face-smile">
-                                <i class="fa-solid fa-face-smile"></i>
-                              </button>
+                              <div class="setDateBox">
+                                <h5 class="filterChkListBox-title">등록일자</h5>
+                                <div class="inputBox inputBox_calendar">
+                                  <input class="input_date" type="date" value="2023-01-10"> ~
+                                  <input class="input_date" type="date" value="2023-01-10">
+                                </div>
+                                <div class="btnsBox">
+                                  <button type="button" class="btn btn_s btn_s_outline active">오늘</button>
+                                  <button type="button" class="btn btn_s btn_s_outline">일주일</button>
+                                  <button type="button" class="btn btn_s btn_s_outline">1달</button>
+                                </div>
+                                <button type="button" class="btn btn_m btn_m_secondary">필터 적용</button>
+                              </div>
                             </div>
                           </div>
-                          <button class="btn btn_xs btn_xs_gray"><i class="fa-solid fa-calendar-day"></i></button>
                           <button class="btn btn_m btn_m_back">검색조건 초기화</button>
                         </div>
                         <button type="button" class="btn btn_m btn_m_secondary"><i class="fa-solid fa-plus"></i> 개별 등록</button>
@@ -1190,21 +1217,119 @@
                 <p class="popup-desc">
                   체크한 잠재고객 <em class="em">10</em>명의 잠재단계를 아래 선택한 단계와 같이 변경합니다.
                 </p>
-                <ul class="stepBarBox">
-                  <li class="stepBarBox-item">
-                    <h4 class="stepBarBox-item_title disable">분류</h4>
+                <div class="tabWrapBox">
+                  <button type="button" class="arrowBtns btn">분류</button>
+                  <button type="button" class="arrowBtns btn">분류</button>
+                  <button type="button" class="arrowBtns btn disable">분류</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 개별등록 -->
+          <div class="popupBox" style="display: none;">
+            <div class="popupBox-contents">
+              <div class="popup-title">
+                <div class="subTitleBox subTitleBox_bt">
+                  <div class="subTitleBox-inner">
+                    <h3 class="subTitleBox-subTitle">
+                      개별 등록
+                    </h3>
+                  </div>
+                  <button class="btn btn_pop"><i class="fa-light fa-xmark"></i></button>
+                </div>
+              </div>
+              <div class="popup-detail">
+                <h4 class="popupDetailTitle">
+                  잠재 고객 상태
+                </h4>
+                <div class="tabWrapBox">
+                  <button type="button" class="arrowBtns btn">분류</button>
+                  <button type="button" class="arrowBtns btn">분류</button>
+                  <button type="button" class="arrowBtns btn disable">분류</button>
+                </div>
+                <h4 class="popupDetailTitle">
+                  고객 정보
+                </h4>
+                <ul class="infoBox">
+                  <li class="infoBox-inner infoBox-inner_half">
+                    <strong class="infoBox-cate em">인풋</strong>
+                    <div class="infoBox-info infoBox-info_form">
+                      <div class="inputBox inputBox_input">
+                        <input class="input_text" type="text">
+                      </div>
+                    </div>
                   </li>
-                  <li class="stepBarBox-item">
-                    <h4 class="stepBarBox-item_title disable">크리닝</h4>
+                  <li class="infoBox-inner infoBox-inner_half">
+                    <strong class="infoBox-cate em">인풋</strong>
+                    <div class="infoBox-info infoBox-info_form">
+                      <div class="inputBox inputBox_input">
+                        <input class="input_text" type="text">
+                      </div>
+                    </div>
                   </li>
-                  <li class="stepBarBox-item">
-                    <h4 class="stepBarBox-item_title disable">유치</h4>
+                  <li class="infoBox-inner infoBox-inner_half">
+                    <strong class="infoBox-cate em">인풋</strong>
+                    <div class="infoBox-info infoBox-info_form">
+                      <div class="inputBox inputBox_input">
+                        <input class="input_text" type="text">
+                      </div>
+                    </div>
+                  </li>
+                  <li class="infoBox-inner infoBox-inner_half">
+                    <strong class="infoBox-cate em">인풋</strong>
+                    <div class="infoBox-info infoBox-info_form">
+                      <div class="inputBox inputBox_input">
+                        <input class="input_text" type="text">
+                      </div>
+                    </div>
+                  </li>
+                  <li class="infoBox-inner infoBox-inner_half">
+                    <strong class="infoBox-cate em">인풋</strong>
+                    <div class="infoBox-info infoBox-info_form">
+                      <div class="inputBox inputBox_input">
+                        <input class="input_text" type="text">
+                      </div>
+                    </div>
+                  </li>
+                  <li class="infoBox-inner infoBox-inner_half">
+                    <strong class="infoBox-cate em">인풋</strong>
+                    <div class="infoBox-info infoBox-info_form">
+                      <div class="inputBox inputBox_input">
+                        <input class="input_text" type="text">
+                      </div>
+                    </div>
                   </li>
                 </ul>
-                <div class="popup-btnGroup">
-                  <button type="button" class="btn btn_l btn_l_reg">등록</button>
-                  <button type="button" class="btn btn_l btn_l_cl">취소</button>
-                </div>
+                <h4 class="popupDetailTitle">
+                  정보 수집
+                </h4>
+                <ul class="infoBox">
+                  <li class="infoBox-inner infoBox-inner_half">
+                    <strong class="infoBox-cate em">셀렉박스</strong>
+                    <div class="infoBox-info infoBox-info_form">
+                      <div class="inputBox inputBox_select">
+                        <select class="select" name="" id="">
+                          <option value="">잠재 단계</option>
+                          <option value="value1">value1</option>
+                          <option value="value2">value2</option>
+                        </select>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="infoBox-inner infoBox-inner_half">
+                    <strong class="infoBox-cate em">셀렉박스</strong>
+                    <div class="infoBox-info infoBox-info_form">
+                      <div class="inputBox inputBox_select">
+                        <select class="select" name="" id="">
+                          <option value="">잠재 단계</option>
+                          <option value="value1">value1</option>
+                          <option value="value2">value2</option>
+                        </select>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -1251,42 +1376,6 @@
             </div>
           </div>
 
-          <!-- 유효고객 전환 -->
-          <div class="popupBox" style="display: none;">
-            <div class="popupBox-contents">
-              <div class="popup-title">
-                <div class="subTitleBox subTitleBox_bt">
-                  <div class="subTitleBox-inner">
-                    <h3 class="subTitleBox-subTitle">
-                      유효고객 전환
-                    </h3>
-                  </div>
-                  <button class="btn btn_pop"><i class="fa-light fa-xmark"></i></button>
-                </div>
-              </div>
-              <div class="popup-detail">
-                <p class="popup-desc">
-                  체크한 잠재고객 <em class="em">10</em>명을 유효고객으로 전환합니다. 고객이 소속될 그룹을 선택해주세요.
-                </p>
-                <div class="addGroupBox">
-                  <div class="addGroupBox-side">
-                    <h4 class="popupSubTitleText">
-                      새로운 그룹에 추가하기
-                    </h4>
-                  </div>
-                  <div class="addGroupBox-side">
-                    <h4 class="popupSubTitleText">
-                      기존 그룹에 추가하기
-                    </h4>
-                  </div>
-                </div>
-                <div class="popup-btnGroup">
-                  <button type="button" class="btn btn_l btn_l_reg">등록</button>
-                  <button type="button" class="btn btn_l btn_l_cl">취소</button>
-                </div>
-              </div>
-            </div>
-          </div>
         </article>
       </section>
     </main>

@@ -87,8 +87,8 @@
   min-width: 334px;
 }
 .stepBarBox-item:first-child:nth-last-child(5) .stepBarBox-item_title, .stepBarBox-item:first-child:nth-last-child(5) ~ .stepBarBox-item .stepBarBox-item_title {
-  -webkit-clip-path: polygon(0% 0%, 97% 0%, 100% 50%, 97% 100%, 0% 100%);
-          clip-path: polygon(0% 0%, 97% 0%, 100% 50%, 97% 100%, 0% 100%);
+  -webkit-clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%);
+          clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%);
 }
 .stepBarBox-item:last-child .stepBarBox-item_title {
   -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 100% 100%, 0% 100%) !important;

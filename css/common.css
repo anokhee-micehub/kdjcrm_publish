@@ -164,7 +164,7 @@
 .btn_xs {
   width: 2rem;
   height: 2rem;
-  background-color: #F5F5F5;
+  background-color: #fff;
   border: 1px solid #D2D2D2;
   border-radius: 3px;
   font-size: 1.0666666667rem;
@@ -196,6 +196,9 @@
 .btn_s_del.start {
   -ms-flex-item-align: start;
       align-self: flex-start;
+}
+.btn_s_outline {
+  border: 1px solid #E9E9E9;
 }
 .btn_m {
   padding: 0 0.8666666667rem;
