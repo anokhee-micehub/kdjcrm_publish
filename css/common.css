@@ -241,10 +241,13 @@
 .btn_m_align.isActive {
   color: #FF6202;
 }
+.btn_m.disable {
+  background-color: #71706E;
+}
 .btn_l {
   padding: 0.8rem 0;
-  height: 40px;
-  border-radius: 6px;
+  height: 2.6666666667rem;
+  border-radius: 3px;
   color: #fff;
 }
 .btn_l_reg {

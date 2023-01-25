@@ -61,6 +61,61 @@
   }
 }
 
+// 그룹(기업,기관) 검색박스
+.searchGroupBox {
+  .inputBox ~ .resBox {
+    margin-top: rem(10px);
+  }
+  .input_text {
+    border: 1px solid #E9E9E9;
+    &::placeholder {
+      color: #aaa;
+    }
+  }
+  .resBox {
+    border-radius: 3px;
+    background-color: #eee;
+    &-inner {
+      &_res,
+      &_input {
+        padding: rem(10px) rem(20px);
+      }
+      &_res {
+        @include flex-box;
+        min-height: rem(150px);
+        max-height: rem(150px);
+        border-bottom: 1px solid #dbdbdb;
+        text-align: center;
+        overflow-y: auto;
+        .em {
+          color: $main;
+        }
+      }
+      &_input {
+        .input_text {
+          flex: 1;
+        }
+      }
+    }
+  }
+  .isRes {
+    @include flex-box($fd:column, $ai:start);
+    flex: 1;
+    .btn {
+      width: 100%;
+      justify-content: flex-start;
+    }
+  }
+  & + .inputLabelGroupBox {
+    .label {
+      font-size: rem(16px);
+      .checkboxChk {
+        vertical-align: middle;
+      }
+    }
+  }
+}
+
 .popup {
   &-detail {
     @include flex-box($fd: column, $ai: stretch) {

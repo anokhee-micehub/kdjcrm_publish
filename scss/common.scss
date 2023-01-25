@@ -194,11 +194,14 @@
         color: $main;
       }
     }
+    &.disable {
+      background-color: #71706E;
+    }
   }
   &_l { 
     padding: rem(12px) 0;
-    height: 40px;
-    border-radius: 6px;
+    height: rem(40px);
+    border-radius: 3px;
     color: #fff;
     &_reg {
       min-width: rem(140px);

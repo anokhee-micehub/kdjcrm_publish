@@ -59,6 +59,89 @@
   margin-top: 0;
 }
 
+.searchGroupBox .inputBox ~ .resBox {
+  margin-top: 0.6666666667rem;
+}
+.searchGroupBox .input_text {
+  border: 1px solid #E9E9E9;
+}
+.searchGroupBox .input_text::-webkit-input-placeholder {
+  color: #aaa;
+}
+.searchGroupBox .input_text::-moz-placeholder {
+  color: #aaa;
+}
+.searchGroupBox .input_text:-ms-input-placeholder {
+  color: #aaa;
+}
+.searchGroupBox .input_text::-ms-input-placeholder {
+  color: #aaa;
+}
+.searchGroupBox .input_text::placeholder {
+  color: #aaa;
+}
+.searchGroupBox .resBox {
+  border-radius: 3px;
+  background-color: #eee;
+}
+.searchGroupBox .resBox-inner_res, .searchGroupBox .resBox-inner_input {
+  padding: 0.6666666667rem 1.3333333333rem;
+}
+.searchGroupBox .resBox-inner_res {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 10rem;
+  max-height: 10rem;
+  border-bottom: 1px solid #dbdbdb;
+  text-align: center;
+  overflow-y: auto;
+}
+.searchGroupBox .resBox-inner_res .em {
+  color: #FF6202;
+}
+.searchGroupBox .resBox-inner_input .input_text {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.searchGroupBox .isRes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.searchGroupBox .isRes .btn {
+  width: 100%;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.searchGroupBox + .inputLabelGroupBox .label {
+  font-size: 1.0666666667rem;
+}
+.searchGroupBox + .inputLabelGroupBox .label .checkboxChk {
+  vertical-align: middle;
+}
+
 .popup-detail {
   display: -webkit-box;
   display: -ms-flexbox;
