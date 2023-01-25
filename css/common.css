@@ -34,6 +34,26 @@
   margin-top: 3.3333333333rem;
 }
 
+.mb10 {
+  margin-bottom: 0.6666666667rem;
+}
+
+.mb20 {
+  margin-bottom: 1.3333333333rem;
+}
+
+.mb30 {
+  margin-bottom: 2rem;
+}
+
+.mb40 {
+  margin-bottom: 2.6666666667rem;
+}
+
+.mb50 {
+  margin-bottom: 3.3333333333rem;
+}
+
 .wrap {
   background-color: #EEEFF1;
   overflow-x: hidden;
@@ -325,6 +345,13 @@
   background-color: #f1f1f1;
   border: 1px solid #D2D2D2;
 }
+.input_text_formInput {
+  font-size: 0.9333333333rem;
+}
+.input_text_formInput:disabled {
+  background-color: transparent;
+  border: none !important;
+}
 .input_file {
   display: none;
 }
@@ -426,10 +453,21 @@
   right: 10px;
   font-family: fontAwesome;
 }
+.inputBox_select:has(.select_formSelect:disabled) {
+  border: none !important;
+}
+.inputBox_select:has(.select_formSelect:disabled)::after {
+  content: "";
+}
 .inputBox_select .select {
   -webkit-appearance: none;
   background-color: transparent;
   z-index: 9;
+  font-size: 0.9333333333rem;
+  color: #000;
+}
+.inputBox_select .select_formSelect:disabled {
+  border: none;
 }
 .inputBox_textarea .input_textarea {
   resize: none;
@@ -668,4 +706,22 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.3333333333rem;
+}
+
+.chkAreaBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 320px;
+  background-color: #F3F7FD;
+}
+.chkAreaBox .innerText {
+  font-size: 1.3333333333rem;
+  color: #4B4B4B;
 }

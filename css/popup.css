@@ -26,10 +26,16 @@
           transform: translate(-50%, -50%);
   width: 100%;
   height: auto;
-  max-width: 61.6rem;
+  max-width: 930px;
+  max-height: calc(100vh - 100px);
   padding: 2.8rem 3.8666666667rem;
   border-radius: 1.6rem;
   background-color: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.popupBox-contents_m {
+  max-width: 740px;
 }
 .popupBox .subTitleBox {
   padding-bottom: 1.3333333333rem;
@@ -57,6 +63,67 @@
 }
 .popupBox .infoBox ~ .infoBox {
   margin-top: 0;
+}
+
+.popup-detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.3333333333rem;
+  max-height: calc(100vh - 345px);
+  overflow-y: auto;
+}
+.popup-detail .subTitleBox:not(:first-child) {
+  margin-top: 2.6666666667rem;
+}
+.popup-desc {
+  font-size: 0.9333333333rem;
+  font-weight: 400;
+}
+.popup-desc .em {
+  color: #FF6202;
+}
+.popup-desc-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.2666666667rem;
+}
+.popup-btnGroup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.4rem;
+}
+
+.popupDetailTitle {
+  padding-left: 0.6666666667rem;
+  border-left: 3px solid #FF6202;
+}
+.popupDetailTitle:not(:first-child) {
+  margin-top: 1.3333333333rem;
 }
 
 .searchGroupBox .inputBox ~ .resBox {
@@ -97,13 +164,13 @@
   padding: 1.3333333333rem;
   min-height: 10rem;
   max-height: 10rem;
-  border-bottom: 1px solid #dbdbdb;
   text-align: center;
 }
 .searchGroupBox .resBox-inner_res .em {
   color: #FF6202;
 }
 .searchGroupBox .resBox-inner_input {
+  border-top: 1px solid #dbdbdb;
   padding: 0.6666666667rem 1.3333333333rem;
 }
 .searchGroupBox .resBox-inner_input .input_text {
@@ -151,65 +218,6 @@
 }
 .searchGroupBox + .inputLabelGroupBox .label .checkboxChk {
   vertical-align: middle;
-}
-
-.popup-detail {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 1.3333333333rem;
-}
-.popup-detail .subTitleBox:not(:first-child) {
-  margin-top: 2.6666666667rem;
-}
-.popup-desc {
-  font-size: 0.9333333333rem;
-  font-weight: 400;
-}
-.popup-desc .em {
-  color: #FF6202;
-}
-.popup-desc-btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 1.2666666667rem;
-}
-.popup-btnGroup {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 0.4rem;
-}
-
-.popupDetailTitle {
-  padding-left: 0.6666666667rem;
-  border-left: 3px solid #FF6202;
-}
-.popupDetailTitle:not(:first-child) {
-  margin-top: 1.3333333333rem;
 }
 
 .btn_pop i {

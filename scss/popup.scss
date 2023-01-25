@@ -25,10 +25,15 @@
   &-contents {
     @include position-center;
     @include wh(100%, auto);
-    max-width: rem(924px);
+    max-width: 930px;
+    max-height: calc(100vh - 100px);
     padding: rem(42px) rem(58px);
     border-radius: rem(24px);
     background-color: #fff;
+    box-sizing: border-box;
+    &_m {
+      max-width: 740px;
+    }
   }
   // 팝업창용 - 타이틀바
   .subTitleBox {
@@ -61,6 +66,45 @@
   }
 }
 
+// 팝업창 내부 디테일
+.popup {
+  &-detail {
+    @include flex-box($fd: column, $ai: stretch, $jc: start) {
+      gap: rem(20px);
+      max-height: calc(100vh - 345px);
+      overflow-y: auto;
+    }
+    .subTitleBox:not(:first-child) {
+      margin-top: rem(40px);
+    }
+  }
+  &-desc {
+    font-size: rem(14px);
+    font-weight: 400;
+    .em {
+      color: $main;
+    }
+    &-btn {
+      @include flex-box($jc: start){
+        gap: rem(19px);
+      }
+    }
+  }
+  &-btnGroup {
+    @include flex-box {
+      gap: rem(6px);
+    }
+  }
+}
+
+.popupDetailTitle {
+  padding-left: rem(10px);
+  border-left: 3px solid $main;
+  &:not(:first-child) {
+    margin-top: rem(20px);
+  }
+}
+
 // 그룹(기업,기관) 검색박스
 .searchGroupBox {
   .inputBox ~ .resBox {
@@ -81,13 +125,13 @@
         padding: rem(20px);
         min-height: rem(150px);
         max-height: rem(150px);
-        border-bottom: 1px solid #dbdbdb;
         text-align: center;
         .em {
           color: $main;
         }
       }
       &_input {
+        border-top: 1px solid #dbdbdb;
         padding: rem(10px) rem(20px);
         .input_text {
           flex: 1;
@@ -121,42 +165,6 @@
         vertical-align: middle;
       }
     }
-  }
-}
-
-.popup {
-  &-detail {
-    @include flex-box($fd: column, $ai: stretch) {
-      gap: rem(20px);
-    }
-    .subTitleBox:not(:first-child) {
-      margin-top: rem(40px);
-    }
-  }
-  &-desc {
-    font-size: rem(14px);
-    font-weight: 400;
-    .em {
-      color: $main;
-    }
-    &-btn {
-      @include flex-box($jc: start){
-        gap: rem(19px);
-      }
-    }
-  }
-  &-btnGroup {
-    @include flex-box {
-      gap: rem(6px);
-    }
-  }
-}
-
-.popupDetailTitle {
-  padding-left: rem(10px);
-  border-left: 3px solid $main;
-  &:not(:first-child) {
-    margin-top: rem(20px);
   }
 }
 

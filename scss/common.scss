@@ -33,6 +33,21 @@
 .mt50 {
   margin-top: rem(50px);
 }
+.mb10 {
+  margin-bottom: rem(10px);
+}
+.mb20 {
+  margin-bottom: rem(20px);
+}
+.mb30 {
+  margin-bottom: rem(30px);
+}
+.mb40 {
+  margin-bottom: rem(40px);
+}
+.mb50 {
+  margin-bottom: rem(50px);
+}
 
 // 레이아웃css
 .wrap {
@@ -275,6 +290,13 @@
       background-color: #f1f1f1;
       border: 1px solid $btn2;
     }
+    &_formInput {
+      font-size: rem(14px);
+      &:disabled {
+        background-color: transparent;
+        border: none !important;
+      }
+    }
   }
   &_file {
     display: none;
@@ -355,10 +377,26 @@
       right: 10px;
       font-family: fontAwesome;
     }
+    &:has(.select_formSelect:disabled) {
+      border: none !important;
+      &::after {
+        content: '';
+      }
+    }
+    // &[disabled] {
+    //   border: none !important;
+    // }
     .select {
       -webkit-appearance: none;
       background-color: transparent;
       z-index: 9;
+      font-size: rem(14px);
+      color: #000;
+      &_formSelect {
+        &:disabled {
+          border: none;
+        }
+      }
     }
   }
   &_textarea {
@@ -545,5 +583,16 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: rem(20px);
+  }
+}
+
+// 권한 체크 영역
+.chkAreaBox {
+  @include flex-box;
+  height: 320px;
+  background-color: #F3F7FD;
+  .innerText {
+    font-size: rem(20px);
+    color: #4B4B4B;
   }
 }

@@ -44,9 +44,11 @@
       @include flex-box($jc: start);
       .infoBox {
         &-info {
-          // width: 100%;
           .inputBox {
             width: 100%;
+            &_select {
+              max-width: 167px;
+            }
           }
         }
       }
@@ -475,7 +477,7 @@ $colors: (#F7B401, #F89E00, #FF9000, #FF6201, #E83E0B);
     box-shadow: none;
   }
   &:last-child {
-    clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 100% 100%, 0% 100%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 100% 100%, 0% 100%) !important;
     border-radius: 5px 15px 15px 5px;
   }
 }
