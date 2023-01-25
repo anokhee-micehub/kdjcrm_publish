@@ -76,22 +76,19 @@
     border-radius: 3px;
     background-color: #eee;
     &-inner {
-      &_res,
-      &_input {
-        padding: rem(10px) rem(20px);
-      }
       &_res {
         @include flex-box;
+        padding: rem(20px);
         min-height: rem(150px);
         max-height: rem(150px);
         border-bottom: 1px solid #dbdbdb;
         text-align: center;
-        overflow-y: auto;
         .em {
           color: $main;
         }
       }
       &_input {
+        padding: rem(10px) rem(20px);
         .input_text {
           flex: 1;
         }
@@ -99,11 +96,22 @@
     }
   }
   .isRes {
-    @include flex-box($fd:column, $ai:start);
+    @include flex-box($fd:column, $ai:start, $jc:start);
     flex: 1;
+    height: rem(150px);
+    overflow-y: auto;
     .btn {
-      width: 100%;
+      width: calc(100% - 20px);
       justify-content: flex-start;
+      padding: rem(10px);
+      font-size: rem(15px);
+      &::before {
+        content: '-';
+      }
+      &.isActive {
+        background-color: $main;
+        color: #fff;
+      }
     }
   }
   & + .inputLabelGroupBox {

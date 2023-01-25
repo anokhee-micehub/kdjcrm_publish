@@ -84,9 +84,6 @@
   border-radius: 3px;
   background-color: #eee;
 }
-.searchGroupBox .resBox-inner_res, .searchGroupBox .resBox-inner_input {
-  padding: 0.6666666667rem 1.3333333333rem;
-}
 .searchGroupBox .resBox-inner_res {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -97,14 +94,17 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 1.3333333333rem;
   min-height: 10rem;
   max-height: 10rem;
   border-bottom: 1px solid #dbdbdb;
   text-align: center;
-  overflow-y: auto;
 }
 .searchGroupBox .resBox-inner_res .em {
   color: #FF6202;
+}
+.searchGroupBox .resBox-inner_input {
+  padding: 0.6666666667rem 1.3333333333rem;
 }
 .searchGroupBox .resBox-inner_input .input_text {
   -webkit-box-flex: 1;
@@ -115,9 +115,9 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -128,12 +128,23 @@
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  height: 10rem;
+  overflow-y: auto;
 }
 .searchGroupBox .isRes .btn {
-  width: 100%;
+  width: calc(100% - 20px);
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  padding: 0.6666666667rem;
+  font-size: 1rem;
+}
+.searchGroupBox .isRes .btn::before {
+  content: "-";
+}
+.searchGroupBox .isRes .btn.isActive {
+  background-color: #FF6202;
+  color: #fff;
 }
 .searchGroupBox + .inputLabelGroupBox .label {
   font-size: 1.0666666667rem;
