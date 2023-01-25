@@ -336,6 +336,7 @@
 .label_form {
   font-size: inherit;
   font-weight: inherit;
+  color: #727272;
 }
 
 .input_text {
@@ -347,6 +348,11 @@
 }
 .input_text_formInput {
   font-size: 0.9333333333rem;
+  color: #727272;
+}
+.input_text_formInput.noInput {
+  pointer-events: none;
+  background-color: #F1F1F1;
 }
 .input_text_formInput:disabled {
   background-color: transparent;
@@ -464,7 +470,7 @@
   background-color: transparent;
   z-index: 9;
   font-size: 0.9333333333rem;
-  color: #000;
+  color: #727272;
 }
 .inputBox_select .select_formSelect:disabled {
   border: none;
@@ -473,12 +479,18 @@
   resize: none;
   width: calc(100% - 10px);
   height: 7.6666666667rem;
-  padding: 15px;
+  padding: 15px 10px;
   border: 1px solid #D2D2D2;
   border-radius: 3px;
   outline: none;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-size: 0.9333333333rem;
+  color: #727272;
+}
+.inputBox_textarea .input_textarea:disabled {
+  border: none;
+  background-color: transparent;
 }
 
 .inputWrapBox {

@@ -30,6 +30,9 @@
   &-info {
     @include inline-flex;
   }
+  &-info {
+    color: $formText;
+  }
   &-cate {
     &.em {
       background-color: #F3F7FD;
@@ -48,6 +51,12 @@
             width: 100%;
             &_select {
               max-width: 167px;
+            }
+            &_input {
+              max-width: 265px;
+              &.full {
+                max-width: unset;
+              }
             }
           }
         }

@@ -58,6 +58,11 @@
 .inputGroup-line ~ .inputGroup-line {
   margin-top: 0.5333333333rem;
 }
+.inputGroup .input_text,
+.inputGroup .input_date,
+.inputGroup .select {
+  color: #4b4b4b;
+}
 
 .buttonGroup {
   -ms-flex-item-align: end;

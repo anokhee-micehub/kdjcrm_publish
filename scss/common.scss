@@ -281,6 +281,7 @@
   &_form {
     font-size: inherit;
     font-weight: inherit;
+    color: $formText;
   }
 }
 .input {
@@ -292,6 +293,11 @@
     }
     &_formInput {
       font-size: rem(14px);
+      color: $formText;
+      &.noInput {
+        pointer-events: none;
+        background-color: #F1F1F1;
+      }
       &:disabled {
         background-color: transparent;
         border: none !important;
@@ -391,7 +397,7 @@
       background-color: transparent;
       z-index: 9;
       font-size: rem(14px);
-      color: #000;
+      color: $formText;
       &_formSelect {
         &:disabled {
           border: none;
@@ -404,11 +410,17 @@
       resize: none;
       width: calc(100% - 10px);
       height: rem(115px);
-      padding: 15px;
+      padding: 15px 10px;
       border: 1px solid #D2D2D2;
       border-radius: 3px;
       outline: none;
       box-sizing: border-box;
+      font-size: rem(14px);
+      color: $formText;
+      &:disabled {
+        border: none;
+        background-color: transparent;
+      }
     }
   }
 }

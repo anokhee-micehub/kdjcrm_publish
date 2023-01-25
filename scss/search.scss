@@ -41,6 +41,11 @@
       margin-top: rem(8px);
     }
   }
+  .input_text,
+  .input_date,
+  .select {
+    color: #4b4b4b;
+  }
 }
 .buttonGroup {
   align-self: flex-end; 

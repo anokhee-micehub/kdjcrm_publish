@@ -31,6 +31,9 @@
       -ms-flex-align: center;
           align-items: center;
 }
+.infoBox-info {
+  color: #727272;
+}
 .infoBox-cate.em {
   background-color: #F3F7FD;
 }
@@ -64,6 +67,12 @@
 }
 .infoBox-inner_full .infoBox-info .inputBox_select {
   max-width: 167px;
+}
+.infoBox-inner_full .infoBox-info .inputBox_input {
+  max-width: 265px;
+}
+.infoBox-inner_full .infoBox-info .inputBox_input.full {
+  max-width: unset;
 }
 .infoBox-inner_full_col {
   display: -webkit-box;

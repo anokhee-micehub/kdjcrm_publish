@@ -4,20 +4,20 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=1980">
-  <link rel="stylesheet" href="./css/normalize.css">
-  <link rel="stylesheet" href="./css/header.css">
-  <link rel="stylesheet" href="./css/footer.css">
-  <link rel="stylesheet" href="./css/common.css">
-  <link rel="stylesheet" href="./css/form.css">
-  <link rel="stylesheet" href="./css/search.css">
-  <link rel="stylesheet" href="./css/table.css">
-  <link rel="stylesheet" href="./css/signboard.css">
-  <link rel="stylesheet" href="./css/card.css">
-  <link rel="stylesheet" href="./css/popup.css">
-  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/form.css">
+  <link rel="stylesheet" href="../css/search.css">
+  <link rel="stylesheet" href="../css/table.css">
+  <link rel="stylesheet" href="../css/signboard.css">
+  <link rel="stylesheet" href="../css/card.css">
+  <link rel="stylesheet" href="../css/popup.css">
+  <link rel="stylesheet" href="../css/main.css">
   <link href="https://demo-custom.micehub-gov.com/css/v6/all.css" rel="stylesheet">
   <link href="https://demo-custom.micehub-gov.com/css/v6/sharp-solid.css" rel="stylesheet">
-  <title>kdjcrm_publish</title>
+  <title>CA_05</title>
 </head>
 <body>
   <div class="wrap">
@@ -79,6 +79,375 @@
     <main class="main">
       <section class="main-inner">
         <article class="commonPageBox_ly">
+          <div class="popupBox" style="display: none;">
+            <div class="popupBox-contents">
+              <div class="popup-title">
+                <div class="subTitleBox subTitleBox_bt">
+                  <div class="subTitleBox-inner">
+                    <h3 class="subTitleBox-subTitle">
+                      전시 등록
+                    </h3>
+                  </div>
+                  <button class="btn btn_pop"><i class="fa-light fa-xmark"></i></button>
+                </div>
+              </div>
+              <div class="popup-detail">
+                <h4 class="popupDetailTitle">
+                  기회 단계
+                </h4>
+                <div class="tabWrapBox">
+                  <button type="button" class="arrowBtns btn disable">입수</button>
+                  <button type="button" class="arrowBtns btn disable">분석</button>
+                  <button type="button" class="arrowBtns btn disable">제안</button>
+                  <button type="button" class="arrowBtns btn disable">협상</button>
+                  <button type="button" class="arrowBtns btn disable">완료</button>
+                </div>
+                <h4 class="popupDetailTitle">
+                  고객 정보
+                </h4>
+                <ul class="infoBox">
+                  <li class="infoBox-inner infoBox-inner_half">
+                    <strong class="infoBox-cate">소속</strong>
+                    <div class="infoBox-info infoBox-info_form">
+                      <div class="inputBox inputBox_input">
+                        <input class="input_text input_text_formInput noInput" type="text" value="주식회사 마이스허브">
+                      </div>
+                    </div>
+                  </li>
+                  <li class="infoBox-inner infoBox-inner_half">
+                    <strong class="infoBox-cate">이름</strong>
+                    <div class="infoBox-info infoBox-info_form">
+                      <div class="inputBox inputBox_input">
+                        <input class="input_text input_text_formInput noInput" type="text" value="홍길동">
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <h4 class="popupDetailTitle">
+                  기회 정보
+                </h4>
+                <ul class="infoBox">
+                  <li class="infoBox-inner infoBox-inner_half">
+                    <strong class="infoBox-cate">기회 이름</strong>
+                    <div class="infoBox-info infoBox-info_form">
+                      <div class="inputBox inputBox_input">
+                        <input class="input_text input_text_formInput" type="text" value="SWEET 2023 참가">
+                      </div>
+                    </div>
+                  </li>
+                  <li class="infoBox-inner infoBox-inner_half">
+                    <strong class="infoBox-cate">신규 여부</strong>
+                    <div class="infoBox-info infoBox-info_form">
+                      <div class="inputBox inputBox_input">
+                        <div class="radioBox">
+                          <input class="input_radio" type="radio" id="val1" name="type1" checked="">
+                          <span class="radioChk"></span>
+                          <label class="label label_form" for="val1">신규</label>
+                        </div>
+                        <div class="radioBox">
+                          <input class="input_radio" type="radio" id="val2" name="type1">
+                          <span class="radioChk"></span>
+                          <label class="label label_form" for="val2">반복</label>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="infoBox-inner infoBox-inner_half">
+                    <strong class="infoBox-cate">기회 성공률</strong>
+                    <div class="infoBox-info infoBox-info_form">
+                      <div class="inputBox inputBox_select">
+                        <select class="select select_formSelect" name="" id="">
+                          <option value="">90%</option>
+                          <option value="value1">value1</option>
+                          <option value="value2">value2</option>
+                        </select>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="infoBox-inner infoBox-inner_half">
+                    <strong class="infoBox-cate">기회 마감일</strong>
+                    <div class="infoBox-info infoBox-info_form">
+                      <div class="inputBox inputBox_input">
+                        <input class="input_date input_date_time" type="datetime-local">
+                      </div>
+                    </div>
+                  </li>
+                  <li class="infoBox-inner infoBox-inner_half">
+                    <strong class="infoBox-cate">목표 금액</strong>
+                    <div class="infoBox-info infoBox-info_form">
+                      <div class="inputBox inputBox_input">
+                        <input class="input_text input_text_formInput" type="text" value="10,000,000">
+                      </div>
+                    </div>
+                  </li>
+                  <li class="infoBox-inner infoBox-inner_half">
+                    <strong class="infoBox-cate">매출 금액</strong>
+                    <div class="infoBox-info infoBox-info_form">
+                      <div class="inputBox inputBox_input">
+                        <input class="input_text input_text_formInput" type="text" value="10,000,000">
+                      </div>
+                    </div>
+                  </li>
+                  <li class="infoBox-inner infoBox-inner_full infoBox-inner_full_row">
+                    <strong class="infoBox-cate">메모</strong>
+                    <div class="infoBox-info">
+                      <div class="inputBox inputBox_textarea">
+                        <textarea class="input_textarea">비고 내용 입력</textarea>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <h4 class="popupDetailTitle">
+                  전시 참가 정보
+                </h4>
+                <ul class="infoBox">
+                  <li class="infoBox-inner infoBox-inner_half">
+                    <strong class="infoBox-cate">사업코드</strong>
+                    <div class="infoBox-info infoBox-info_form">
+                      <div class="inputBox inputBox_select">
+                        <select class="select select_formSelect" name="" id="">
+                          <option value="">(200702) SWEET</option>
+                          <option value="value1">value1</option>
+                          <option value="value2">value2</option>
+                        </select>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="infoBox-inner infoBox-inner_half">
+                    <strong class="infoBox-cate">참가연도</strong>
+                    <div class="infoBox-info infoBox-info_form">
+                      <div class="inputBox inputBox_select">
+                        <select class="select select_formSelect" name="" id="">
+                          <option value="">2021</option>
+                          <option value="value1">value1</option>
+                          <option value="value2">value2</option>
+                        </select>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="infoBox-inner infoBox-inner_half">
+                    <strong class="infoBox-cate">부스 수</strong>
+                    <div class="infoBox-info infoBox-info_form">
+                      <div class="inputBox inputBox_input">
+                        <input class="input_text input_text_formInput" type="text" value="내용">
+                      </div>
+                    </div>
+                  </li>
+                  <li class="infoBox-inner infoBox-inner_half">
+                    <strong class="infoBox-cate">참가비</strong>
+                    <div class="infoBox-info infoBox-info_form">
+                      <div class="inputBox inputBox_input">
+                        <input class="input_text input_text_formInput" type="text" value="내용">
+                      </div>
+                    </div>
+                  </li>
+                  <li class="infoBox-inner infoBox-inner_full">
+                    <strong class="infoBox-cate">만족도</strong>
+                    <div class="infoBox-info infoBox-info_form">
+                      <div class="inputBox inputBox_select">
+                        <select class="select select_formSelect" name="" id="">
+                          <option value="">상</option>
+                          <option value="value1">value1</option>
+                          <option value="value2">value2</option>
+                        </select>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="infoBox-inner infoBox-inner_half">
+                    <strong class="infoBox-cate">DB출처</strong>
+                    <div class="infoBox-info infoBox-info_form">
+                      <div class="inputBox inputBox_select">
+                        <select class="select select_formSelect" name="" id="">
+                          <option value="">기 참가업체</option>
+                          <option value="value1">value1</option>
+                          <option value="value2">value2</option>
+                        </select>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="infoBox-inner infoBox-inner_half">
+                    <strong class="infoBox-cate">갱신연도</strong>
+                    <div class="infoBox-info infoBox-info_form">
+                      <div class="inputBox inputBox_select">
+                        <select class="select select_formSelect" name="" id="">
+                          <option value="">2022</option>
+                          <option value="value1">value1</option>
+                          <option value="value2">value2</option>
+                        </select>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="infoBox-inner infoBox-inner_full infoBox-inner_full_row">
+                    <strong class="infoBox-cate">비고</strong>
+                    <div class="infoBox-info">
+                      <div class="inputBox inputBox_textarea">
+                        <textarea class="input_textarea">지원사업 규모, 히스토리 등 입력</textarea>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="popup-btnGroup mt40">
+                <button type="button" class="btn btn_l btn_l_reg">등록</button>
+                <button type="button" class="btn btn_l btn_l_cl">취소</button>
+              </div>
+            </div>
+          </div>
+          <div class="popupBox">
+            <div class="popupBox-contents">
+              <div class="popup-title">
+                <div class="subTitleBox subTitleBox_bt">
+                  <div class="subTitleBox-inner">
+                    <h3 class="subTitleBox-subTitle">
+                      대관 등록
+                    </h3>
+                  </div>
+                  <button class="btn btn_pop"><i class="fa-light fa-xmark"></i></button>
+                </div>
+              </div>
+              <div class="popup-detail">
+                <h4 class="popupDetailTitle">
+                  기회 단계
+                </h4>
+                <div class="tabWrapBox">
+                  <button type="button" class="arrowBtns btn disable">신규</button>
+                  <button type="button" class="arrowBtns btn disable">분석</button>
+                  <button type="button" class="arrowBtns btn disable">제안</button>
+                  <button type="button" class="arrowBtns btn disable">협상</button>
+                  <button type="button" class="arrowBtns btn disable">완료</button>
+                </div>
+                <h4 class="popupDetailTitle">
+                  고객 정보
+                </h4>
+                <ul class="infoBox">
+                  <li class="infoBox-inner infoBox-inner_half">
+                    <strong class="infoBox-cate">소속</strong>
+                    <div class="infoBox-info infoBox-info_form">
+                      <div class="inputBox inputBox_input">
+                        <input class="input_text input_text_formInput noInput" type="text" value="주식회사 마이스허브">
+                      </div>
+                    </div>
+                  </li>
+                  <li class="infoBox-inner infoBox-inner_half">
+                    <strong class="infoBox-cate">이름</strong>
+                    <div class="infoBox-info infoBox-info_form">
+                      <div class="inputBox inputBox_input">
+                        <input class="input_text input_text_formInput noInput" type="text" value="홍길동">
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <h4 class="popupDetailTitle">
+                  기회 정보
+                </h4>
+                <ul class="infoBox">
+                  <li class="infoBox-inner infoBox-inner_half">
+                    <strong class="infoBox-cate">기회 이름</strong>
+                    <div class="infoBox-info infoBox-info_form">
+                      <div class="inputBox inputBox_input">
+                        <input class="input_text input_text_formInput" type="text" value="SWEET 2023 참가">
+                      </div>
+                    </div>
+                  </li>
+                  <li class="infoBox-inner infoBox-inner_half">
+                    <strong class="infoBox-cate">신규 여부</strong>
+                    <div class="infoBox-info infoBox-info_form">
+                      <div class="inputBox inputBox_input">
+                        <div class="radioBox">
+                          <input class="input_radio" type="radio" id="val1" name="type1" checked="">
+                          <span class="radioChk"></span>
+                          <label class="label label_form" for="val1">신규</label>
+                        </div>
+                        <div class="radioBox">
+                          <input class="input_radio" type="radio" id="val2" name="type1">
+                          <span class="radioChk"></span>
+                          <label class="label label_form" for="val2">반복</label>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="infoBox-inner infoBox-inner_half">
+                    <strong class="infoBox-cate">기회 성공률</strong>
+                    <div class="infoBox-info infoBox-info_form">
+                      <div class="inputBox inputBox_select">
+                        <select class="select select_formSelect" name="" id="">
+                          <option value="">90%</option>
+                          <option value="value1">value1</option>
+                          <option value="value2">value2</option>
+                        </select>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="infoBox-inner infoBox-inner_half">
+                    <strong class="infoBox-cate">기회 마감일</strong>
+                    <div class="infoBox-info infoBox-info_form">
+                      <div class="inputBox inputBox_input">
+                        <input class="input_date input_date_time" type="datetime-local">
+                      </div>
+                    </div>
+                  </li>
+                  <li class="infoBox-inner infoBox-inner_half">
+                    <strong class="infoBox-cate">목표 금액</strong>
+                    <div class="infoBox-info infoBox-info_form">
+                      <div class="inputBox inputBox_input">
+                        <input class="input_text input_text_formInput" type="text" value="10,000,000">
+                      </div>
+                    </div>
+                  </li>
+                  <li class="infoBox-inner infoBox-inner_half">
+                    <strong class="infoBox-cate">매출 금액</strong>
+                    <div class="infoBox-info infoBox-info_form">
+                      <div class="inputBox inputBox_input">
+                        <input class="input_text input_text_formInput" type="text" value="10,000,000">
+                      </div>
+                    </div>
+                  </li>
+                  <li class="infoBox-inner infoBox-inner_full infoBox-inner_full_row">
+                    <strong class="infoBox-cate">메모</strong>
+                    <div class="infoBox-info">
+                      <div class="inputBox inputBox_textarea">
+                        <textarea class="input_textarea">비고 내용 입력</textarea>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <h4 class="popupDetailTitle">
+                  대관 정보
+                </h4>
+                <ul class="infoBox">
+                  <li class="infoBox-inner infoBox-inner_full">
+                    <strong class="infoBox-cate">구분</strong>
+                    <div class="infoBox-info infoBox-info_form">
+                      <div class="inputBox inputBox_input">
+                        <div class="radioBox">
+                          <input class="input_radio" type="radio" id="val1" name="type1" checked="">
+                          <span class="radioChk"></span>
+                          <label class="label label_form" for="val1">전시장</label>
+                        </div>
+                        <div class="radioBox">
+                          <input class="input_radio" type="radio" id="val2" name="type1">
+                          <span class="radioChk"></span>
+                          <label class="label label_form" for="val2">회의실</label>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="infoBox-inner infoBox-inner_full">
+                    <strong class="infoBox-cate">부스 수</strong>
+                    <div class="infoBox-info infoBox-info_form">
+                      <div class="inputBox inputBox_input full">
+                        전시장, 회의실 구분에 따라서 폼 내용이 각각 달라짐
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="popup-btnGroup mt40">
+                <button type="button" class="btn btn_l btn_l_reg">등록</button>
+                <button type="button" class="btn btn_l btn_l_cl">취소</button>
+              </div>
+            </div>
+          </div>
         </article>
       </section>
     </main>
