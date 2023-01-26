@@ -466,5 +466,78 @@
       <p>Copyright © <strong>2022 김대중컨벤션센터</strong> All rights reserved.</p>
     </footer>
   </div>
+  <script>
+    /*
+    * 1. 버튼을 클릭한다.
+    * 2. 버튼 바로 아래 요소에 active 클래스를 추가한다.
+    * 3. 요소밖을 클릭하면 요소에 active가 제거된다.
+    */
+
+    // const customSelectBoxBtn = document.querySelector('.customSelectBox-btn');
+    
+    // customSelectBoxBtn.addEventListener('click', (e) => {
+    //   if(e.target.classList.contains('customSelectBox-btn')) {
+    //     e.target.classList.add('active');
+    //   } else {
+    //     return;
+    //   }
+    // })
+    // customSelectBoxBtn.addEventListener('blur', () => {
+    //   customSelectBoxBtn.classList.remove('active');
+    // })
+
+    // const customSelectBoxBtnClick = {
+    //   createElement(name) {
+    //     this.element = document.querySelector(name);
+    //   },
+    //   openSelectBox() {
+    //     this.element.addEventListener('click', () => {
+    //       if(this.element.classList.contains('customSelectBox-btn')) {
+    //         this.element.classList.add('active');
+    //       } else {
+    //         return;
+    //       }
+    //     });
+    //   },
+    //   closeSelectBox() {
+    //     this.element.addEventListener('blur', () => {
+    //       this.element.classList.remove('active');
+    //     })
+    //   }
+    // }
+
+    const customSelectBoxBtnClick = {
+      createElement(name) {
+        this.element = document.querySelectorAll(name);
+      },
+      openSelectBox() {
+        this.element.forEach((item) => {
+          item.addEventListener('click', () => {
+            if(item.classList.contains('customSelectBox-btn')) {
+              item.classList.add('active');
+            } else {
+              return;
+            }
+          });
+        });
+      },
+      closeSelectBox() {
+        window.addEventListener('click', (e) => {
+          // console.log(e.target);
+          // if(e.target.classList.contains('customSelectBox-options')) {
+          //   console.log('ggg');
+          // } else {
+          //   console.log('hkhkhk')
+          // }
+          // document.querySelector('.customSelectBox-btn').classList.remove('active');
+        });
+      }
+    }
+
+    // 셀렉박스 여는 버튼 이벤트용 공통 클래스 추가해주기
+    customSelectBoxBtnClick.createElement('.customSelectBox-btn')
+    customSelectBoxBtnClick.openSelectBox();
+    customSelectBoxBtnClick.closeSelectBox();
+  </script>
 </body>
 </html>

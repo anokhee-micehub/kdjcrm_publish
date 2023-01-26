@@ -306,6 +306,9 @@
   background-color: #fff;
   display: none;
 }
+.customSelectBox-options .input_date {
+  height: auto;
+}
 .customSelectBox-textVal {
   font-size: 0.8rem;
 }
