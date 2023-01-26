@@ -123,6 +123,10 @@
           align-items: center;
   gap: 0.4rem;
 }
+.popup-tabBox {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
 
 .popupDetailTitle {
   padding-left: 0.6666666667rem;

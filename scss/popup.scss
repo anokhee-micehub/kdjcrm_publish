@@ -103,6 +103,9 @@
       gap: rem(6px);
     }
   }
+  &-tabBox {
+    flex-shrink: 0;
+  }
 }
 
 .popupDetailTitle {
