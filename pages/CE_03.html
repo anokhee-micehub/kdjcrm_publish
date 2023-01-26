@@ -4,20 +4,20 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=1980">
-  <link rel="stylesheet" href="./css/normalize.css">
-  <link rel="stylesheet" href="./css/header.css">
-  <link rel="stylesheet" href="./css/footer.css">
-  <link rel="stylesheet" href="./css/common.css">
-  <link rel="stylesheet" href="./css/form.css">
-  <link rel="stylesheet" href="./css/search.css">
-  <link rel="stylesheet" href="./css/table.css">
-  <link rel="stylesheet" href="./css/signboard.css">
-  <link rel="stylesheet" href="./css/card.css">
-  <link rel="stylesheet" href="./css/popup.css">
-  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/form.css">
+  <link rel="stylesheet" href="../css/search.css">
+  <link rel="stylesheet" href="../css/table.css">
+  <link rel="stylesheet" href="../css/signboard.css">
+  <link rel="stylesheet" href="../css/card.css">
+  <link rel="stylesheet" href="../css/popup.css">
+  <link rel="stylesheet" href="../css/main.css">
   <link href="https://demo-custom.micehub-gov.com/css/v6/all.css" rel="stylesheet">
   <link href="https://demo-custom.micehub-gov.com/css/v6/sharp-solid.css" rel="stylesheet">
-  <title>kdjcrm_publish</title>
+  <title>CE_03</title>
 </head>
 <body>
   <div class="wrap">
@@ -79,6 +79,46 @@
     <main class="main">
       <section class="main-inner">
         <article class="commonPageBox_ly">
+          <div class="popupBox">
+            <div class="popupBox-contents popupBox-contents_m">
+              <div class="popup-title">
+                <div class="subTitleBox subTitleBox_bt">
+                  <div class="subTitleBox-inner">
+                    <h3 class="subTitleBox-subTitle">
+                      일괄 등록
+                    </h3>
+                  </div>
+                  <button class="btn btn_pop"><i class="fa-light fa-xmark"></i></button>
+                </div>
+              </div>
+              <div class="popup-detail">
+                <p class="popup-desc popup-desc-btn">
+                  양식에 맞춰 파일을 업로드하면 잠재고객이 일괄 등록됩니다.
+                  <button class="btn btn_m btn_m_secondary">양식 다운로드</button>
+                </p>
+                <div class="uploadFileBox">
+                  <div class="uploadFileBox-inputWrap">
+                    <input class="input input_file" type="file" id="file"></input>
+                    <label for="file" class="label_file btn btn_m btn_m_back">
+                      파일 선택
+                    </label>
+                    <span class="getFileNameText">선택된 파일 없음</span>
+                    <button type="button" class="btn btn_m btn_m_primary">업로드</button>
+                  </div>
+                  <ul class="uploadFileListBox">
+                    <li class="uploadFileListBox-item">
+                      <i class="chip chip_excel fa-regular fa-file-excel"></i>
+                      <span class="getFileNameText">단체등록파일.xlsx</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="popup-btnGroup">
+                  <button type="button" class="btn btn_l btn_l_reg">등록</button>
+                  <button type="button" class="btn btn_l btn_l_cl">취소</button>
+                </div>
+              </div>
+            </div>
+          </div>
         </article>
       </section>
     </main>

@@ -42,6 +42,18 @@
       -ms-flex-align: end;
           align-items: flex-end;
 }
+.searchBox .inputBox_select .select {
+  min-width: 170px;
+  font-size: 12px;
+}
+.searchBox .input_date {
+  padding: 6px 10px;
+  height: auto;
+}
+.searchBox .label {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
 
 .inputGroup-line {
   display: -webkit-box;

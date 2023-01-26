@@ -31,6 +31,23 @@
       }
     }
   }
+  .inputBox {
+    &_select {
+      .select {
+        min-width: 170px;
+        font-size: 12px;
+      }
+    }
+  }
+  .input {
+    &_date {
+      padding: 6px 10px;
+      height: auto;
+    }
+  }
+  .label {
+    flex-shrink: 0;
+  }
 }
 .inputGroup {
   &-line {

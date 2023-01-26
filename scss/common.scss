@@ -48,6 +48,9 @@
 .mb50 {
   margin-bottom: rem(50px);
 }
+.maxWidth50 {
+  max-width: 50%;
+}
 
 // 레이아웃css
 .wrap {
@@ -236,6 +239,7 @@
     font-size: rem(16px);
     font-weight: 600;
     color: $btn1;
+    flex-shrink: 0;
   }
   &_arrow {
     @include wh(rem(15px), rem(15px));
@@ -330,10 +334,9 @@
     }
   }
   &_date {
-    &_time {
-      height: rem(35px);
-      border: 1px solid $btn2;
-    }
+    height: rem(35px);
+    border: 1px solid $btn2;
+    width: 100%;
   }
   &_checkbox {
     display: none;

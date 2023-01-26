@@ -54,6 +54,10 @@
   margin-bottom: 3.3333333333rem;
 }
 
+.maxWidth50 {
+  max-width: 50%;
+}
+
 .wrap {
   background-color: #EEEFF1;
   overflow-x: hidden;
@@ -288,6 +292,8 @@
   font-size: 1.0666666667rem;
   font-weight: 600;
   color: #4B4B4B;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 .btn_arrow {
   width: 1rem;
@@ -384,9 +390,10 @@
           box-shadow: 0 0 0 1px inset #D2D2D2;
   vertical-align: middle;
 }
-.input_date_time {
+.input_date {
   height: 2.3333333333rem;
   border: 1px solid #D2D2D2;
+  width: 100%;
 }
 .input_checkbox {
   display: none;
