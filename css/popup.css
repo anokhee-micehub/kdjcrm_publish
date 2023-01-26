@@ -64,6 +64,12 @@
 .popupBox .infoBox ~ .infoBox {
   margin-top: 0;
 }
+.popupBox .tableWrapBox {
+  padding: 0;
+}
+.popupBox .searchBox_head {
+  padding: 0.6666666667rem;
+}
 
 .popup-detail {
   display: -webkit-box;

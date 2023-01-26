@@ -64,6 +64,14 @@
   .infoBox ~ .infoBox {
     margin-top: 0;
   }
+
+  // 팝업창용 테이블, 검색창패딩값
+  .tableWrapBox {
+    padding: 0;
+  }
+  .searchBox_head {
+    padding: rem(10px);
+  }
 }
 
 // 팝업창 내부 디테일
