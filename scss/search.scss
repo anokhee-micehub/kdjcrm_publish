@@ -31,6 +31,12 @@
       }
     }
   }
+  // 대관탭 + 검색창
+  &_extension {
+    .searchBox_head {
+      border-radius: 0 0 10px 10px;
+    }
+  }
   .inputBox {
     &_select {
       .select {
@@ -71,12 +77,24 @@
 
 // 대관 탭박스
 .selectlocationBox {
-  @include flex-box($fd: column, $ai: start) {
-    gap: 10px;
+  position: relative;
+  padding: 20px 35px;
+  background-color: #DFDFDF;
+  border-radius: 10px 10px 0 0;
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 42px);
+    height: 1px;
+    background-color: #fff;
   }
-  &-btnsWrap {
+  &-tabBtns {
     @include inline-flex($jc: start);
     padding: 3px;
+    margin-bottom: 10px;
     border-radius: 20px;
     background-color: #DFDFDF;
     .btn {
@@ -91,31 +109,45 @@
       }
     }
   }
-  &-chksWrap {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 468px;
-    gap: 25px;
-    width: 100%;
-    padding: 20px 40px;
-    background-color: #DFDFDF;
-    border-radius: 10px;
-    box-sizing: border-box;
-  }
   &-section {
-    &:not(:last-child) {
-      border-right: 1px solid #959595;
-    }
-  }
-  &-chks {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    row-gap: 10px;
-    &.extension {
-      grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 110px 1fr;
+    gap: 10px;
+    align-items: flex-start;
+    & ~ & {
+      margin-top: 15px;
     }
   }
   .sectionTitle {
     font-size: rem(16px);
-    margin-bottom: 11px;
+    font-weight: 600;
+  }
+  .chksWrap {
+    @include flex-box($jc: start) {
+      flex-wrap: wrap;
+      gap: 13px;
+    }
+  }
+}
+
+.fullChks {
+  input {
+    display: none;
+    &:checked {
+      & + label {
+        background-color: $main;
+        color: #fff;
+        &::before {
+          content: '\f00c';
+          font-family: 'fontAwesome';
+        }
+      }
+    }
+  }
+  label {
+    padding: 5px 8px;
+    border-radius: 11px;
+    font-size: rem(12px);
+    background-color: #fff;
   }
 }

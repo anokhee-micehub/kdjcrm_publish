@@ -117,6 +117,7 @@
                       잠재고객 정보
                     </h3>
                     <div class="subTitleBox_st">
+                      <button type="button" class="btn btn_m btn_m_primary">유효고객 전환</button>
                       <button type="button" class="btn btn_m btn_m_primary">수정</button>
                       <button type="button" class="btn btn_m btn_m_back">이력</button>
                       <button type="button" class="btn btn_m btn_m_back">삭제</button>
@@ -236,7 +237,7 @@
                         <div class="customSelectBox_wrap">
                           <div class="customSelectBox">
                             <!-- active가 들어오면 셀렉트박스가 열림 -->
-                            <button class="customSelectBox-btn btn customSelectBox-btn_value">
+                            <button class="customSelectBox-btn btn customSelectBox-btn_value openSelectBox">
                               <i class="fa-solid fa-face-smile"></i>
                             </button>
                             <div class="customSelectBox-options">
@@ -277,7 +278,7 @@
                           </div>
                           <div class="customSelectBox">
                             <!-- active가 들어오면 셀렉트박스가 열림 -->
-                            <button class="customSelectBox-btn btn customSelectBox-btn_value">
+                            <button class="customSelectBox-btn btn customSelectBox-btn_value openSelectBox">
                               <i class="fa-solid fa-filter"></i>
                             </button>
                             <div class="customSelectBox-options">
@@ -336,7 +337,7 @@
                           </div>
                           <div class="customSelectBox">
                             <!-- active가 들어오면 셀렉트박스가 열림 -->
-                            <button class="customSelectBox-btn btn btn_xs"><i class="fa-regular fa-calendar-day"></i></button>
+                            <button class="customSelectBox-btn btn btn_xs openSelectBox"><i class="fa-regular fa-calendar-day"></i></button>
                             <div class="customSelectBox-options">
                               <div class="setDateBox">
                                 <h5 class="filterChkListBox-title">등록일자</h5>
@@ -523,6 +524,19 @@
       },
       closeSelectBox() {
         window.addEventListener('click', (e) => {
+          this.element.forEach((item) => {
+            if(item.classList.contains('active')) {
+              console.log('ggg');
+              console.log(e.target);
+              console.log(item);
+              if(e.target === item) {
+                console.log('타겟')
+              } else {
+                console.log('안타겟')
+                item.classList.remove('active');
+              }
+            }
+          })
           // console.log(e.target);
           // if(e.target.classList.contains('customSelectBox-options')) {
           //   console.log('ggg');
@@ -535,7 +549,7 @@
     }
 
     // 셀렉박스 여는 버튼 이벤트용 공통 클래스 추가해주기
-    customSelectBoxBtnClick.createElement('.customSelectBox-btn')
+    customSelectBoxBtnClick.createElement('.openSelectBox')
     customSelectBoxBtnClick.openSelectBox();
     customSelectBoxBtnClick.closeSelectBox();
   </script>

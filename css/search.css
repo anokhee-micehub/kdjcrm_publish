@@ -42,6 +42,9 @@
       -ms-flex-align: end;
           align-items: flex-end;
 }
+.searchBox_extension .searchBox_head {
+  border-radius: 0 0 10px 10px;
+}
 .searchBox .inputBox_select .select {
   min-width: 140px;
   padding-right: 30px;
@@ -83,22 +86,23 @@
 }
 
 .selectlocationBox {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 10px;
+  position: relative;
+  padding: 20px 35px;
+  background-color: #DFDFDF;
+  border-radius: 10px 10px 0 0;
 }
-.selectlocationBox-btnsWrap {
+.selectlocationBox::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: calc(100% - 42px);
+  height: 1px;
+  background-color: #fff;
+}
+.selectlocationBox-tabBtns {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -109,10 +113,11 @@
       -ms-flex-align: center;
           align-items: center;
   padding: 3px;
+  margin-bottom: 10px;
   border-radius: 20px;
   background-color: #DFDFDF;
 }
-.selectlocationBox-btnsWrap .btn {
+.selectlocationBox-tabBtns .btn {
   width: 152px;
   height: 35px;
   font-size: 1rem;
@@ -120,33 +125,54 @@
   color: 878787;
   border-radius: 17px;
 }
-.selectlocationBox-btnsWrap .btn.isActive {
+.selectlocationBox-tabBtns .btn.isActive {
   color: #FF6202;
   background-color: #fff;
 }
-.selectlocationBox-chksWrap {
+.selectlocationBox-section {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 468px;
-  gap: 25px;
-  width: 100%;
-  padding: 20px 40px;
-  background-color: #DFDFDF;
-  border-radius: 10px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  grid-template-columns: 110px 1fr;
+  gap: 10px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
-.selectlocationBox-section:not(:last-child) {
-  border-right: 1px solid #959595;
-}
-.selectlocationBox-chks {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  row-gap: 10px;
-}
-.selectlocationBox-chks.extension {
-  grid-template-columns: repeat(3, 1fr);
+.selectlocationBox-section ~ .selectlocationBox-section {
+  margin-top: 15px;
 }
 .selectlocationBox .sectionTitle {
   font-size: 1.0666666667rem;
-  margin-bottom: 11px;
+  font-weight: 600;
+}
+.selectlocationBox .chksWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 13px;
+}
+
+.fullChks input {
+  display: none;
+}
+.fullChks input:checked + label {
+  background-color: #FF6202;
+  color: #fff;
+}
+.fullChks input:checked + label::before {
+  content: "\f00c";
+  font-family: "fontAwesome";
+}
+.fullChks label {
+  padding: 5px 8px;
+  border-radius: 11px;
+  font-size: 0.8rem;
+  background-color: #fff;
 }
