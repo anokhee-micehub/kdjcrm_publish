@@ -386,6 +386,17 @@
   @include flex-box($jc: start) {
     gap: rem(5px);
   }
+  &_s {
+    label {
+      font-size: rem(14px);
+    }
+    .checkboxChk {
+      margin-right: 10px;
+      background-color: #fff;
+      box-shadow: none;
+      border-radius: 3px;
+    }
+  }
 }
 .inputBox {
   position: relative;

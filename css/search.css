@@ -81,3 +81,72 @@
   -ms-flex-item-align: end;
       align-self: flex-end;
 }
+
+.selectlocationBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+.selectlocationBox-btnsWrap {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 3px;
+  border-radius: 20px;
+  background-color: #DFDFDF;
+}
+.selectlocationBox-btnsWrap .btn {
+  width: 152px;
+  height: 35px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: 878787;
+  border-radius: 17px;
+}
+.selectlocationBox-btnsWrap .btn.isActive {
+  color: #FF6202;
+  background-color: #fff;
+}
+.selectlocationBox-chksWrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 468px;
+  gap: 25px;
+  width: 100%;
+  padding: 20px 40px;
+  background-color: #DFDFDF;
+  border-radius: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.selectlocationBox-section:not(:last-child) {
+  border-right: 1px solid #959595;
+}
+.selectlocationBox-chks {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 10px;
+}
+.selectlocationBox-chks.extension {
+  grid-template-columns: repeat(3, 1fr);
+}
+.selectlocationBox .sectionTitle {
+  font-size: 1.0666666667rem;
+  margin-bottom: 11px;
+}

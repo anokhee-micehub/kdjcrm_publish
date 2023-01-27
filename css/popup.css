@@ -127,6 +127,18 @@
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
+.popup-tabBox .btn {
+  position: relative;
+}
+.popup-tabBox .btn.isActive::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #FF6202;
+}
 
 .popupDetailTitle {
   padding-left: 0.6666666667rem;

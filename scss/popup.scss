@@ -105,6 +105,19 @@
   }
   &-tabBox {
     flex-shrink: 0;
+    .btn {
+      position: relative;
+      &.isActive {
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          @include wh(100%, 4px);
+          background-color: $main;
+        }
+      }
+    }
   }
 }
 

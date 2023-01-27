@@ -68,3 +68,54 @@
 .buttonGroup {
   align-self: flex-end; 
 }
+
+// 대관 탭박스
+.selectlocationBox {
+  @include flex-box($fd: column, $ai: start) {
+    gap: 10px;
+  }
+  &-btnsWrap {
+    @include inline-flex($jc: start);
+    padding: 3px;
+    border-radius: 20px;
+    background-color: #DFDFDF;
+    .btn {
+      @include wh(152px, 35px);
+      font-size: rem(15px);
+      font-weight: 600;
+      color: 878787;
+      border-radius: 17px;
+      &.isActive {
+        color: $main;
+        background-color: #fff;
+      }
+    }
+  }
+  &-chksWrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 468px;
+    gap: 25px;
+    width: 100%;
+    padding: 20px 40px;
+    background-color: #DFDFDF;
+    border-radius: 10px;
+    box-sizing: border-box;
+  }
+  &-section {
+    &:not(:last-child) {
+      border-right: 1px solid #959595;
+    }
+  }
+  &-chks {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 10px;
+    &.extension {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  .sectionTitle {
+    font-size: rem(16px);
+    margin-bottom: 11px;
+  }
+}
