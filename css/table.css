@@ -13,6 +13,12 @@
   padding: 2.3333333333rem 2rem;
   border-radius: 0.6666666667rem;
 }
+.tableWrapBox_tab {
+  display: none;
+}
+.tableWrapBox_tab.isActive {
+  display: block;
+}
 
 .table {
   width: 100%;

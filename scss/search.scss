@@ -81,6 +81,10 @@
   padding: 20px 35px;
   background-color: #DFDFDF;
   border-radius: 10px 10px 0 0;
+  display: none;
+  &.isActive {
+    display: block;
+  }
   &::after {
     content: '';
     position: absolute;

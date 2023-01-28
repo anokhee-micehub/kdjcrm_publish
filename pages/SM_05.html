@@ -17,6 +17,8 @@
   <link rel="stylesheet" href="../css/main.css">
   <link href="https://demo-custom.micehub-gov.com/css/v6/all.css" rel="stylesheet">
   <link href="https://demo-custom.micehub-gov.com/css/v6/sharp-solid.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="../JS/commonJs.js" defer></script>
   <title>SM_05</title>
 </head>
 <body>
@@ -93,8 +95,8 @@
               </div>
               <div class="popup-detail">
                 <div class="popup-tabBox">
-                  <button type="button" class="btn btn_tab isActive">접속 이력</button>
-                  <button type="button" class="btn btn_tab">다운로드 이력</button>
+                  <button type="button" data-val="tab1" class="btn btn_tab isActive">접속 이력</button>
+                  <button type="button" data-val="tab2" class="btn btn_tab">다운로드 이력</button>
                 </div>
                 <div class="searchBox searchBox_head">
                   <div class="inputGroup">
@@ -109,7 +111,7 @@
                     <button type="button" class="btn btn_m btn_m_excel"><i class="fa-regular fa-file-excel"></i></button>
                   </div>
                 </div>
-                <div class="tableWrapBox box">
+                <div class="tableWrapBox tableWrapBox_tab tab1 box isActive">
                   <table class="table">
                     <thead>
                       <tr>
@@ -146,6 +148,63 @@
                         <td>515</td>
                         <td>2022-12-07 15:51</td>
                         <td>111.111.111</td>
+                        <td>홍길동</td>
+                        <td>goho0303</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div class="pageBox">
+                    <a class="btn btn_arrow prev"><i class="fa-solid fa-chevron-left"></i></a>
+                    <a class="btn btn_num isActive">1</a>
+                    <a class="btn btn_num">2</a>
+                    <a class="btn btn_num">3</a>
+                    <a class="btn btn_num">4</a>
+                    <a class="btn btn_num">5</a>
+                    <a class="btn btn_num">6</a>
+                    <a class="btn btn_num">7</a>
+                    <a class="btn btn_num">8</a>
+                    <a class="btn btn_num">9</a>
+                    <a class="btn btn_num">10</a>
+                    <a class="btn btn_arrow next"><i class="fa-solid fa-chevron-right"></i></a>
+                  </div>
+                </div>
+                <div class="tableWrapBox tableWrapBox_tab tab2 box">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>접속 일시</th>
+                        <th>접속 IP</th>
+                        <th>접속자 이름</th>
+                        <th>접속자 ID</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>666</td>
+                        <td>2022-12-07 15:51</td>
+                        <td>222.222.222</td>
+                        <td>홍길동이</td>
+                        <td>goho0303</td>
+                      </tr>
+                      <tr>
+                        <td>515</td>
+                        <td>2022-12-07 15:51</td>
+                        <td>222.222.222</td>
+                        <td>홍길동</td>
+                        <td>goho0303</td>
+                      </tr>
+                      <tr>
+                        <td>777</td>
+                        <td>2022-12-07 15:51</td>
+                        <td>222.222.222</td>
+                        <td>홍길동</td>
+                        <td>goho0303</td>
+                      </tr>
+                      <tr>
+                        <td>515</td>
+                        <td>2022-12-07 15:51</td>
+                        <td>222.222.222</td>
                         <td>홍길동</td>
                         <td>goho0303</td>
                       </tr>

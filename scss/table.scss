@@ -18,6 +18,12 @@
 .tableWrapBox {
   padding: rem(35px) rem(30px);
   border-radius: rem(10px);
+  &_tab {
+    display: none;
+    &.isActive {
+      display: block;
+    }
+  }
 }
 .table {
   width: 100%;

@@ -17,6 +17,10 @@
   left: 0;
   background-color: rgba(0, 0, 0, 0.2);
   z-index: 10;
+  display: none;
+}
+.popupBox.open {
+  display: block;
 }
 .popupBox-contents {
   position: absolute;

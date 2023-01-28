@@ -17,6 +17,9 @@
   <link rel="stylesheet" href="./css/main.css">
   <link href="https://demo-custom.micehub-gov.com/css/v6/all.css" rel="stylesheet">
   <link href="https://demo-custom.micehub-gov.com/css/v6/sharp-solid.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.3/dragula.min.js" integrity="sha512-NgXVRE+Mxxf647SqmbB9wPS5SEpWiLFp5G7ItUNFi+GVUyQeP+7w4vnKtc2O/Dm74TpTFKXNjakd40pfSKNulg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="../JS/commonJs.js" defer></script>
   <title>kdjcrm_components</title>
 </head>
 <body>
@@ -230,7 +233,7 @@
               <ul class="stepBarBox">
                 <li class="stepBarBox-item">
                   <h4 class="stepBarBox-item_title">신규</h4>
-                  <ul class="cardWrapBox">
+                  <ul class="cardWrapBox" id="cardWrapBox1">
                     <li class="cardBox box">
                       <div class="cardBox-inner cardBox-inner_left">
                         <h5 class="cardBox-title cardBox-title_text">[전시 참가] SWEET 2023 참가</h5>
@@ -301,16 +304,19 @@
                 </li>
                 <li class="stepBarBox-item">
                   <h4 class="stepBarBox-item_title">분석</h4>
+                  <ul class="cardWrapBox" id="cardWrapBox2"></ul>
                 </li>
                 <li class="stepBarBox-item">
                   <h4 class="stepBarBox-item_title">제안</h4>
+                  <ul class="cardWrapBox" id="cardWrapBox3"></ul>
                 </li>
                 <li class="stepBarBox-item">
                   <h4 class="stepBarBox-item_title">협상</h4>
+                  <ul class="cardWrapBox" id="cardWrapBox4"></ul>
                 </li>
                 <li class="stepBarBox-item">
                   <h4 class="stepBarBox-item_title">완료</h4>
-                  <ul class="cardWrapBox">
+                  <ul class="cardWrapBox" id="cardWrapBox5">
                     <li class="cardBox box">
                       <div class="cardBox-inner cardBox-inner_left">
                         <h5 class="cardBox-title cardBox-title_text">[전시 참가] SWEET 2023 참가</h5>
@@ -410,7 +416,7 @@
               <div class="searchBox searchBox_body">
                 <div class="searchBox_body-inner searchBox_body-inner_left">
                   <label class="label">검색 결과 <strong>1-15 / 500</strong>개</label>
-                  <button type="button" class="btn btn_m btn_m_secondary"><i class="fa-solid fa-arrow-right-arrow-left"></i> 잠재 상태 변경</button>
+                  <button type="button" class="btn btn_m btn_m_secondary open_popup" data-popup="popup1"><i class="fa-solid fa-arrow-right-arrow-left"></i> 잠재 상태 변경</button>
                   <button type="button" class="btn btn_m btn_m_primary"><i class="fa-solid fa-file-export"></i> 고객으로 이동</button>
                 </div>
                 <div class="searchBox_body-inner searchBox_body-inner_right">
@@ -970,7 +976,39 @@
                   </div>
                   <div class="grid_col2 cardWrap">
                     <!-- isActive 가 들어오면 선이 강조됨 -->
-                    <div class="cardBox cardBox_btn box">
+                    <div class="cardBox cardBox_btn box cardToggle">
+                      <div class="cardBox-inner cardBox-inner_left">
+                        <h5 class="cardBox-title cardBox-title_text">홍길동 사원</h5>
+                        <ul class="cardBox-list">
+                          <li class="cardBox-listItem">
+                            <i class="fa-solid fa-user"></i>
+                            홍길동 (주식회사 마이스허브)
+                          </li>
+                          <li class="cardBox-listItem">
+                            <i class="fa-solid fa-calendar"></i>
+                            10,000,000
+                          </li>
+                          <li class="cardBox-listItem">
+                            <i class="fa-solid fa-circle-dollar"></i>
+                            2023.03.31
+                          </li>
+                          <li class="cardBox-listItem">
+                            <i class="fa-solid fa-circle-dollar"></i>
+                            2023.03.31
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="cardBox-inner cardBox-inner_right">
+                        <button type="button" class="btn btn_xxs" title="수정"><i class="fa-solid fa-pen"></i></button>
+                        <button type="button" class="btn btn_xxs" title="이력"><i class="fa-solid fa-rotate-right"></i></button>
+                        <button type="button" class="btn btn_xxs" title="삭제"><i class="fa-solid fa-trash"></i></button>
+                      </div>
+                      <div class="cardBox-inner cardBox-inner_bottom">
+                        <button type="button" class="btn btn_m btn_m_primary">+ 전시 등록</button>
+                        <button type="button" class="btn btn_m btn_m_primary">+ 대관 등록</button>
+                      </div>
+                    </div>
+                    <div class="cardBox cardBox_btn box cardToggle">
                       <div class="cardBox-inner cardBox-inner_left">
                         <h5 class="cardBox-title cardBox-title_text">홍길동 사원</h5>
                         <ul class="cardBox-list">
@@ -1020,9 +1058,9 @@
                       <!-- offInput이 onInput로 바뀌면 총평텍스트를 입력할 수 있음 -->
                       <div class="infoBox-info infoBox-info_bt offInput">
                         <div class="customSelectBox_wrap">
-                          <div class="customSelectBox">
+                          <div class="customSelectBox customSelectBox1">
                             <!-- active가 들어오면 셀렉트박스가 열림 -->
-                            <button class="customSelectBox-btn btn customSelectBox-btn_value">
+                            <button class="customSelectBox-btn btn customSelectBox-btn_value openSelectBox1">
                               <i class="fa-solid fa-face-smile"></i>
                             </button>
                             <div class="customSelectBox-options">
@@ -1041,16 +1079,16 @@
                             </div>
                           </div>
                           <div class="inputBox inputBox_input">
-                            <input class="input_text" type="text">
+                            <input class="input_text" type="text" id="giveText">
                           </div>
-                          <span class="customSelectBox-textVal">
+                          <span class="customSelectBox-textVal" id="getText">
                             MICE 솔루션을 제공하는 기업으로 강력한 전시, 상담, 포럼 기능을 제공하고 있음
                           </span>
                         </div>
-                        <button type="button" class="btn btn_xxs"><i class="fa-solid fa-pen"></i></button>
+                        <button type="button" class="btn btn_xxs editContents"><i class="fa-solid fa-pen"></i></button>
                         <div class="subTitleBox_st">
-                          <button type="button" class="btn btn_m btn_m_primary">저장</button>
-                          <button type="button" class="btn btn_m btn_m_cancel">취소</button>
+                          <button type="button" class="closeEdit saveText btn btn_m btn_m_primary">저장</button>
+                          <button type="button" class="closeEdit btn btn_m btn_m_cancel">취소</button>
                         </div>
                       </div>
                     </li>
@@ -1061,9 +1099,9 @@
                             <input type="text" class="input_text">
                             <button class="btn btn_xs btn_xs_tran"><i class="fa-solid fa-magnifying-glass"></i></button>
                           </div>
-                          <div class="customSelectBox">
+                          <div class="customSelectBox customSelectBox2">
                             <!-- active가 들어오면 셀렉트박스가 열림 -->
-                            <button class="customSelectBox-btn btn customSelectBox-btn_value">
+                            <button class="customSelectBox-btn btn customSelectBox-btn_value openSelectBox2">
                               <i class="fa-solid fa-filter"></i>
                             </button>
                             <div class="customSelectBox-options">
@@ -1116,12 +1154,13 @@
                                     </label>
                                   </dd>
                                 </dl>
-                                <button type="button" class="btn btn_m btn_m_secondary">필터 적용</button>
+                                <button type="button" class="btn btn_m btn_m_secondary closeSelectBox">필터 적용</button>
                               </div>
                             </div>
                           </div>
-                          <div class="customSelectBox">
-                            <button class="customSelectBox-btn btn btn_xs openSelectBox"><i class="fa-regular fa-calendar-day"></i></i></button>
+                          <div class="customSelectBox customSelectBox3">
+                            <!-- active가 들어오면 셀렉트박스가 열림 -->
+                            <button class="customSelectBox-btn btn btn_xs openSelectBox3"><i class="fa-regular fa-calendar-day"></i></i></button>
                             <div class="customSelectBox-options">
                               <div class="setDateBox">
                                 <h5 class="filterChkListBox-title">등록일자</h5>
@@ -1130,11 +1169,11 @@
                                   <input class="input_date" type="date" value="2023-01-10">
                                 </div>
                                 <div class="btnsBox">
-                                  <button type="button" class="btn btn_s btn_s_outline active">오늘</button>
-                                  <button type="button" class="btn btn_s btn_s_outline">일주일</button>
-                                  <button type="button" class="btn btn_s btn_s_outline">1달</button>
+                                  <button type="button" class="isActiveBtn btn btn_s btn_s_outline active">오늘</button>
+                                  <button type="button" class="isActiveBtn btn btn_s btn_s_outline">일주일</button>
+                                  <button type="button" class="isActiveBtn btn btn_s btn_s_outline">1달</button>
                                 </div>
-                                <button type="button" class="btn btn_m btn_m_secondary">필터 적용</button>
+                                <button type="button" class="btn btn_m btn_m_secondary closeSelectBox">필터 적용</button>
                               </div>
                             </div>
                           </div>
@@ -1298,7 +1337,7 @@
             </div>
           </div>
           <!-- 잠재 단계 변경 -->
-          <div class="popupBox" style="display: none;">
+          <div class="popupBox popup1">
             <div class="popupBox-contents">
               <div class="popup-title">
                 <div class="subTitleBox subTitleBox_bt">
@@ -1307,7 +1346,7 @@
                       잠재 단계 변경
                     </h3>
                   </div>
-                  <button class="btn btn_pop"><i class="fa-light fa-xmark"></i></button>
+                  <button class="btn btn_pop close_popup"><i class="fa-light fa-xmark"></i></button>
                 </div>
               </div>
               <div class="popup-detail">
@@ -1324,7 +1363,7 @@
           </div>
 
           <!-- 개별등록 -->
-          <div class="popupBox" style="display: none;">
+          <div class="popupBox">
             <div class="popupBox-contents">
               <div class="popup-title">
                 <div class="subTitleBox subTitleBox_bt">
@@ -1333,7 +1372,7 @@
                       개별 등록
                     </h3>
                   </div>
-                  <button class="btn btn_pop"><i class="fa-light fa-xmark"></i></button>
+                  <button class="btn btn_pop close_popup"><i class="fa-light fa-xmark"></i></button>
                 </div>
               </div>
               <div class="popup-detail">
@@ -1432,7 +1471,7 @@
           </div>
 
           <!-- 일괄 등록 -->
-          <div class="popupBox" style="display: none;">
+          <div class="popupBox">
             <div class="popupBox-contents">
               <div class="popup-title">
                 <div class="subTitleBox subTitleBox_bt">
@@ -1441,7 +1480,7 @@
                       일괄 등록
                     </h3>
                   </div>
-                  <button class="btn btn_pop"><i class="fa-light fa-xmark"></i></button>
+                  <button class="btn btn_pop close_popup"><i class="fa-light fa-xmark"></i></button>
                 </div>
               </div>
               <div class="popup-detail">
@@ -1474,7 +1513,7 @@
           </div>
 
           <!-- 유효고객 전환 -->
-          <div class="popupBox" style="display: none;">
+          <div class="popupBox">
             <div class="popupBox-contents">
               <div class="popup-title">
                 <div class="subTitleBox subTitleBox_bt">
@@ -1483,7 +1522,7 @@
                       유효고객 전환
                     </h3>
                   </div>
-                  <button class="btn btn_pop"><i class="fa-light fa-xmark"></i></button>
+                  <button class="btn btn_pop close_popup"><i class="fa-light fa-xmark"></i></button>
                 </div>
               </div>
               <div class="popup-detail">
@@ -1551,7 +1590,7 @@
           </div>
 
           <!-- 유효고객검색 -->
-          <div class="popupBox" style="display: none;">
+          <div class="popupBox">
             <div class="popupBox-contents">
               <div class="popup-title">
                 <div class="subTitleBox subTitleBox_bt">
@@ -1560,7 +1599,7 @@
                       전시업무 등록
                     </h3>
                   </div>
-                  <button class="btn btn_pop"><i class="fa-light fa-xmark"></i></button>
+                  <button class="btn btn_pop close_popup"><i class="fa-light fa-xmark"></i></button>
                 </div>
               </div>
               <div class="popup-detail">
@@ -1609,7 +1648,7 @@
           </div>
 
           <!-- 권한 설정 -->
-          <div class="popupBox" style="display: none;">
+          <div class="popupBox">
             <div class="popupBox-contents">
               <div class="popup-title">
                 <div class="subTitleBox subTitleBox_bt">
@@ -1618,7 +1657,7 @@
                       권한 설정
                     </h3>
                   </div>
-                  <button class="btn btn_pop"><i class="fa-light fa-xmark"></i></button>
+                  <button class="btn btn_pop close_popup"><i class="fa-light fa-xmark"></i></button>
                 </div>
               </div>
               <div class="popup-detail">
@@ -1659,22 +1698,5 @@
       <p>Copyright © <strong>2022 김대중컨벤션센터</strong> All rights reserved.</p>
     </footer>
   </div>
-  <script>
-
-    // 총평 셀렉트박스 커스텀
-    const evalSelectBoxBtnValue = document.querySelector('.evalSelectBox-btn_value');
-    const evalSelectBoxBtnValueChild = document.querySelector('.evalSelectBox-btn_value > .fa-solid');
-    const evalSelectBoxBtnOption = document.querySelectorAll('.evalSelectBox-btn_option');
-    evalSelectBoxBtnValue.addEventListener('click', function(e) {
-      e.target.classList.toggle('active');
-    });
-    evalSelectBoxBtnOption.forEach((e)=> {
-      e.addEventListener('click', function(t) {
-        const emotionCode = t.target.getAttribute('data-val');
-        evalSelectBoxBtnValueChild.className = `fa-solid ${emotionCode}`
-        evalSelectBoxBtnValue.classList.remove('active');
-      });
-    })
-  </script>
 </body>
 </html>
