@@ -513,6 +513,9 @@
   &_st {
     justify-content: flex-start;
   }
+  &_end {
+    justify-content: flex-end;
+  }
   &-subTitle {
     position: relative;
     @include flex-box($jc:start) {

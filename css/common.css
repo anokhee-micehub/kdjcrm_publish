@@ -607,6 +607,11 @@
       -ms-flex-pack: start;
           justify-content: flex-start;
 }
+.subTitleBox_end {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
 .subTitleBox-subTitle {
   position: relative;
   display: -webkit-box;
