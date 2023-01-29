@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="../css/popup.css">
   <link href="https://demo-custom.micehub-gov.com/css/v6/all.css" rel="stylesheet">
   <link href="https://demo-custom.micehub-gov.com/css/v6/sharp-solid.css" rel="stylesheet">
-  <title>CL_02</title>
+  <title>CL_07</title>
 </head>
 <body>
   <div class="wrap">
@@ -75,77 +75,88 @@
       <section class="main-inner">
         <article class="commonPageBox_ly">
           <div class="popupBox">
-            <div class="popupBox-contents popupBox-contents_m">
+            <div class="popupBox-contents">
               <div class="popup-title">
                 <div class="subTitleBox subTitleBox_bt">
                   <div class="subTitleBox-inner">
                     <h3 class="subTitleBox-subTitle">
-                      유효고객 전환
+                      컨택 이력 등록
                     </h3>
                   </div>
-                  <button class="btn btn_pop"><i class="fa-light fa-xmark"></i></button>
+                  <button class="btn btn_pop close_popup"><i class="fa-light fa-xmark"></i></button>
                 </div>
               </div>
               <div class="popup-detail">
-                <p class="popup-desc">
-                  체크한 잠재고객 <em class="em">10</em>명을 유효고객으로 전환합니다. 고객이 소속될 그룹을 선택해주세요.
-                </p>
-                <div class="searchGroupBox">
-                  <div class="inputBox inputBox_input">
-                    <!-- 속성 disabled 가 들어오면 비활성화 -->
-                    <input class="input_text" type="text" placeholder="기존 그룹을 검색하세요 (기업, 기관 등)">
-                    <button type="button" class="btn btn_m btn_m_primary">검색</button>
-                  </div>
-                  <div class="resBox">
-                    <div class="resBox-inner resBox-inner_res">
-                      <!-- 기본텍스트 -->
-                      <!-- <p class="noRes">
-                        <em class="em">그룹을 검색</em>하거나 아래에 <em class="em">새로 입력</em>해주세요.
-                      </p> -->
-                      <!-- 검색결과 없음 -->
-                      <!-- <p class="noRes">
-                        검색 결과가 없습니다.<br/>
-                        <em class="em">다른 키워드로 검색</em>하거나 아래 버튼을 눌러 <em class="em">새로 입력</em>해주세요.
-                      </p> -->
-                      <!-- 검색결과 있음 -->
-                      <div class="isRes">
-                        <!-- 클래스 isActive가 들어오면 색적용 -->
-                        <button type="button" class="btn isRes-item isActive">주식회사 마이스허브</button>
-                        <button type="button" class="btn isRes-item">주식회사 마이스허브</button>
-                        <button type="button" class="btn isRes-item">주식회사 마이스허브</button>
-                        <button type="button" class="btn isRes-item">주식회사 마이스허브</button>
-                        <button type="button" class="btn isRes-item">주식회사 마이스허브</button>
-                        <button type="button" class="btn isRes-item">주식회사 마이스허브</button>
-                        <button type="button" class="btn isRes-item">주식회사 마이스허브</button>
-                        <button type="button" class="btn isRes-item">주식회사 마이스허브</button>
-                        <button type="button" class="btn isRes-item">주식회사 마이스허브</button>
-                        <button type="button" class="btn isRes-item">주식회사 마이스허브</button>
-                        <button type="button" class="btn isRes-item">주식회사 마이스허브</button>
+                <ul class="infoBox">
+                  <li class="infoBox-inner infoBox-inner_half">
+                    <strong class="infoBox-cate">전시회 코드</strong>
+                    <div class="infoBox-info infoBox-info_form">
+                      <div class="inputBox inputBox_select">
+                        <select class="select select_formSelect" name="" id="">
+                          <option value="">미디어</option>
+                          <option value="value1">value1</option>
+                          <option value="value2">value2</option>
+                        </select>
                       </div>
                     </div>
-                    <div class="resBox-inner resBox-inner_input">
+                  </li>
+                  <li class="infoBox-inner infoBox-inner_half">
+                    <strong class="infoBox-cate">날짜</strong>
+                    <div class="infoBox-info infoBox-info_form">
                       <div class="inputBox inputBox_input">
-                        <!-- 클래스 disable가 들어오면 버튼 비활성화-->
-                        <button type="button" class="btn btn_m btn_m_search">
-                          <i class="fa-light fa-plus"></i>
-                          새 그룹
-                        </button>
-                        <input class="input_text" type="text" placeholder="또는 새로운 그룹을 입력하세요">
+                        <input class="input_date input_date_time" type="datetime-local">
                       </div>
                     </div>
-                  </div>
-                </div>
-                <div class="inputLabelGroupBox">
-                  <label class="label" for="chk99">
-                    <input class="input_checkbox" type="checkbox" id="chk99" checked="">
-                    <span class="checkboxChk"></span>
-                    소속없음
-                  </label>
-                </div>
-                <div class="popup-btnGroup">
-                  <button type="button" class="btn btn_l btn_l_reg">등록</button>
-                  <button type="button" class="btn btn_l btn_l_cl">취소</button>
-                </div>
+                  </li>
+                  <li class="infoBox-inner infoBox-inner_half">
+                    <strong class="infoBox-cate">컨택 타입</strong>
+                    <div class="infoBox-info infoBox-info_form">
+                      <div class="inputBox inputBox_select">
+                        <select class="select select_formSelect" name="" id="">
+                          <option value="">인바운드</option>
+                          <option value="value1">value1</option>
+                          <option value="value2">value2</option>
+                        </select>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="infoBox-inner infoBox-inner_half">
+                    <strong class="infoBox-cate">컨택 방식</strong>
+                    <div class="infoBox-info infoBox-info_form">
+                      <div class="inputBox inputBox_select">
+                        <select class="select select_formSelect" name="" id="">
+                          <option value="">전화</option>
+                          <option value="value1">value1</option>
+                          <option value="value2">value2</option>
+                        </select>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="infoBox-inner infoBox-inner_full">
+                    <strong class="infoBox-cate">컨택 반응</strong>
+                    <div class="infoBox-info infoBox-info_form">
+                      <div class="inputBox inputBox_select">
+                        <select class="select select_formSelect" name="" id="">
+                          <option value="">긍정</option>
+                          <option value="value1">value1</option>
+                          <option value="value2">value2</option>
+                        </select>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="infoBox-inner infoBox-inner_full infoBox-inner_full_row">
+                    <strong class="infoBox-cate">내용</strong>
+                    <div class="infoBox-info">
+                      <div class="inputBox inputBox_textarea">
+                        <textarea class="input_textarea"></textarea>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="popup-btnGroup mt40">
+                <button type="button" class="btn btn_l btn_l_reg">등록</button>
+                <button type="button" class="btn btn_l btn_l_cl">취소</button>
               </div>
             </div>
           </div>

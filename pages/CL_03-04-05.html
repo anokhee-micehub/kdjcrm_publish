@@ -9,11 +9,17 @@
   <link rel="stylesheet" href="../css/footer.css">
   <link rel="stylesheet" href="../css/common.css">
   <link rel="stylesheet" href="../css/search.css">
+  <link rel="stylesheet" href="../css/form.css">
+  <link rel="stylesheet" href="../css/popup.css">
   <link rel="stylesheet" href="../css/signboard.css">
   <link rel="stylesheet" href="../css/card.css">
   <link href="https://demo-custom.micehub-gov.com/css/v6/all.css" rel="stylesheet">
   <link href="https://demo-custom.micehub-gov.com/css/v6/sharp-solid.css" rel="stylesheet">
-  <title>CL_03</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.3/dragula.min.js" integrity="sha512-NgXVRE+Mxxf647SqmbB9wPS5SEpWiLFp5G7ItUNFi+GVUyQeP+7w4vnKtc2O/Dm74TpTFKXNjakd40pfSKNulg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="../js/commonJs.js" defer></script>
+  <script src="../js/dragAndDrop.js" defer></script>
+  <title>CL_03-04-05</title>
 </head>
 <body>
   <div class="wrap">
@@ -87,35 +93,24 @@
               <div class="inputGroup-line">
                 <div class="inputBox inputBox_select">
                   <select class="select" name="" id="">
-                    <option value="">기회구분</option>
+                    <option value="">잠재 단계</option>
                     <option value="value1">value1</option>
                     <option value="value2">value2</option>
                   </select>
                 </div>
                 <div class="inputBox inputBox_select">
                   <select class="select" name="" id="">
-                    <option value="">사업</option>
+                    <option value="">정보 수집 경로</option>
                     <option value="value1">value1</option>
                     <option value="value2">value2</option>
                   </select>
                 </div>
                 <div class="inputBox inputBox_select">
                   <select class="select" name="" id="">
-                    <option value="">신규여부</option>
+                    <option value="">최초 수집자</option>
                     <option value="value1">value1</option>
                     <option value="value2">value2</option>
                   </select>
-                </div>
-                <div class="inputBox inputBox_select">
-                  <select class="select" name="" id="">
-                    <option value="">기회성공률</option>
-                    <option value="value1">value1</option>
-                    <option value="value2">value2</option>
-                  </select>
-                </div>
-                <div class="inputBox inputBox_calendar">
-                  <label class="label" for="regDate">기회마감일</label>
-                  <input class="input_date" type="date" value="2023-01-10">
                 </div>
                 <div class="inputBox inputBox_calendar">
                   <label class="label" for="regDate">등록 일자</label>
@@ -124,11 +119,9 @@
                 </div>
               </div>
               <div class="inputGroup-line">
-              </div>
-              <div class="inputGroup-line">
                 <div class="inputBox inputBox_select">
                   <select class="select" name="" id="">
-                    <option value="">기회 이름</option>
+                    <option value="">이름</option>
                     <option value="value1">value1</option>
                     <option value="value2">value2</option>
                   </select>
@@ -143,6 +136,8 @@
               </div>
             </div>
             <div class="buttonGroup">
+              <button type="button" class="btn btn_m btn_m_primary open_popup" data-popup="cl05"><i class="fa-solid fa-file-arrow-up"></i> 일괄 등록</button>
+              <button type="button" class="btn btn_m btn_m_primary open_popup" data-popup="cl04"><i class="fa-solid fa-user-plus"></i> 개별 등록</button>
               <button type="button" class="btn btn_m btn_m_excel"><i class="fa-regular fa-file-excel"></i></button>
             </div>
           </div>
@@ -150,6 +145,8 @@
             <div class="searchBox searchBox_body">
               <div class="searchBox_body-inner searchBox_body-inner_left">
                 <label class="label">검색 결과 <strong>1-15 / 500</strong>개</label>
+                <button type="button" class="btn btn_m btn_m_secondary open_popup" data-popup="popup1"><i class="fa-solid fa-arrow-right-arrow-left"></i> 잠재 단계 변경</button>
+                <button type="button" class="btn btn_m btn_m_primary"><i class="fa-solid fa-file-export"></i> 유효고객전환</button>
               </div>
               <div class="searchBox_body-inner searchBox_body-inner_right">
                 <button class="btn btn_m btn_m_align isActive"><i class="fa-solid fa-list"></i></button>
@@ -174,7 +171,7 @@
               <ul class="stepBarBox">
                 <li class="stepBarBox-item">
                   <h4 class="stepBarBox-item_title">신규</h4>
-                  <ul class="cardWrapBox">
+                  <ul class="cardWrapBox" id="cardWrapBox1">
                     <li class="cardBox box">
                       <div class="cardBox-inner cardBox-inner_left">
                         <h5 class="cardBox-title cardBox-title_text">[전시 참가] SWEET 2023 참가</h5>
@@ -194,7 +191,6 @@
                         </ul>
                       </div>
                       <div class="cardBox-inner cardBox-inner_right">
-                        <button type="button" class="btn btn_xxs" title="유효고객 전환"><i class="fa-solid fa-file-export"></i></button>
                         <button type="button" class="btn btn_xxs" title="수정"><i class="fa-solid fa-pen"></i></button>
                         <button type="button" class="btn btn_xxs" title="이력"><i class="fa-solid fa-rotate-right"></i></button>
                         <button type="button" class="btn btn_xxs" title="삭제"><i class="fa-solid fa-trash"></i></button>
@@ -234,7 +230,6 @@
                         </ul>
                       </div>
                       <div class="cardBox-inner cardBox-inner_right">
-                        <button type="button" class="btn btn_xxs" title="유효고객 전환"><i class="fa-solid fa-file-export"></i></button>
                         <button type="button" class="btn btn_xxs" title="수정"><i class="fa-solid fa-pen"></i></button>
                         <button type="button" class="btn btn_xxs" title="이력"><i class="fa-solid fa-rotate-right"></i></button>
                         <button type="button" class="btn btn_xxs" title="삭제"><i class="fa-solid fa-trash"></i></button>
@@ -247,16 +242,19 @@
                 </li>
                 <li class="stepBarBox-item">
                   <h4 class="stepBarBox-item_title">분석</h4>
+                  <ul class="cardWrapBox" id="cardWrapBox2"></ul>
                 </li>
                 <li class="stepBarBox-item">
                   <h4 class="stepBarBox-item_title">제안</h4>
+                  <ul class="cardWrapBox" id="cardWrapBox3"></ul>
                 </li>
                 <li class="stepBarBox-item">
                   <h4 class="stepBarBox-item_title">협상</h4>
+                  <ul class="cardWrapBox" id="cardWrapBox4"></ul>
                 </li>
                 <li class="stepBarBox-item">
                   <h4 class="stepBarBox-item_title">완료</h4>
-                  <ul class="cardWrapBox">
+                  <ul class="cardWrapBox" id="cardWrapBox5">
                     <li class="cardBox box">
                       <div class="cardBox-inner cardBox-inner_left">
                         <h5 class="cardBox-title cardBox-title_text">[전시 참가] SWEET 2023 참가</h5>
@@ -276,7 +274,6 @@
                         </ul>
                       </div>
                       <div class="cardBox-inner cardBox-inner_right">
-                        <button type="button" class="btn btn_xxs" title="유효고객 전환"><i class="fa-solid fa-file-export"></i></button>
                         <button type="button" class="btn btn_xxs" title="수정"><i class="fa-solid fa-pen"></i></button>
                         <button type="button" class="btn btn_xxs" title="이력"><i class="fa-solid fa-rotate-right"></i></button>
                         <button type="button" class="btn btn_xxs" title="삭제"><i class="fa-solid fa-trash"></i></button>
@@ -288,6 +285,158 @@
                   </ul>
                 </li>
               </ul>
+            </div>
+          </div>
+          <!-- CL_04개별등록 -->
+          <div class="popupBox cl04">
+            <div class="popupBox-contents">
+              <div class="popup-title">
+                <div class="subTitleBox subTitleBox_bt">
+                  <div class="subTitleBox-inner">
+                    <h3 class="subTitleBox-subTitle">
+                      개별 등록
+                    </h3>
+                  </div>
+                  <button class="btn btn_pop close_popup"><i class="fa-light fa-xmark"></i></button>
+                </div>
+              </div>
+              <div class="popup-detail">
+                <h4 class="popupDetailTitle">
+                  잠재 고객 상태
+                </h4>
+                <div class="tabWrapBox">
+                  <button type="button" class="arrowBtns btn">분류</button>
+                  <button type="button" class="arrowBtns btn disable">크리닝</button>
+                  <button type="button" class="arrowBtns btn disable">유치</button>
+                </div>
+                <h4 class="popupDetailTitle">
+                  고객 정보
+                </h4>
+                <ul class="infoBox">
+                  <li class="infoBox-inner infoBox-inner_half">
+                    <strong class="infoBox-cate em">이름</strong>
+                    <div class="infoBox-info infoBox-info_form">
+                      <div class="inputBox inputBox_input">
+                        <input class="input_text" type="text" value="성이름">
+                      </div>
+                    </div>
+                  </li>
+                  <li class="infoBox-inner infoBox-inner_half">
+                    <strong class="infoBox-cate em">직위</strong>
+                    <div class="infoBox-info infoBox-info_form">
+                      <div class="inputBox inputBox_input">
+                        <input class="input_text" type="text" value="사원">
+                      </div>
+                    </div>
+                  </li>
+                  <li class="infoBox-inner infoBox-inner_half">
+                    <strong class="infoBox-cate em">유선전화</strong>
+                    <div class="infoBox-info infoBox-info_form">
+                      <div class="inputBox inputBox_input">
+                        <input class="input_text" type="text" value="02-1245-1235">
+                      </div>
+                    </div>
+                  </li>
+                  <li class="infoBox-inner infoBox-inner_half">
+                    <strong class="infoBox-cate em">휴대전화</strong>
+                    <div class="infoBox-info infoBox-info_form">
+                      <div class="inputBox inputBox_input">
+                        <input class="input_text" type="text" value="010-2222-3444">
+                      </div>
+                    </div>
+                  </li>
+                  <li class="infoBox-inner infoBox-inner_half">
+                    <strong class="infoBox-cate em">이메일</strong>
+                    <div class="infoBox-info infoBox-info_form">
+                      <div class="inputBox inputBox_input">
+                        <input class="input_text" type="text" value="mail@mail.com">
+                      </div>
+                    </div>
+                  </li>
+                  <li class="infoBox-inner infoBox-inner_half">
+                    <strong class="infoBox-cate em">소속</strong>
+                    <div class="infoBox-info infoBox-info_form">
+                      <div class="inputBox inputBox_input">
+                        <input class="input_text" type="text" value="주식회사 마이스허브">
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <h4 class="popupDetailTitle">
+                  정보 수집
+                </h4>
+                <ul class="infoBox">
+                  <li class="infoBox-inner infoBox-inner_half">
+                    <strong class="infoBox-cate em">최초 수집자</strong>
+                    <div class="infoBox-info infoBox-info_form">
+                      <div class="inputBox inputBox_select">
+                        <select class="select" name="" id="">
+                          <option value="">성이름</option>
+                          <option value="value1">value1</option>
+                          <option value="value2">value2</option>
+                        </select>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="infoBox-inner infoBox-inner_half">
+                    <strong class="infoBox-cate em">수집 경로</strong>
+                    <div class="infoBox-info infoBox-info_form">
+                      <div class="inputBox inputBox_select">
+                        <select class="select" name="" id="">
+                          <option value="">미디어</option>
+                          <option value="value1">value1</option>
+                          <option value="value2">value2</option>
+                        </select>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="popup-btnGroup mt40">
+                <button type="button" class="btn btn_l btn_l_reg">등록</button>
+                <button type="button" class="btn btn_l btn_l_cl close_popup">취소</button>
+              </div>
+            </div>
+          </div>
+          <!-- CL_05일괄등록 -->
+          <div class="popupBox cl05">
+            <div class="popupBox-contents popupBox-contents_m">
+              <div class="popup-title">
+                <div class="subTitleBox subTitleBox_bt">
+                  <div class="subTitleBox-inner">
+                    <h3 class="subTitleBox-subTitle">
+                      일괄 등록
+                    </h3>
+                  </div>
+                  <button class="btn btn_pop close_popup"><i class="fa-light fa-xmark"></i></button>
+                </div>
+              </div>
+              <div class="popup-detail">
+                <p class="popup-desc popup-desc-btn">
+                  양식에 맞춰 파일을 업로드하면 잠재고객이 일괄 등록됩니다.
+                  <button class="btn btn_m btn_m_secondary">양식 다운로드</button>
+                </p>
+                <div class="uploadFileBox">
+                  <div class="uploadFileBox-inputWrap">
+                    <input class="input input_file" type="file" id="file"></input>
+                    <label for="file" class="label_file btn btn_m btn_m_back">
+                      파일 선택
+                    </label>
+                    <span class="getFileNameText">선택된 파일 없음</span>
+                    <button type="button" class="btn btn_m btn_m_primary">업로드</button>
+                  </div>
+                  <ul class="uploadFileListBox">
+                    <li class="uploadFileListBox-item">
+                      <i class="chip chip_excel fa-regular fa-file-excel"></i>
+                      <span class="getFileNameText">단체등록파일.xlsx</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="popup-btnGroup">
+                  <button type="button" class="btn btn_l btn_l_reg">등록</button>
+                  <button type="button" class="btn btn_l btn_l_cl close_popup">취소</button>
+                </div>
+              </div>
             </div>
           </div>
         </article>
