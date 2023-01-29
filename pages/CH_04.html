@@ -9,14 +9,12 @@
   <link rel="stylesheet" href="../css/footer.css">
   <link rel="stylesheet" href="../css/common.css">
   <link rel="stylesheet" href="../css/form.css">
-  <link rel="stylesheet" href="../css/search.css">
-  <link rel="stylesheet" href="../css/table.css">
-  <link rel="stylesheet" href="../css/signboard.css">
-  <link rel="stylesheet" href="../css/card.css">
-  <link rel="stylesheet" href="../css/popup.css">
-  <link rel="stylesheet" href="../css/main.css">
   <link href="https://demo-custom.micehub-gov.com/css/v6/all.css" rel="stylesheet">
   <link href="https://demo-custom.micehub-gov.com/css/v6/sharp-solid.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="../js/commonJs.js" defer></script>
+  <script src="../js/customSelectBox.js" defer></script>
+  <script src="../js/form.js" defer></script>
   <title>CH_04</title>
 </head>
 <body>
@@ -324,7 +322,8 @@
                       </li>
                     </ul>
                   </div>
-                  <div class="subTitleBox_st mt40">
+                  <!-- hidden클래스가 제거되면 나타남 -->
+                  <div class="subTitleBox_st mt40 hidden">
                     <button type="button" class="btn btn_m btn_m_primary">저장</button>
                     <button type="button" class="btn btn_m btn_m_cancel">취소</button>
                   </div>
@@ -345,9 +344,9 @@
                       <!-- offInput이 onInput로 바뀌면 총평텍스트를 입력할 수 있음 -->
                       <div class="infoBox-info infoBox-info_bt offInput">
                         <div class="customSelectBox_wrap">
-                          <div class="customSelectBox">
+                          <div class="customSelectBox customSelectBox1">
                             <!-- active가 들어오면 셀렉트박스가 열림 -->
-                            <button class="customSelectBox-btn btn customSelectBox-btn_value openSelectBox">
+                            <button class="customSelectBox-btn btn customSelectBox-btn_value openSelectBox1">
                               <i class="fa-solid fa-face-smile"></i>
                             </button>
                             <div class="customSelectBox-options">
@@ -366,16 +365,16 @@
                             </div>
                           </div>
                           <div class="inputBox inputBox_input">
-                            <input class="input_text" type="text">
+                            <input class="input_text" type="text" id="giveText">
                           </div>
-                          <span class="customSelectBox-textVal">
+                          <span class="customSelectBox-textVal" id="getText">
                             MICE 솔루션을 제공하는 기업으로 강력한 전시, 상담, 포럼 기능을 제공하고 있음
                           </span>
                         </div>
-                        <button type="button" class="btn btn_xxs"><i class="fa-solid fa-pen"></i></button>
+                        <button type="button" class="btn btn_xxs editContents"><i class="fa-solid fa-pen"></i></button>
                         <div class="subTitleBox_st">
-                          <button type="button" class="btn btn_m btn_m_primary">저장</button>
-                          <button type="button" class="btn btn_m btn_m_cancel">취소</button>
+                          <button type="button" class="closeEdit saveText btn btn_m btn_m_primary">저장</button>
+                          <button type="button" class="closeEdit btn btn_m btn_m_cancel">취소</button>
                         </div>
                       </div>
                     </li>
@@ -386,9 +385,9 @@
                             <input type="text" class="input_text">
                             <button class="btn btn_xs btn_xs_tran"><i class="fa-solid fa-magnifying-glass"></i></button>
                           </div>
-                          <div class="customSelectBox">
+                          <div class="customSelectBox customSelectBox2">
                             <!-- active가 들어오면 셀렉트박스가 열림 -->
-                            <button class="customSelectBox-btn btn customSelectBox-btn_value openSelectBox">
+                            <button class="customSelectBox-btn btn customSelectBox-btn_value openSelectBox2">
                               <i class="fa-solid fa-filter"></i>
                             </button>
                             <div class="customSelectBox-options">
@@ -441,13 +440,13 @@
                                     </label>
                                   </dd>
                                 </dl>
-                                <button type="button" class="btn btn_m btn_m_secondary">필터 적용</button>
+                                <button type="button" class="btn btn_m btn_m_secondary closeSelectBox">필터 적용</button>
                               </div>
                             </div>
                           </div>
-                          <div class="customSelectBox">
+                          <div class="customSelectBox customSelectBox3">
                             <!-- active가 들어오면 셀렉트박스가 열림 -->
-                            <button class="customSelectBox-btn btn btn_xs openSelectBox"><i class="fa-regular fa-calendar-day"></i></button>
+                            <button class="customSelectBox-btn btn btn_xs openSelectBox3"><i class="fa-regular fa-calendar-day"></i></button>
                             <div class="customSelectBox-options">
                               <div class="setDateBox">
                                 <h5 class="filterChkListBox-title">등록일자</h5>
@@ -456,14 +455,15 @@
                                   <input class="input_date" type="date" value="2023-01-10">
                                 </div>
                                 <div class="btnsBox">
-                                  <button type="button" class="btn btn_s btn_s_outline active">오늘</button>
-                                  <button type="button" class="btn btn_s btn_s_outline">일주일</button>
-                                  <button type="button" class="btn btn_s btn_s_outline">1달</button>
+                                  <button type="button" class="isActiveBtn btn btn_s btn_s_outline active">오늘</button>
+                                  <button type="button" class="isActiveBtn btn btn_s btn_s_outline">일주일</button>
+                                  <button type="button" class="isActiveBtn btn btn_s btn_s_outline">1달</button>
                                 </div>
-                                <button type="button" class="btn btn_m btn_m_secondary">필터 적용</button>
+                                <button type="button" class="btn btn_m btn_m_secondary closeSelectBox">필터 적용</button>
                               </div>
                             </div>
                           </div>
+                          <button class="btn btn_m btn_m_back">검색조건 초기화</button>
                         </div>
                         <button type="button" class="btn btn_m btn_m_secondary"><i class="fa-solid fa-plus"></i> 개별 등록</button>
                         <ul class="stickersBox">
@@ -478,9 +478,6 @@
                           <li class="sticker">
                             <button class="btn">X</button>
                             2022.12.31~2023.01.31
-                          </li>
-                          <li class="resetBtn">
-                            <button class="btn btn_m btn_m_back">검색조건 초기화</button>
                           </li>
                         </ul>
                       </strong>

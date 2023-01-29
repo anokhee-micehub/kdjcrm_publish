@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=1980">
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/form.css">
+  <link rel="stylesheet" href="../css/search.css">
+  <link rel="stylesheet" href="../css/table.css">
+  <link rel="stylesheet" href="../css/popup.css">
+  <link href="https://demo-custom.micehub-gov.com/css/v6/all.css" rel="stylesheet">
+  <link href="https://demo-custom.micehub-gov.com/css/v6/sharp-solid.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="../js/commonJs.js" defer></script>
+  <title>CE_01-02-03</title>
+</head>
+<body>
+  <div class="wrap">
+    <header class="header">
+      <h1 class="logo">
+        <img src="/assets/logo.png" alt="로고">
+      </h1>
+      <ul class="gnb gnb_depth1">
+        <li>
+          <a href="#" class="gnb-link gnb-link_depth1 isActive"><i class="fa-solid fa-user"></i> 고객</a>
+          <ul class="gnb gnb_depth2">
+            <li><a href="#" class="gnb-link gnb-link_depth2 isActive">보고</a></li>
+            <li><a href="#" class="gnb-link gnb-link_depth2">잠재</a></li>
+            <li><a href="#" class="gnb-link gnb-link_depth2">고객</a></li>
+            <li><a href="#" class="gnb-link gnb-link_depth2">기회</a></li>
+            <li><a href="#" class="gnb-link gnb-link_depth2">참관객</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="gnb-link gnb-link_depth1"><i class="fa-solid fa-megaphone"></i> 마케팅</a>
+          <ul class="gnb gnb_depth2">
+            <li><a href="#" class="gnb-link gnb-link_depth2">보고</a></li>
+            <li><a href="#" class="gnb-link gnb-link_depth2">캠페인</a></li>
+            <li><a href="#" class="gnb-link gnb-link_depth2">메시지</a></li>
+            <li><a href="#" class="gnb-link gnb-link_depth2">대화</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="gnb-link gnb-link_depth1"><i class="fa-solid fa-location-plus"></i> 대관</a>
+          <ul class="gnb gnb_depth2">
+            <li><a href="#" class="gnb-link gnb-link_depth2">보고</a></li>
+            <li><a href="#" class="gnb-link gnb-link_depth2">전시장</a></li>
+            <li><a href="#" class="gnb-link gnb-link_depth2">행사장</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="gnb-link gnb-link_depth1"><i class="fa-solid fa-calendar-check"></i> 행사</a>
+          <ul class="gnb gnb_depth2">
+            <li><a href="#" class="gnb-link gnb-link_depth2">보고</a></li>
+            <li><a href="#" class="gnb-link gnb-link_depth2">전시등록</a></li>
+            <li><a href="#" class="gnb-link gnb-link_depth2">행사등록</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="gnb-link gnb-link_depth1"><i class="fa-solid fa-list-check"></i> 관리</a>
+          <ul class="gnb gnb_depth2">
+            <li><a href="#" class="gnb-link gnb-link_depth2">회원</a></li>
+            <li><a href="#" class="gnb-link gnb-link_depth2">분류</a></li>
+            <li><a href="#" class="gnb-link gnb-link_depth2">시설</a></li>
+            <li><a href="#" class="gnb-link gnb-link_depth2">기기</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="header-userInfo">
+        <span>안녕하세요! 홍길동님</span>
+        <button type="button"><i class="fa-solid fa-arrow-right-from-bracket"></i></button>
+      </div>
+    </header>
+    <main class="main">
+      <section class="main-inner">
+        <article class="commonPageBox_ly">
+          <div class="lnb">
+            <div class="lnb-side">
+              <a class="lnb-link">홈</a>
+              <a class="lnb-link">고객</a>
+              <a class="lnb-link isActive">참관객</a>
+            </div>
+          </div>
+          <div class="searchBox searchBox_head">
+            <div class="inputGroup">
+              <div class="inputGroup-line">
+                <div class="inputBox inputBox_calendar">
+                  <label class="label" for="regDate">등록 일자</label>
+                  <input class="input_date" type="date" value="2023-01-10"> ~
+                  <input class="input_date" type="date" value="2023-01-10">
+                </div>
+                <div class="inputBox inputBox_select">
+                  <select class="select" name="" id="">
+                    <option value="">개인정보 이용 가능 여부</option>
+                    <option value="value1">value1</option>
+                    <option value="value2">value2</option>
+                  </select>
+                </div>
+                <div class="inputBox inputBox_select">
+                  <select class="select" name="" id="">
+                    <option value="">일반/전문</option>
+                    <option value="value1">value1</option>
+                    <option value="value2">value2</option>
+                  </select>
+                </div>
+                <div class="inputBox inputBox_select">
+                  <select class="select" name="" id="">
+                    <option value="">회사분류</option>
+                    <option value="value1">value1</option>
+                    <option value="value2">value2</option>
+                  </select>
+                </div>
+                <div class="inputBox inputBox_select">
+                  <select class="select" name="" id="">
+                    <option value="">직책</option>
+                    <option value="value1">value1</option>
+                    <option value="value2">value2</option>
+                  </select>
+                </div>
+                <div class="inputBox inputBox_select">
+                  <select class="select" name="" id="">
+                    <option value="">담당부서</option>
+                    <option value="value1">value1</option>
+                    <option value="value2">value2</option>
+                  </select>
+                </div>
+              </div>
+              <div class="inputGroup-line">
+                <div class="inputBox inputBox_select">
+                  <select class="select" name="" id="">
+                    <option value="">사업코드</option>
+                    <option value="value1">value1</option>
+                    <option value="value2">value2</option>
+                  </select>
+                </div>
+                <div class="inputBox inputBox_select">
+                  <select class="select" name="" id="">
+                    <option value="">참가연도</option>
+                    <option value="value1">value1</option>
+                    <option value="value2">value2</option>
+                  </select>
+                </div>
+                <div class="inputBox inputBox_select">
+                  <select class="select" name="" id="">
+                    <option value="">관람목적</option>
+                    <option value="value1">value1</option>
+                    <option value="value2">value2</option>
+                  </select>
+                </div>
+                <div class="inputBox inputBox_select">
+                  <select class="select" name="" id="">
+                    <option value="">관심분야</option>
+                    <option value="value1">value1</option>
+                    <option value="value2">value2</option>
+                  </select>
+                </div>
+                <div class="inputBox inputBox_select">
+                  <select class="select" name="" id="">
+                    <option value="">인지경로</option>
+                    <option value="value1">value1</option>
+                    <option value="value2">value2</option>
+                  </select>
+                </div>
+                <div class="inputBox inputBox_select">
+                  <select class="select" name="" id="">
+                    <option value="">지역</option>
+                    <option value="value1">value1</option>
+                    <option value="value2">value2</option>
+                  </select>
+                </div>
+                <div class="inputBox inputBox_select">
+                  <select class="select" name="" id="">
+                    <option value="">연령대</option>
+                    <option value="value1">value1</option>
+                    <option value="value2">value2</option>
+                  </select>
+                </div>
+                <div class="inputBox inputBox_select">
+                  <select class="select" name="" id="">
+                    <option value="">참가 유형</option>
+                    <option value="value1">value1</option>
+                    <option value="value2">value2</option>
+                  </select>
+                </div>
+              </div>
+              <div class="inputGroup-line">
+                <div class="inputBox inputBox_select">
+                  <select class="select" name="" id="">
+                    <option value="">참관객 이름</option>
+                    <option value="value1">value1</option>
+                    <option value="value2">value2</option>
+                  </select>
+                </div>
+                <div class="inputBox inputBox_input">
+                  <input class="input_text" type="text">
+                  <button type="button" class="btn btn_m btn_m_search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    검색
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="buttonGroup">
+              <button type="button" class="btn btn_m btn_m_primary open_popup" data-popup="ce03"><i class="fa-solid fa-file-arrow-up"></i> 일괄 등록</button>
+              <button type="button" class="btn btn_m btn_m_primary open_popup" data-popup="ce02"><i class="fa-solid fa-user-plus"></i> 개별 등록</button>
+              <button type="button" class="btn btn_m btn_m_excel"><i class="fa-regular fa-file-excel"></i></button>
+            </div>
+          </div>
+          <div class="contentsBox_ly">
+            <div class="tableBox_ly">
+              <div class="searchBox searchBox_body">
+                <div class="searchBox_body-inner searchBox_body-inner_left">
+                  <label class="label">검색 결과 <strong>1-15 / 500</strong>개</label>
+                </div>
+                <div class="searchBox_body-inner searchBox_body-inner_right">
+                  <div class="inputBox inputBox_select">
+                    <select class="select" name="" id="">
+                      <option value="">- 정렬순서 -</option>
+                      <option value="value1">value1</option>
+                      <option value="value2">value2</option>
+                    </select>
+                  </div>
+                  <div class="inputBox inputBox_select">
+                    <select class="select" name="" id="">
+                      <option value="">- 15개씩 보기 -</option>
+                      <option value="value1">value1</option>
+                      <option value="value2">value2</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="tableWrapBox box">
+                <table class="table">
+                  <colgroup>
+                    <col width="5%">
+                    <col width="4%">
+                    <col width="8%">
+                    <col width="8%">
+                    <col width="14%">
+                    <col width="20%">
+                    <col width="7%">
+                    <col width="7%">
+                    <col width="10%">
+                    <col width="10%">
+                    <col width="7%">
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th>#</th>
+                      <th>일반/전문</th>
+                      <th>이름</th>
+                      <th>휴대전화</th>
+                      <th>이메일</th>
+                      <th>사업코드 및 참가연도</th>
+                      <th>참가유형</th>
+                      <th>정보 이용가능 여부</th>
+                      <th>등록일자</th>
+                      <th>최종수정일자</th>
+                      <th>관리</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>515</td>
+                      <td>전문</td>
+                      <td>홍길동</td>
+                      <td>010-2233-5555</td>
+                      <td>hgd@gmail.com</td>
+                      <td>
+                        200201 SWEET (2021)<br>
+                        200201 SWEET (2022)<br>
+                        200201 SWEET (2023)<br>
+                        200202 ICEF (2021)<br>
+                      </td>
+                      <td>개별</td>
+                      <td>불가</td>
+                      <td>2022-12-07 15:51</td>
+                      <td>2022-12-07 15:51</td>
+                      <td>
+                        <button type="button" class="btn btn_xxs" title="수정"><i class="fa-solid fa-pen"></i></button>
+                        <button type="button" class="btn btn_xxs" title="이력"><i class="fa-solid fa-clock-rotate-left"></i></button>
+                        <button type="button" class="btn btn_xxs" title="삭제"><i class="fa-solid fa-trash"></i></button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>515</td>
+                      <td>전문</td>
+                      <td>홍길동</td>
+                      <td>010-2233-5555</td>
+                      <td>hgd@gmail.com</td>
+                      <td>
+                        200201 SWEET (2021)<br>
+                        200201 SWEET (2022)<br>
+                        200201 SWEET (2023)<br>
+                        200202 ICEF (2021)<br>
+                      </td>
+                      <td>개별</td>
+                      <td>불가</td>
+                      <td>2022-12-07 15:51</td>
+                      <td>2022-12-07 15:51</td>
+                      <td>
+                        <button type="button" class="btn btn_xxs" title="수정"><i class="fa-solid fa-pen"></i></button>
+                        <button type="button" class="btn btn_xxs" title="이력"><i class="fa-solid fa-clock-rotate-left"></i></button>
+                        <button type="button" class="btn btn_xxs" title="삭제"><i class="fa-solid fa-trash"></i></button>
+                      </td>
+                    </tr>
+                    <tr class="disable">
+                      <td>515</td>
+                      <td>전문</td>
+                      <td>홍길동</td>
+                      <td>010-2233-5555</td>
+                      <td>hgd@gmail.com</td>
+                      <td>
+                        200201 SWEET (2021)<br>
+                        200201 SWEET (2022)<br>
+                        200201 SWEET (2023)<br>
+                        200202 ICEF (2021)<br>
+                      </td>
+                      <td>개별</td>
+                      <td>불가</td>
+                      <td>2022-12-07 15:51</td>
+                      <td>2022-12-07 15:51</td>
+                      <td>
+                        <button type="button" class="btn btn_xxs" title="수정"><i class="fa-solid fa-pen"></i></button>
+                        <button type="button" class="btn btn_xxs" title="이력"><i class="fa-solid fa-clock-rotate-left"></i></button>
+                        <button type="button" class="btn btn_xxs" title="삭제"><i class="fa-solid fa-trash"></i></button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="pageBox">
+                  <a class="btn btn_arrow prev"><i class="fa-solid fa-chevron-left"></i></a>
+                  <a class="btn btn_num isActive">1</a>
+                  <a class="btn btn_num">2</a>
+                  <a class="btn btn_num">3</a>
+                  <a class="btn btn_num">4</a>
+                  <a class="btn btn_num">5</a>
+                  <a class="btn btn_num">6</a>
+                  <a class="btn btn_num">7</a>
+                  <a class="btn btn_num">8</a>
+                  <a class="btn btn_num">9</a>
+                  <a class="btn btn_num">10</a>
+                  <a class="btn btn_arrow next"><i class="fa-solid fa-chevron-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CE_02개별등록 -->
+          <div class="popupBox ce02">
+            <div class="popupBox-contents">
+              <div class="popup-title">
+                <div class="subTitleBox subTitleBox_bt">
+                  <div class="subTitleBox-inner">
+                    <h3 class="subTitleBox-subTitle">
+                      개별 등록
+                    </h3>
+                  </div>
+                  <button class="btn btn_pop close_popup"><i class="fa-light fa-xmark"></i></button>
+                </div>
+              </div>
+              <div class="popup-detail">
+                <h4 class="popupDetailTitle">
+                  고객 정보
+                </h4>
+                <ul class="infoBox">
+                  <li class="infoBox-inner infoBox-inner_half">
+                    <strong class="infoBox-cate">일반/전문</strong>
+                    <div class="infoBox-info infoBox-info_form">
+                      <div class="inputBox inputBox_input">
+                        <div class="radioBox">
+                          <label class="label label_form" for="val1">
+                            <input class="input_radio" type="radio" id="val1" name="type1" checked="">
+                            <span class="radioChk"></span>
+                            일반 참관객
+                          </label>
+                        </div>
+                        <div class="radioBox">
+                          <label class="label label_form" for="val2">
+                            <input class="input_radio" type="radio" id="val2" name="type1">
+                            <span class="radioChk"></span>
+                            전문 참관객
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="infoBox-inner infoBox-inner_half">
+                    <strong class="infoBox-cate">이름</strong>
+                    <div class="infoBox-info infoBox-info_form">
+                      <div class="inputBox inputBox_input">
+                        <input class="input_text input_text_formInput" type="text" value="">
+                      </div>
+                    </div>
+                  </li>
+                  <li class="infoBox-inner infoBox-inner_half">
+                    <strong class="infoBox-cate">휴대전화</strong>
+                    <div class="infoBox-info infoBox-info_form">
+                      <div class="inputBox inputBox_input">
+                        <input class="input_text input_text_formInput" type="text" value="">
+                      </div>
+                    </div>
+                  </li>
+                  <li class="infoBox-inner infoBox-inner_half">
+                    <strong class="infoBox-cate">이메일</strong>
+                    <div class="infoBox-info infoBox-info_form">
+                      <div class="inputBox inputBox_input">
+                        <input class="input_text input_text_formInput" type="text" value="">
+                      </div>
+                    </div>
+                  </li>
+                  <li class="infoBox-inner infoBox-inner_full infoBox-inner_full_row">
+                    <strong class="infoBox-cate">비고</strong>
+                    <div class="infoBox-info">
+                      <div class="inputBox inputBox_textarea">
+                        <textarea class="input_textarea"></textarea>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <h4 class="popupDetailTitle">
+                  정보 수집
+                </h4>
+                <ul class="infoBox">
+                  <li class="infoBox-inner infoBox-inner_half">
+                    <strong class="infoBox-cate">개인정보활용</br>동의 일자</strong>
+                    <div class="infoBox-info infoBox-info_form">
+                      <div class="inputBox inputBox_input">
+                        <input class="input_date" type="date">
+                      </div>
+                    </div>
+                  </li>
+                  <li class="infoBox-inner infoBox-inner_half">
+                    <strong class="infoBox-cate">이용 가능 여부</strong>
+                    <div class="infoBox-info infoBox-info_form">
+                      <div class="inputBox inputBox_input">
+                        <div class="radioBox">
+                          <label class="label label_form" for="val11">
+                            <input class="input_radio" type="radio" id="val11" name="type2" checked="">
+                            <span class="radioChk"></span>
+                            가능
+                          </label>
+                        </div>
+                        <div class="radioBox">
+                          <label class="label label_form" for="val22">
+                            <input class="input_radio" type="radio" id="val22" name="type2">
+                            <span class="radioChk"></span>
+                            불가
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="infoBox-inner infoBox-inner_full">
+                    <strong class="infoBox-cate">최초 소유자</strong>
+                    <div class="infoBox-info infoBox-info_form">
+                      <div class="inputBox inputBox_select">
+                        <select class="select select_formSelect" name="" id="">
+                          <option value="">김철수</option>
+                          <option value="value1">value1</option>
+                          <option value="value2">value2</option>
+                        </select>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <h4 class="popupDetailTitle">
+                  전문 참관객 추가 정보
+                </h4>
+                <ul class="infoBox">
+                  <li class="infoBox-inner infoBox-inner_half">
+                    <strong class="infoBox-cate">회사 분류</strong>
+                    <div class="infoBox-info infoBox-info_form">
+                      <div class="inputBox inputBox_select">
+                        <select class="select select_formSelect" name="" id="">
+                          <option value="">제조업체</option>
+                          <option value="value1">value1</option>
+                          <option value="value2">value2</option>
+                        </select>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="infoBox-inner infoBox-inner_half">
+                    <strong class="infoBox-cate">직책</strong>
+                    <div class="infoBox-info infoBox-info_form">
+                      <div class="inputBox inputBox_select">
+                        <select class="select select_formSelect" name="" id="">
+                          <option value="">대표</option>
+                          <option value="value1">value1</option>
+                          <option value="value2">value2</option>
+                        </select>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="infoBox-inner infoBox-inner_full">
+                    <strong class="infoBox-cate">담당 부서</strong>
+                    <div class="infoBox-info infoBox-info_form">
+                      <div class="inputBox inputBox_select">
+                        <select class="select select_formSelect" name="" id="">
+                          <option value="">경영</option>
+                          <option value="value1">value1</option>
+                          <option value="value2">value2</option>
+                        </select>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <h4 class="popupDetailTitle">
+                  참관 정보
+                </h4>
+                <!-- 클래스 addDelBtn 를 넣으면 삭제버튼이 노출됨 -->
+                <ul class="infoBox addDelBtn">
+                  <li class="infoBox-inner infoBox-inner_half">
+                    <strong class="infoBox-cate">사업코드</strong>
+                    <div class="infoBox-info infoBox-info_form">
+                      <div class="inputBox inputBox_select">
+                        <select class="select select_formSelect" name="" id="">
+                          <option value="">선택</option>
+                          <option value="value1">value1</option>
+                          <option value="value2">value2</option>
+                        </select>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="infoBox-inner infoBox-inner_half">
+                    <strong class="infoBox-cate">참가연도</strong>
+                    <div class="infoBox-info infoBox-info_form">
+                      <div class="inputBox inputBox_select">
+                        <select class="select select_formSelect" name="" id="">
+                          <option value="">선택</option>
+                          <option value="value1">value1</option>
+                          <option value="value2">value2</option>
+                        </select>
+                      </div>
+                      <button class="btn btn_s btn_s_del start">삭제</button>
+                    </div>
+                  </li>
+                  <li class="infoBox-inner infoBox-inner_full infoBox-inner_full_row">
+                    <strong class="infoBox-cate">관람목적</strong>
+                    <div class="infoBox-info">
+                      <div class="inputBox flex_wrap">
+                        <div class="inputLabelGroupBox">
+                          <label for="chk11">
+                            <input class="input_checkbox" type="checkbox" id="chk11" checked="">
+                            <span class="checkboxChk"></span>
+                            정보수집
+                          </label>
+                        </div>
+                        <div class="inputLabelGroupBox">
+                          <label for="chk22">
+                            <input class="input_checkbox" type="checkbox" id="chk22">
+                            <span class="checkboxChk"></span>
+                            구매상담
+                          </label>
+                        </div>
+                        <div class="inputLabelGroupBox">
+                          <label for="chk22">
+                            <input class="input_checkbox" type="checkbox" id="chk22">
+                            <span class="checkboxChk"></span>
+                            시장조사
+                          </label>
+                        </div>
+                        <div class="inputLabelGroupBox">
+                          <label for="chk22">
+                            <input class="input_checkbox" type="checkbox" id="chk22">
+                            <span class="checkboxChk"></span>
+                            일반관람
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="infoBox-inner infoBox-inner_full infoBox-inner_full_row">
+                    <strong class="infoBox-cate">관심분야</strong>
+                    <div class="infoBox-info">
+                      <div class="inputBox flex_wrap">
+                        <div class="inputLabelGroupBox">
+                          <label for="chk11">
+                            <input class="input_checkbox" type="checkbox" id="chk11" checked="">
+                            <span class="checkboxChk"></span>
+                            내용확인필요
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="infoBox-inner infoBox-inner_full infoBox-inner_full_row">
+                    <strong class="infoBox-cate">인지경로</strong>
+                    <div class="infoBox-info">
+                      <div class="inputBox flex_wrap">
+                        <div class="inputLabelGroupBox">
+                          <label for="chk11">
+                            <input class="input_checkbox" type="checkbox" id="chk11" checked="">
+                            <span class="checkboxChk"></span>
+                            초청장
+                          </label>
+                        </div>
+                        <div class="inputLabelGroupBox">
+                          <label for="chk11">
+                            <input class="input_checkbox" type="checkbox" id="chk11" checked="">
+                            <span class="checkboxChk"></span>
+                            인터넷
+                          </label>
+                        </div>
+                        <div class="inputLabelGroupBox">
+                          <label for="chk11">
+                            <input class="input_checkbox" type="checkbox" id="chk11" checked="">
+                            <span class="checkboxChk"></span>
+                            이메일
+                          </label>
+                        </div>
+                        <div class="inputLabelGroupBox">
+                          <label for="chk11">
+                            <input class="input_checkbox" type="checkbox" id="chk11" checked="">
+                            <span class="checkboxChk"></span>
+                            유관기관/단체
+                          </label>
+                        </div>
+                        <div class="inputLabelGroupBox">
+                          <label for="chk11">
+                            <input class="input_checkbox" type="checkbox" id="chk11" checked="">
+                            <span class="checkboxChk"></span>
+                            라디오
+                          </label>
+                        </div>
+                        <div class="inputLabelGroupBox">
+                          <label for="chk11">
+                            <input class="input_checkbox" type="checkbox" id="chk11" checked="">
+                            <span class="checkboxChk"></span>
+                            TV
+                          </label>
+                        </div>
+                        <div class="inputLabelGroupBox">
+                          <label for="chk11">
+                            <input class="input_checkbox" type="checkbox" id="chk11" checked="">
+                            <span class="checkboxChk"></span>
+                            전문지
+                          </label>
+                        </div>
+                        <div class="inputLabelGroupBox">
+                          <label for="chk11">
+                            <input class="input_checkbox" type="checkbox" id="chk11" checked="">
+                            <span class="checkboxChk"></span>
+                            옥외홍보물
+                          </label>
+                        </div>
+                        <div class="inputLabelGroupBox">
+                          <label for="chk11">
+                            <input class="input_checkbox" type="checkbox" id="chk11" checked="">
+                            <span class="checkboxChk"></span>
+                            엘리베이터 LCD
+                          </label>
+                        </div>
+                        <div class="inputLabelGroupBox">
+                          <label for="chk11">
+                            <input class="input_checkbox" type="checkbox" id="chk11" checked="">
+                            <span class="checkboxChk"></span>
+                            페이스북
+                          </label>
+                        </div>
+                        <div class="inputLabelGroupBox">
+                          <label for="chk11">
+                            <input class="input_checkbox" type="checkbox" id="chk11" checked="">
+                            <span class="checkboxChk"></span>
+                            인스타그램
+                          </label>
+                        </div>
+                        <div class="inputLabelGroupBox">
+                          <label for="chk11">
+                            <input class="input_checkbox" type="checkbox" id="chk11" checked="">
+                            <span class="checkboxChk"></span>
+                            유튜브
+                          </label>
+                        </div>
+                        <div class="inputLabelGroupBox">
+                          <label for="chk11">
+                            <input class="input_checkbox" type="checkbox" id="chk11" checked="">
+                            <span class="checkboxChk"></span>
+                            기타(직접입력)
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="infoBox-inner infoBox-inner_half">
+                    <strong class="infoBox-cate">지역별 분류</strong>
+                    <div class="infoBox-info infoBox-info_form">
+                      <div class="inputBox inputBox_select">
+                        <select class="select select_formSelect" name="" id="">
+                          <option value="">선택</option>
+                          <option value="value1">value1</option>
+                          <option value="value2">value2</option>
+                        </select>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="infoBox-inner infoBox-inner_half">
+                    <strong class="infoBox-cate">연령별 분류</strong>
+                    <div class="infoBox-info infoBox-info_form">
+                      <div class="inputBox inputBox_select">
+                        <select class="select select_formSelect" name="" id="">
+                          <option value="">선택</option>
+                          <option value="value1">value1</option>
+                          <option value="value2">value2</option>
+                        </select>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="infoBox-inner infoBox-inner_full infoBox-inner_full_row">
+                    <strong class="infoBox-cate">참가유형</strong>
+                    <div class="infoBox-info">
+                      <div class="inputBox flex_wrap">
+                        <div class="inputLabelGroupBox">
+                          <label for="chk11">
+                            <input class="input_checkbox" type="checkbox" id="chk11" checked="">
+                            <span class="checkboxChk"></span>
+                            개별등록
+                          </label>
+                        </div>
+                        <div class="inputLabelGroupBox">
+                          <label for="chk22">
+                            <input class="input_checkbox" type="checkbox" id="chk22">
+                            <span class="checkboxChk"></span>
+                            단체등록
+                          </label>
+                        </div>
+                        <div class="inputLabelGroupBox">
+                          <label for="chk22">
+                            <input class="input_checkbox" type="checkbox" id="chk22">
+                            <span class="checkboxChk"></span>
+                            참가업체
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <ul class="infoBox addDelBtn">
+                  <li class="infoBox-inner infoBox-inner_half">
+                    <strong class="infoBox-cate">사업코드</strong>
+                    <div class="infoBox-info infoBox-info_form">
+                      <div class="inputBox inputBox_select">
+                        <select class="select select_formSelect" name="" id="">
+                          <option value="">선택</option>
+                          <option value="value1">value1</option>
+                          <option value="value2">value2</option>
+                        </select>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="infoBox-inner infoBox-inner_half">
+                    <strong class="infoBox-cate">참가연도</strong>
+                    <div class="infoBox-info infoBox-info_form">
+                      <div class="inputBox inputBox_select">
+                        <select class="select select_formSelect" name="" id="">
+                          <option value="">선택</option>
+                          <option value="value1">value1</option>
+                          <option value="value2">value2</option>
+                        </select>
+                      </div>
+                      <button class="btn btn_s btn_s_del start">삭제</button>
+                    </div>
+                  </li>
+                  <li class="infoBox-inner infoBox-inner_full infoBox-inner_full_row">
+                    <strong class="infoBox-cate">관람목적</strong>
+                    <div class="infoBox-info">
+                      <div class="inputBox flex_wrap">
+                        <div class="inputLabelGroupBox">
+                          <label for="chk11">
+                            <input class="input_checkbox" type="checkbox" id="chk11" checked="">
+                            <span class="checkboxChk"></span>
+                            정보수집
+                          </label>
+                        </div>
+                        <div class="inputLabelGroupBox">
+                          <label for="chk22">
+                            <input class="input_checkbox" type="checkbox" id="chk22">
+                            <span class="checkboxChk"></span>
+                            구매상담
+                          </label>
+                        </div>
+                        <div class="inputLabelGroupBox">
+                          <label for="chk22">
+                            <input class="input_checkbox" type="checkbox" id="chk22">
+                            <span class="checkboxChk"></span>
+                            시장조사
+                          </label>
+                        </div>
+                        <div class="inputLabelGroupBox">
+                          <label for="chk22">
+                            <input class="input_checkbox" type="checkbox" id="chk22">
+                            <span class="checkboxChk"></span>
+                            일반관람
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="infoBox-inner infoBox-inner_full infoBox-inner_full_row">
+                    <strong class="infoBox-cate">관심분야</strong>
+                    <div class="infoBox-info">
+                      <div class="inputBox flex_wrap">
+                        <div class="inputLabelGroupBox">
+                          <label for="chk11">
+                            <input class="input_checkbox" type="checkbox" id="chk11" checked="">
+                            <span class="checkboxChk"></span>
+                            내용확인필요
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="infoBox-inner infoBox-inner_full infoBox-inner_full_row">
+                    <strong class="infoBox-cate">인지경로</strong>
+                    <div class="infoBox-info">
+                      <div class="inputBox flex_wrap">
+                        <div class="inputLabelGroupBox">
+                          <label for="chk11">
+                            <input class="input_checkbox" type="checkbox" id="chk11" checked="">
+                            <span class="checkboxChk"></span>
+                            초청장
+                          </label>
+                        </div>
+                        <div class="inputLabelGroupBox">
+                          <label for="chk11">
+                            <input class="input_checkbox" type="checkbox" id="chk11" checked="">
+                            <span class="checkboxChk"></span>
+                            인터넷
+                          </label>
+                        </div>
+                        <div class="inputLabelGroupBox">
+                          <label for="chk11">
+                            <input class="input_checkbox" type="checkbox" id="chk11" checked="">
+                            <span class="checkboxChk"></span>
+                            이메일
+                          </label>
+                        </div>
+                        <div class="inputLabelGroupBox">
+                          <label for="chk11">
+                            <input class="input_checkbox" type="checkbox" id="chk11" checked="">
+                            <span class="checkboxChk"></span>
+                            유관기관/단체
+                          </label>
+                        </div>
+                        <div class="inputLabelGroupBox">
+                          <label for="chk11">
+                            <input class="input_checkbox" type="checkbox" id="chk11" checked="">
+                            <span class="checkboxChk"></span>
+                            라디오
+                          </label>
+                        </div>
+                        <div class="inputLabelGroupBox">
+                          <label for="chk11">
+                            <input class="input_checkbox" type="checkbox" id="chk11" checked="">
+                            <span class="checkboxChk"></span>
+                            TV
+                          </label>
+                        </div>
+                        <div class="inputLabelGroupBox">
+                          <label for="chk11">
+                            <input class="input_checkbox" type="checkbox" id="chk11" checked="">
+                            <span class="checkboxChk"></span>
+                            전문지
+                          </label>
+                        </div>
+                        <div class="inputLabelGroupBox">
+                          <label for="chk11">
+                            <input class="input_checkbox" type="checkbox" id="chk11" checked="">
+                            <span class="checkboxChk"></span>
+                            옥외홍보물
+                          </label>
+                        </div>
+                        <div class="inputLabelGroupBox">
+                          <label for="chk11">
+                            <input class="input_checkbox" type="checkbox" id="chk11" checked="">
+                            <span class="checkboxChk"></span>
+                            엘리베이터 LCD
+                          </label>
+                        </div>
+                        <div class="inputLabelGroupBox">
+                          <label for="chk11">
+                            <input class="input_checkbox" type="checkbox" id="chk11" checked="">
+                            <span class="checkboxChk"></span>
+                            페이스북
+                          </label>
+                        </div>
+                        <div class="inputLabelGroupBox">
+                          <label for="chk11">
+                            <input class="input_checkbox" type="checkbox" id="chk11" checked="">
+                            <span class="checkboxChk"></span>
+                            인스타그램
+                          </label>
+                        </div>
+                        <div class="inputLabelGroupBox">
+                          <label for="chk11">
+                            <input class="input_checkbox" type="checkbox" id="chk11" checked="">
+                            <span class="checkboxChk"></span>
+                            유튜브
+                          </label>
+                        </div>
+                        <div class="inputLabelGroupBox">
+                          <label for="chk11">
+                            <input class="input_checkbox" type="checkbox" id="chk11" checked="">
+                            <span class="checkboxChk"></span>
+                            기타(직접입력)
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="infoBox-inner infoBox-inner_half">
+                    <strong class="infoBox-cate">지역별 분류</strong>
+                    <div class="infoBox-info infoBox-info_form">
+                      <div class="inputBox inputBox_select">
+                        <select class="select select_formSelect" name="" id="">
+                          <option value="">선택</option>
+                          <option value="value1">value1</option>
+                          <option value="value2">value2</option>
+                        </select>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="infoBox-inner infoBox-inner_half">
+                    <strong class="infoBox-cate">연령별 분류</strong>
+                    <div class="infoBox-info infoBox-info_form">
+                      <div class="inputBox inputBox_select">
+                        <select class="select select_formSelect" name="" id="">
+                          <option value="">선택</option>
+                          <option value="value1">value1</option>
+                          <option value="value2">value2</option>
+                        </select>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="infoBox-inner infoBox-inner_full infoBox-inner_full_row">
+                    <strong class="infoBox-cate">참가유형</strong>
+                    <div class="infoBox-info">
+                      <div class="inputBox flex_wrap">
+                        <div class="inputLabelGroupBox">
+                          <label for="chk11">
+                            <input class="input_checkbox" type="checkbox" id="chk11" checked="">
+                            <span class="checkboxChk"></span>
+                            개별등록
+                          </label>
+                        </div>
+                        <div class="inputLabelGroupBox">
+                          <label for="chk22">
+                            <input class="input_checkbox" type="checkbox" id="chk22">
+                            <span class="checkboxChk"></span>
+                            단체등록
+                          </label>
+                        </div>
+                        <div class="inputLabelGroupBox">
+                          <label for="chk22">
+                            <input class="input_checkbox" type="checkbox" id="chk22">
+                            <span class="checkboxChk"></span>
+                            참가업체
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <button type="button" class="btn btn_full addForm mt20">+ 추가</button>
+              </div>
+              <div class="popup-btnGroup mt40">
+                <button type="button" class="btn btn_l btn_l_reg">등록</button>
+                <button type="button" class="btn btn_l btn_l_cl close_popup">취소</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- CE_03일괄등록 -->
+          <div class="popupBox ce03">
+            <div class="popupBox-contents popupBox-contents_m">
+              <div class="popup-title">
+                <div class="subTitleBox subTitleBox_bt">
+                  <div class="subTitleBox-inner">
+                    <h3 class="subTitleBox-subTitle">
+                      일괄 등록
+                    </h3>
+                  </div>
+                  <button class="btn btn_pop close_popup"><i class="fa-light fa-xmark"></i></button>
+                </div>
+              </div>
+              <div class="popup-detail">
+                <p class="popup-desc popup-desc-btn">
+                  양식에 맞춰 파일을 업로드하면 잠재고객이 일괄 등록됩니다.
+                  <button class="btn btn_m btn_m_secondary">양식 다운로드</button>
+                </p>
+                <div class="uploadFileBox">
+                  <div class="uploadFileBox-inputWrap">
+                    <input class="input input_file" type="file" id="file"></input>
+                    <label for="file" class="label_file btn btn_m btn_m_back">
+                      파일 선택
+                    </label>
+                    <span class="getFileNameText">선택된 파일 없음</span>
+                    <button type="button" class="btn btn_m btn_m_primary">업로드</button>
+                  </div>
+                  <ul class="uploadFileListBox">
+                    <li class="uploadFileListBox-item">
+                      <i class="chip chip_excel fa-regular fa-file-excel"></i>
+                      <span class="getFileNameText">단체등록파일.xlsx</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="popup-btnGroup">
+                  <button type="button" class="btn btn_l btn_l_reg">등록</button>
+                  <button type="button" class="btn btn_l btn_l_cl close_popup">취소</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+    <footer class="footer">
+      <p>Copyright © <strong>2022 김대중컨벤션센터</strong> All rights reserved.</p>
+    </footer>
+  </div>
+</body>
+</html>

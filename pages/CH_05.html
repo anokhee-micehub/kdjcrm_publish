@@ -352,27 +352,12 @@
             <div class="searchBox searchBox_head">
               <div class="inputGroup">
                 <div class="inputGroup-line">
-                  <div class="inputBox inputBox_calendar">
-                    <label class="label" for="regDate">장소선택</label>
-                    <div class="inputBox inputBox_select">
-                      <select class="select" name="" id="">
-                        <option value="">분류</option>
-                        <option value="value1">value1</option>
-                        <option value="value2">value2</option>
-                      </select>
-                    </div>
-                    <div class="inputBox inputBox_select">
-                      <select class="select" name="" id="">
-                        <option value="">분류</option>
-                        <option value="value1">value1</option>
-                        <option value="value2">value2</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="inputBox inputBox_calendar">
-                    <label class="label" for="regDate">일자</label>
-                    <input class="input_date" type="date" value="2023-01-10"> ~
-                    <input class="input_date" type="date" value="2023-01-10">
+                  <div class="inputBox inputBox_select">
+                    <select class="select" name="" id="">
+                      <option value="">종류</option>
+                      <option value="value1">value1</option>
+                      <option value="value2">value2</option>
+                    </select>
                   </div>
                   <div class="inputBox inputBox_select">
                     <select class="select" name="" id="">
@@ -381,11 +366,16 @@
                       <option value="value2">value2</option>
                     </select>
                   </div>
+                  <div class="inputBox inputBox_calendar">
+                    <label class="label" for="regDate">일자</label>
+                    <input class="input_date" type="date" value="2023-01-10"> ~
+                    <input class="input_date" type="date" value="2023-01-10">
+                  </div>
                 </div>
                 <div class="inputGroup-line">
                   <div class="inputBox inputBox_select">
                     <select class="select" name="" id="">
-                      <option value="">기회 이름</option>
+                      <option value="">행사명</option>
                       <option value="value1">value1</option>
                       <option value="value2">value2</option>
                     </select>
@@ -403,7 +393,7 @@
                 </div>
               </div>
               <div class="buttonGroup">
-                <button type="button" class="btn btn_m btn_m_primary"><i class="fa-light fa-plus"></i> 전시 등록</button>
+                <button type="button" class="btn btn_m btn_m_primary"><i class="fa-light fa-plus"></i> 대관 등록</button>
                 <button type="button" class="btn btn_m btn_m_excel"><i class="fa-regular fa-file-excel"></i></button>
               </div>
             </div>
@@ -437,60 +427,63 @@
                 <table class="table">
                   <thead>
                     <tr>
+                      <th></th>
                       <th>#</th>
-                      <th>기회 이름</th>
-                      <th>소속</th>
-                      <th>이름</th>
-                      <th>기회 단계</th>
-                      <th>사업 코드</th>
-                      <th>신규 여부</th>
-                      <th>기회 성공률</th>
-                      <th>기회 마감일</th>
-                      <th>목표 금액</th>
-                      <th>매출 금액</th>
+                      <th>종류</th>
+                      <th>행사명</th>
+                      <th>행사기간</th>
+                      <th>주최</th>
+                      <th>담당자</th>
+                      <th>등록자</th>
                       <th>등록일자</th>
-                      <th>최종수정일자</th>
+                      <th>최종수정자</th>
+                      <th>최종수정일시</th>
+                      <th>상태</th>
+                      <th>일반전화</th>
+                      <th>휴대전화</th>
                       <th>관리</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
+                      <td><input type="checkbox"></td>
                       <td>515</td>
-                      <td>SWEET 2023 참가</td>
+                      <td>기업회의</td>
+                      <td>1차 ㅇㅇㅇ회의</td>
+                      <td>2022-12-13 ~ 2022-12-13</td>
                       <td>주식회사 마이스허브</td>
+                      <td>홍길동 사원</td>
                       <td>홍길동</td>
-                      <td>신규</td>
-                      <td>SWEET 2023</td>
-                      <td>신규</td>
-                      <td>90%</td>
                       <td>2023-03-31</td>
-                      <td>10,000,000</td>
-                      <td>10,000,000</td>
+                      <td>홍길동</td>
                       <td>2022-12-07 15:51</td>
-                      <td>2022-12-07 15:51</td>
+                      <td>가계약</td>
+                      <td>02-0000-0000</td>
+                      <td>010-0000-0000</td>
                       <td>
                         <button type="button" class="btn btn_xxs" title="수정"><i class="fa-solid fa-pen"></i></button>
-                        <button type="button" class="btn btn_xxs" title="이력"><i class="fa-solid fa-rotate-right"></i></button>
+                        <button type="button" class="btn btn_xxs" title="이력"><i class="fa-solid fa-clock-rotate-left"></i></button>
                         <button type="button" class="btn btn_xxs" title="삭제"><i class="fa-solid fa-trash"></i></button>
                       </td>
                     </tr>
-                    <tr class="disable">
+                    <tr>
+                      <td><input type="checkbox"></td>
                       <td>515</td>
-                      <td>SWEET 2023 참가</td>
+                      <td>기업회의</td>
+                      <td>1차 ㅇㅇㅇ회의</td>
+                      <td>2022-12-13 ~ 2022-12-13</td>
                       <td>주식회사 마이스허브</td>
+                      <td>홍길동 사원</td>
                       <td>홍길동</td>
-                      <td>신규</td>
-                      <td>SWEET 2023</td>
-                      <td>신규</td>
-                      <td>90%</td>
                       <td>2023-03-31</td>
-                      <td>10,000,000</td>
-                      <td>10,000,000</td>
+                      <td>홍길동</td>
                       <td>2022-12-07 15:51</td>
-                      <td>2022-12-07 15:51</td>
+                      <td>가계약</td>
+                      <td>02-0000-0000</td>
+                      <td>010-0000-0000</td>
                       <td>
                         <button type="button" class="btn btn_xxs" title="수정"><i class="fa-solid fa-pen"></i></button>
-                        <button type="button" class="btn btn_xxs" title="이력"><i class="fa-solid fa-rotate-right"></i></button>
+                        <button type="button" class="btn btn_xxs" title="이력"><i class="fa-solid fa-clock-rotate-left"></i></button>
                         <button type="button" class="btn btn_xxs" title="삭제"><i class="fa-solid fa-trash"></i></button>
                       </td>
                     </tr>
