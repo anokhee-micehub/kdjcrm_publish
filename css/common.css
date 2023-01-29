@@ -380,6 +380,10 @@
   background-color: transparent;
   border: none !important;
 }
+.input_table {
+  width: 50px;
+  text-align: center;
+}
 .input_file {
   display: none;
 }
