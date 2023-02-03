@@ -34,7 +34,22 @@
   // 대관탭 + 검색창
   &_extension {
     .searchBox_head {
-      border-radius: 0 0 10px 10px;
+      position: relative;
+      padding: 40px 0 0 0;
+      margin-top: 5px;
+      &::after {
+        content: '';
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: calc(100%);
+        height: 1px;
+        background-color: #fff;
+      }
+    }
+    .selectlocationBox {
+      border-radius: 10px;
     }
   }
   .inputBox {
@@ -64,6 +79,9 @@
     & ~ .inputGroup-line {
       margin-top: rem(8px);
     }
+    &.gap20 {
+      gap: rem(20px);
+    }
   }
   .input_text,
   .input_date,
@@ -84,16 +102,6 @@
   display: none;
   &.isActive {
     display: block;
-  }
-  &::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: calc(100% - 42px);
-    height: 1px;
-    background-color: #fff;
   }
   &-tabBtns {
     @include inline-flex($jc: start);

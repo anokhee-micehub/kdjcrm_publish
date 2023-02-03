@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=1980">
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/form.css">
+  <link rel="stylesheet" href="../css/table.css">
+  <link rel="stylesheet" href="../assets/fontawesome/css/fontawesome.css">
+  <link rel="stylesheet" href="../assets/fontawesome/css/brands.css">
+  <link rel="stylesheet" href="../assets/fontawesome/css/solid.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="../js/commonJs.js" defer></script>
+  <script src="../js/form.js" defer></script>
+  <script src="../js/depth.js" defer></script>
+  <script src="../js/customSelectBox.js" defer></script>
+  <title>depth-form</title>
+</head>
+<body>
+  <div class="wrap">
+    <header class="header">
+      <h1 class="logo">
+        <img src="../assets/logo.png" alt="로고">
+      </h1>
+      <ul class="gnb gnb_depth1">
+        <li>
+          <a href="#" class="gnb-link gnb-link_depth1 isActive"><i class="fa-solid fa-user"></i> 고객</a>
+          <ul class="gnb gnb_depth2">
+            <li><a href="#" class="gnb-link gnb-link_depth2 isActive">보고</a></li>
+            <li><a href="#" class="gnb-link gnb-link_depth2">잠재</a></li>
+            <li><a href="#" class="gnb-link gnb-link_depth2">고객</a></li>
+            <li><a href="#" class="gnb-link gnb-link_depth2">기회</a></li>
+            <li><a href="#" class="gnb-link gnb-link_depth2">참관객</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="gnb-link gnb-link_depth1"><i class="fa-solid fa-megaphone"></i> 마케팅</a>
+          <ul class="gnb gnb_depth2">
+            <li><a href="#" class="gnb-link gnb-link_depth2">보고</a></li>
+            <li><a href="#" class="gnb-link gnb-link_depth2">캠페인</a></li>
+            <li><a href="#" class="gnb-link gnb-link_depth2">메시지</a></li>
+            <li><a href="#" class="gnb-link gnb-link_depth2">대화</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="gnb-link gnb-link_depth1"><i class="fa-solid fa-location-plus"></i> 대관</a>
+          <ul class="gnb gnb_depth2">
+            <li><a href="#" class="gnb-link gnb-link_depth2">보고</a></li>
+            <li><a href="#" class="gnb-link gnb-link_depth2">전시장</a></li>
+            <li><a href="#" class="gnb-link gnb-link_depth2">행사장</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="gnb-link gnb-link_depth1"><i class="fa-solid fa-calendar-check"></i> 행사</a>
+          <ul class="gnb gnb_depth2">
+            <li><a href="#" class="gnb-link gnb-link_depth2">보고</a></li>
+            <li><a href="#" class="gnb-link gnb-link_depth2">전시등록</a></li>
+            <li><a href="#" class="gnb-link gnb-link_depth2">행사등록</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="gnb-link gnb-link_depth1"><i class="fa-solid fa-list-check"></i> 관리</a>
+          <ul class="gnb gnb_depth2">
+            <li><a href="#" class="gnb-link gnb-link_depth2">회원</a></li>
+            <li><a href="#" class="gnb-link gnb-link_depth2">분류</a></li>
+            <li><a href="#" class="gnb-link gnb-link_depth2">시설</a></li>
+            <li><a href="#" class="gnb-link gnb-link_depth2">기기</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="header-userInfo">
+        <span>안녕하세요! 홍길동님</span>
+        <button type="button"><i class="fa-solid fa-arrow-right-from-bracket"></i></button>
+      </div>
+    </header>
+    <main class="main">
+      <section class="main-inner">
+        <article class="commonPageBox_ly">
+          <div class="detailBox flex_jc_ct">
+            <div class="detailBox-half maxWidth80 flex_jc_bt flex_jc_bt_ai_st mergeForm box">
+              <div class="innerBox mergeForm-inner scrollList">
+                <div class="lnb-header">
+                  <div class="cate cate_1">분류코드</div>
+                  <div class="cate cate_2">기능</div>
+                </div>
+                <div class="lnb">
+                  <ul class="lnb-inner">
+                    <!-- 1depth -->
+                    <li class="depth depth_1">
+                      <div class="depth_1_inner commonDepthInner">
+                        <div class="commonDepthInner-textBox">
+                          <a class="openDepth depthEm">컴퓨터</a>
+                        </div>
+                        <div class="commonDepthInner-btnBox">
+                          <button type="button" class="btn btn_m btn_m_primary">수정</button>
+                          <button type="button" class="btn btn_m btn_m_secondary">하위분류 추가</button>
+                        </div>
+                      </div>
+                      <ul class="depth depth_2">
+                        <!-- 2depth -->
+                        <li>
+                          <div class="depth_2_inner commonDepthInner">
+                            <div class="commonDepthInner-textBox">
+                              컴퓨터 > <a class="openDepth depthEm">IT</a>
+                            </div>
+                            <div class="commonDepthInner-btnBox">
+                              <button type="button" class="btn btn_m btn_m_primary">수정</button>
+                              <button type="button" class="btn btn_m btn_m_secondary">
+                                하위분류 추가
+                              </button>
+                            </div>
+                          </div>
+                          <ul class="depth depth_3">
+                            <!-- 3depth -->
+                            <li class="depth_3_inner commonDepthInner">
+                              <div class="commonDepthInner-textBox">
+                                컴퓨터 > 네트워크 > <a class="depthEm">조립</a>
+                              </div>
+                              <div class="commonDepthInner-btnBox">
+                                <button type="button" class="btn btn_m btn_m_primary">수정</button>
+                              </div>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="depth depth_1">
+                      <div class="depth_1_inner commonDepthInner">
+                        <div class="commonDepthInner-textBox">
+                          <a class="openDepth depthEm">컴퓨터</a>
+                        </div>
+                        <div class="commonDepthInner-btnBox">
+                          <button type="button" class="btn btn_m btn_m_primary">수정</button>
+                          <button type="button" class="btn btn_m btn_m_secondary">하위분류 추가</button>
+                        </div>
+                      </div>
+                      <ul class="depth depth_2">
+                        <!-- 2depth -->
+                        <li>
+                          <div class="depth_2_inner commonDepthInner">
+                            <div class="commonDepthInner-textBox">
+                              컴퓨터 > <a class="openDepth depthEm">IT</a>
+                            </div>
+                            <div class="commonDepthInner-btnBox">
+                              <button type="button" class="btn btn_m btn_m_primary">수정</button>
+                              <button type="button" class="btn btn_m btn_m_secondary">
+                                하위분류 추가
+                              </button>
+                            </div>
+                          </div>
+                          <ul class="depth depth_3">
+                            <!-- 3depth -->
+                            <li class="depth_3_inner commonDepthInner">
+                              <div class="commonDepthInner-textBox">
+                                컴퓨터 > 네트워크 > <a class="depthEm">조립</a>
+                              </div>
+                              <div class="commonDepthInner-btnBox">
+                                <button type="button" class="btn btn_m btn_m_primary">수정</button>
+                              </div>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="innerBox mergeForm-inner">
+                <div class="subTitleBox subTitleBox_bt sectionTitle">
+                  <h3 class="subTitleBox-subTitle">
+                    분류 등록 및 수정
+                  </h3>
+                </div>
+                <div class="sectionBox">
+                  <!-- disabled가 제거되면 인풋 활성화 -->
+                  <ul class="infoBox">
+                    <li class="infoBox-inner infoBox-inner_full">
+                      <strong class="infoBox-cate">관리번호</strong>
+                      <div class="infoBox-info infoBox-info_form">
+                        <div class="inputBox inputBox_input">
+                          <input class="input_text input_text_formInput" type="text" value="홍길동" disabled="">
+                        </div>
+                      </div>
+                    </li>
+                    <li class="infoBox-inner infoBox-inner_full">
+                      <strong class="infoBox-cate">분류명</strong>
+                      <div class="infoBox-info infoBox-info_form">
+                        <div class="inputBox inputBox_input">
+                          <input class="input_text input_text_formInput" type="text" value="홍길동">
+                        </div>
+                      </div>
+                    </li>
+                    <li class="infoBox-inner infoBox-inner_full">
+                      <strong class="infoBox-cate">순번</strong>
+                      <div class="infoBox-info infoBox-info_form">
+                        <div class="inputBox inputBox_input">
+                          <input class="input_text input_text_formInput" type="text" value="홍길동">
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <!-- hidden 클래스가 생성되면 사라짐 -->
+                <div class="subTitleBox_st mt40">
+                  <button type="button" class="btn btn_m btn_m_primary">수정</button>
+                  <button type="button" class="btn btn_m btn_m_back">생성</button>
+                  <button type="button" class="btn btn_m btn_m_back">취소</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+    <footer class="footer">
+      <p>Copyright © <strong>2022 김대중컨벤션센터</strong> All rights reserved.</p>
+    </footer>
+  </div>
+</body>
+</html>

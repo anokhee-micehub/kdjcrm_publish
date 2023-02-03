@@ -1,0 +1,209 @@
+@import "mixin.scss";
+@import "functions.scss";
+@import "variables.scss";
+
+/* 
+* 클래스명 지정 의미
+* @ 블록
+* @ 블록_구분
+* @ 블록_구분-엘리먼트
+* @ 블록-엘리먼트
+* @ 블록-엘리먼트_구분
+* @ 블록-엘리먼트_구분1_구분2
+* @ 상태(ex:isActive)
+*/
+
+.tableWrapBox {
+  * {
+    box-sizing: border-box;
+  }
+  overflow-x: hidden;
+}
+
+.popupBox-contents_xl {
+  min-height: calc(100% - 50px);
+  .popup-detail {
+    max-height: calc(100vh - 220px);
+  }
+}
+
+.captionBox {
+  @include flex-box($jc: end) {
+    gap: 10px;
+  }
+}
+
+$blue : #0087D7;
+$green : #24B89A;
+$red : #ED4A56;
+$gray : #666666;
+
+$disabled : #ededed;
+
+$colorChips : ($blue, $green, $red, $gray);
+@each $color in $colorChips {
+  $idx : index($colorChips, $color);
+  .colorChipBox:nth-child(#{$idx}) {
+    .colorChip {
+      background-color: $color;
+    }
+  }
+}
+.colorChipBox {
+  @include inline-flex;
+  gap: 5px;
+}
+
+.colorChip {
+  display: inline-block;
+  @include wh(15px, 15px);
+  border-radius: 50%;
+}
+
+.commonGrid {
+  position: relative;
+  border-top: 1px solid #EBEBEB;
+  border-bottom: 1px solid #EBEBEB;
+  display: inline-flex;
+  width: 100%;
+}
+
+.commonWidth {
+  width: 100px;
+}
+
+.cal {
+  &-text {
+    padding: 5px 0;
+    text-align: center;
+    font-weight: 600;
+    color: #B3B3B3;
+    border-right: 1px solid #B3B3B3;
+    &.sun {
+      color: #EE6F6C;
+    }
+    &.sat {
+      color: #61A4F2;
+    }
+  }
+  &-title {
+    font-size: rem(15px);
+  }
+  &-num {
+    font-size: rem(14px);
+    flex: 1;
+    &.disable {
+      // background-color: $disabled;
+    }
+  }
+}
+
+.area {
+  &-common {
+    min-height: 150px;
+    @include flex-box($ai: start, $fd:column);
+    border-right: 1px solid #B3B3B3;
+  }
+  &-title {
+    font-size: rem(12px);
+  }
+  &-content {
+    flex: 1;
+    max-width: 52.96px;
+    cursor: pointer;
+    &.disable {
+      cursor: unset;
+      // background-color: $disabled;
+    }
+  }
+}
+
+.eventBox {
+  position: absolute;
+  padding: 8px 5px;
+  height: 50px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  cursor: pointer;
+  &-desc,
+  &-date {
+    font-size: rem(11px);
+    line-height: 1;
+    color: #fff;
+  }
+  &-desc {
+    @include ellipsis(3);
+  }
+  &-date {
+    display: inline-block;
+    margin-top: 5px;
+    font-weight: 300;
+    @include ellipsis;
+  }
+  &.blue {
+    background-color: $blue;
+    &:hover {
+      background-color: lighten($blue, 5%);
+    }
+  }
+  &.green {
+    background-color: $green;
+    &:hover {
+      background-color: lighten($green, 5%);
+    }
+  }
+  &.red {
+    background-color: $red;
+    &:hover {
+      background-color: lighten($red, 5%);
+    }
+  }
+  &.gray {
+    background-color: $gray;
+    &:hover {
+      background-color: lighten($gray, 5%);
+    }
+  }
+
+  // 시작일자 위치 값
+  $cellWidth : 52.96px;
+  @for $i from 1 through 18 {
+    &.d#{$i} {
+      left: calc(($cellWidth * (#{$i} + 1)) - (#{$i}px + 6px));
+    }
+  }
+  @for $i from 19 through 31 {
+    &.d#{$i} {
+      left: calc(($cellWidth * (#{$i} + 1)) - (#{$i}px + 5px));
+    }
+  }
+
+  // 토탈 행사일수별 너비
+  &.t1 {
+    width: $cellWidth;
+  }
+  @for $i from 2 through 19 {
+    &.t#{$i} {
+      width: calc(($cellWidth * (#{$i})) - (#{$i}px - 1px));
+    }
+  }
+  @for $i from 20 through 31 {
+    &.t#{$i} {
+      width: calc(($cellWidth * (#{$i})) - (#{$i}px - 2px));
+    }
+  }
+
+  // y축 위치
+  &.y1 {
+    top: 0;
+    &.full {
+      height: 100%;
+    }
+  }
+  &.y2 {
+    top: 50px;
+  }
+  &.y3 {
+    top: 100px;
+  }
+}

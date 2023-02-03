@@ -62,6 +62,14 @@
           }
         }
       }
+      &.dateSection {
+        .infoBox-info_form {
+          width: auto;
+        }
+        .inputBox_input {
+          max-width: 150px;
+        }
+      }
       &_col {
         @include flex-box($fd: column);
         margin-top: 16px;
@@ -112,6 +120,10 @@
             min-width: unset;
             @include wh(100%, 35px);
             border: 1px solid #D2D2D2;
+            &.noneBorder {
+              border: none;
+              padding: 0;
+            }
           }
           &_date {
             font-size: rem(14px);
@@ -121,6 +133,33 @@
               border: none;
             }
           }
+        }
+      }
+      .inputUpload {
+        padding: 8px 10px;
+        font-size: rem(13px);
+        color: #fff;
+        border-radius: 5px;
+        cursor: pointer;
+        input[type="file"] {
+          display: none;
+        }
+        & + .fileName {
+          font-size: 13px;
+        }
+      }
+      &.st {
+        justify-content: flex-start;
+        gap: 10px;
+      }
+      &.dayChk {
+        .inputBox {
+          border: 1px solid #D2D2D2;
+          border-radius: 3px;
+          padding: 8px 10px;
+        }
+        .input_date {
+          width: calc(100% - 30px);
         }
       }
     }
@@ -217,7 +256,7 @@
       &::after {
         content: '\f078';
         color: #BCBCBC;
-        font-family: fontAwesome;
+        font-family: "Font Awesome 6 Pro";
         font-size: 10px;
         font-weight: 600;
       }
@@ -338,6 +377,7 @@
   padding: rem(16px);
   overflow-y: auto;
   overflow-x: hidden;
+  @include customScroll;
   &-title {
     @include inline-flex;
     padding: rem(4px) rem(23px);
@@ -472,6 +512,14 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(0, auto));
   gap: rem(13px);
+  &.lastIssue {
+    .arrowBtns {
+      &:nth-last-child(-n+2) {
+        border-radius: 3px;
+        clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 100% 100%, 0% 100%) !important;
+      }
+    }
+  }
 }
 
 $colors: (#F7B401, #F89E00, #FF9000, #FF6201, #E83E0B);
@@ -530,4 +578,127 @@ $colors: (#F7B401, #F89E00, #FF9000, #FF6201, #E83E0B);
 }
 .textBox-desc ~ .textBox-desc {
   margin-top: rem(5px);
+}
+
+.mergeForm {
+  padding: rem(35px) rem(30px);
+  gap: 35px;
+  &-inner {
+    flex: 1;
+    min-width: calc(50% - 20px);
+    padding: 0;
+  }
+}
+
+.scrollList {
+  padding: 0px 5px;
+  max-height: 800px;
+  overflow-y: auto;
+  @include customScroll;
+}
+
+// depth메뉴
+.lnb {
+  &-inner {
+    width: 100%;
+  }
+  &-header {
+    @include flex-box($jc: start);
+    border-top: 1px solid #D2D2D2;
+    border-right: 1px solid #D2D2D2;
+    border-left: 1px solid #D2D2D2;
+    .cate {
+      font-weight: 900;
+      background-color: #ebebeb;
+      &_1 {
+        width: calc(60% - 20px);
+        padding: 10px;
+      }
+      &_2 {
+        width: 40%;
+        padding: 10px;
+        border-left: 1px solid #D2D2D2;
+      }
+    }
+  }
+}
+.depth {
+  &_1,
+  &_2 {
+    &_inner {
+      .commonDepthInner {
+        &-textBox {
+          &::before {
+            content: '\2b';
+            font-family: 'Font Awesome 6 Pro';
+            color: #000;
+            font-size: rem(13px);
+            padding-left: 5px;
+      
+          }
+          &.on {
+            &::before {
+              content: '\f068';
+            }
+          }
+        }
+      }
+    }
+  }
+  &_2 {
+    &_inner {
+      .commonDepthInner {
+        &-textBox {
+          padding-left: 30px;
+        }
+      }
+    }
+  }
+  &_3 {
+    &_inner {
+      .commonDepthInner {
+        &-textBox {
+          padding-left: 55px;
+        }
+      }
+    }
+  }
+  &_2,
+  &_3 {
+    display: none;
+  }
+}
+
+.depthEm {
+  font-weight: 600;
+  color: $main;
+}
+.commonDepthInner {
+  @include flex-box($jc:start);
+  border-bottom: 1px solid #D2D2D2;
+  border-right: 1px solid #D2D2D2;
+  border-left: 1px solid #D2D2D2;
+  i {
+    font-size: rem(11px);
+  }
+  &-textBox {
+    width: 60%;
+    padding: 10px;
+    padding-left: 35px;
+    box-sizing: border-box;
+    padding-left: 10px;
+  }
+  &-btnBox {
+    width: 40%;
+    padding: 10px;
+    border-left: 1px solid #D2D2D2;
+  }
+}
+
+// 폼내부 대관구분
+.rentInfoBox {
+  display: none;
+  &.isActive {
+    display: flex;
+  }
 }

@@ -14,53 +14,69 @@
 * @ 상태(ex:isActive)
 */
 
-* {
-  font-family: 'Pretendard';
-}
-
 .mt10 {
-  margin-top: rem(10px);
+  margin-top: rem(10px) !important;
 }
 .mt20 {
-  margin-top: rem(20px);
+  margin-top: rem(20px) !important;
 }
 .mt30 {
-  margin-top: rem(30px);
+  margin-top: rem(30px) !important;
 }
 .mt40 {
-  margin-top: rem(40px);
+  margin-top: rem(40px) !important;
 }
 .mt50 {
-  margin-top: rem(50px);
+  margin-top: rem(50px) !important;
 }
 .mb10 {
-  margin-bottom: rem(10px);
+  margin-bottom: rem(10px) !important;
 }
 .mb20 {
-  margin-bottom: rem(20px);
+  margin-bottom: rem(20px) !important;
 }
 .mb30 {
-  margin-bottom: rem(30px);
+  margin-bottom: rem(30px) !important;
 }
 .mb40 {
-  margin-bottom: rem(40px);
+  margin-bottom: rem(40px) !important;
 }
 .mb50 {
-  margin-bottom: rem(50px);
+  margin-bottom: rem(50px) !important;
+}
+.ml15 {
+  margin-left: 15px;
+}
+.ml30 {
+  margin-left: 30px;
 }
 .maxWidth50 {
   max-width: 50%;
+}
+.maxWidth60 {
+  max-width: 60%;
+}
+.maxWidth70 {
+  max-width: 70%;
+}
+.maxWidth80 {
+  max-width: 80%;
 }
 
 // 레이아웃css
 .wrap {
   background-color: #EEEFF1;
   overflow-x: hidden;
+  min-width: 1865px;
 }
 
 .main {
   min-height: calc(100vh - 184px);
   padding-top: rem(82px);
+  @include responsive(1800) {
+    padding: 82px 20px;
+    box-sizing: border-box;
+  }
 }
 
 .main-inner {
@@ -103,7 +119,7 @@
       margin-right: rem(15px);
       &::after {
         content: '\f105';
-        font-family: fontAwesome;
+        font-family: "Font Awesome 6 Pro";
         position: absolute;
         right: -13px;
         top: 51%;
@@ -183,6 +199,18 @@
     }
     &_primary {
       background-color: $main;
+      &_full {
+        color: #4B4B4B;
+        background-color: $disable;
+        height: 50px;
+        font-size: rem(20px);
+        font-weight: 600;
+        border-radius: 5px;
+        &.isActive {
+          background-color: $main;
+          color: #fff;
+        }
+      }
     }
     &_secondary {
       background-color: $sub1;
@@ -383,7 +411,7 @@
 }
 .radioBox {
   & ~ & {
-    margin-left: rem(10px);
+    // margin-left: rem(10px);
   }
 }
 .inputLabelGroupBox {
@@ -392,13 +420,21 @@
   }
   &_s {
     label {
-      font-size: rem(14px);
+      font-size: rem(12px);
     }
     .checkboxChk {
-      margin-right: 10px;
       background-color: #fff;
       box-shadow: none;
       border-radius: 3px;
+      vertical-align: middle;
+    }
+  }
+  &.addInput {
+    .input_text {
+      min-width: unset;
+      max-width: 200px;
+      border: 1px solid #D2D2D2;
+      padding: 5px;
     }
   }
 }
@@ -414,7 +450,7 @@
       content: '\f078';
       @include position-center-y;
       right: 10px;
-      font-family: fontAwesome;
+      font-family: "Font Awesome 6 Pro";
     }
     &:has(.select_formSelect:disabled) {
       border: none !important;
@@ -422,9 +458,6 @@
         content: '';
       }
     }
-    // &[disabled] {
-    //   border: none !important;
-    // }
     .select {
       -webkit-appearance: none;
       background-color: transparent;
@@ -454,6 +487,26 @@
         border: none;
         background-color: transparent;
       }
+    }
+  }
+  &_customRange {
+    position: relative;
+    max-width: 360px;
+    height: 30px;
+    padding: 10px;
+    border-radius: 3px;
+    background-color: #fff;
+    box-sizing: border-box;
+    .input_text {
+      width: 100px;
+      padding: 0;
+      min-width: unset;
+    }
+  }
+  &.setFontStyle {
+    .label {
+      font-size: rem(14px);
+      font-weight: 700;
     }
   }
 }
@@ -617,11 +670,26 @@
   &_wrap {
     flex-wrap: wrap;
   }
+  &_jc_ct {
+    @include flex-box;
+  }
   &_jc_st {
     @include flex-box($jc:start);
   }
   &_jc_bt {
     @include flex-box($jc:between);
+    &_ai_st {
+      align-items: flex-start;
+    }
+  }
+  &_col_st_sr {
+    @include flex-box($fd:column, $jc:start, $ai:stretch);
+  }
+}
+
+.gap {
+  &20 {
+    gap: 20px;
   }
 }
 
@@ -642,5 +710,37 @@
   .innerText {
     font-size: rem(20px);
     color: #4B4B4B;
+  }
+}
+
+// 테이블박스내부 탭버튼
+.tableWrapBox {
+  &_tab {
+    display: none;
+    &.isActive {
+      display: block;
+    }
+  }
+}
+
+
+// 커스텀 툴팁
+.customToolTip {
+  position: relative;
+  &:hover {
+    .customToolTip-inner {
+      display: block;
+    }
+  }
+  &-inner {
+    display: none;
+    @include position-center-x;
+    top: 25px;
+    min-width: 160px;
+    padding: 10px;
+    font-size: rem(12px);
+    border-radius: 5px;
+    background-color: #F1FCFF;
+    box-shadow: 4px 4px 3px 0px rgba(#000, 0.08);
   }
 }

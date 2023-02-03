@@ -15,6 +15,7 @@ function tabBtn(btnWRap, contentsBox) {
 }
 tabBtn('selectlocationBox-tabBtns', 'selectlocationBox'); // 대관 선택 탭  
 tabBtn('popup-tabBox', 'tableWrapBox_tab'); // 이력 조회 탭
+tabBtn('rentInfoChangeBtns', 'rentInfoBox'); // 대관등록
 
 /**
  * 팝업 열기
@@ -31,4 +32,20 @@ $('.open_popup').click(function() {
 $('.close_popup').click(function() {
   $(this).parents('.popupBox').removeClass('open');
   $('body').css('overflow', 'auto');
+});
+
+// $('document').on('load', '.stepBarBox', function() {
+//   console.log($(this));
+// })
+
+$(window).on('load', function() {
+  const stepBarBoxWidth = $('.stepBarBox_test')
+  const stepBarBoxItemLength = $('.stepBarBox-item').length;
+  // console.log(stepBarBoxItem.length);
+  // console.log($('.stepBarBox_test').width());
+  if(stepBarBoxItemLength >= 6) {
+    stepBarBoxWidth.width(250 * stepBarBoxItemLength + 'px');
+  } else {
+    $('.signboadWrapBox').css('overflow-x', 'hidden');
+  }
 });

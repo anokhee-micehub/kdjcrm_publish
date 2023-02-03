@@ -136,3 +136,17 @@ $flex: (
       }
   }
 }
+
+@mixin customScroll {
+  padding-right: 5px;
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $main;
+    border-radius: 5px;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: #fff;
+  }
+}

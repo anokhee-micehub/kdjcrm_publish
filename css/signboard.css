@@ -9,6 +9,21 @@
 * @ 블록-엘리먼트_구분1_구분2
 * @ 상태(ex:isActive)
 */
+.signboadWrapBox {
+  padding-bottom: 10px;
+  overflow-x: scroll;
+}
+.signboadWrapBox::-webkit-scrollbar {
+  height: 5px;
+}
+.signboadWrapBox::-webkit-scrollbar-thumb {
+  background-color: #FF6202;
+  border-radius: 5px;
+}
+.signboadWrapBox::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+
 .stepBarBox {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(0, auto));
@@ -87,6 +102,41 @@
   min-width: 334px;
 }
 .stepBarBox-item:first-child:nth-last-child(5) .stepBarBox-item_title, .stepBarBox-item:first-child:nth-last-child(5) ~ .stepBarBox-item .stepBarBox-item_title {
+  -webkit-clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%);
+          clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%);
+}
+.stepBarBox-item:first-child:nth-last-child(6), .stepBarBox-item:first-child:nth-last-child(6) ~ .stepBarBox-item {
+  min-width: 290px;
+}
+.stepBarBox-item:first-child:nth-last-child(6) .stepBarBox-item_title, .stepBarBox-item:first-child:nth-last-child(6) ~ .stepBarBox-item .stepBarBox-item_title {
+  -webkit-clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%);
+          clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%);
+}
+.stepBarBox-item:first-child:nth-last-child(7), .stepBarBox-item:first-child:nth-last-child(7) ~ .stepBarBox-item {
+  min-width: 248px;
+}
+.stepBarBox-item:first-child:nth-last-child(7) .stepBarBox-item_title, .stepBarBox-item:first-child:nth-last-child(7) ~ .stepBarBox-item .stepBarBox-item_title {
+  -webkit-clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%);
+          clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%);
+}
+.stepBarBox-item:first-child:nth-last-child(8), .stepBarBox-item:first-child:nth-last-child(8) ~ .stepBarBox-item {
+  min-width: 213px;
+}
+.stepBarBox-item:first-child:nth-last-child(8) .stepBarBox-item_title, .stepBarBox-item:first-child:nth-last-child(8) ~ .stepBarBox-item .stepBarBox-item_title {
+  -webkit-clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%);
+          clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%);
+}
+.stepBarBox-item:first-child:nth-last-child(9), .stepBarBox-item:first-child:nth-last-child(9) ~ .stepBarBox-item {
+  min-width: 190px;
+}
+.stepBarBox-item:first-child:nth-last-child(9) .stepBarBox-item_title, .stepBarBox-item:first-child:nth-last-child(9) ~ .stepBarBox-item .stepBarBox-item_title {
+  -webkit-clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%);
+          clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%);
+}
+.stepBarBox-item:first-child:nth-last-child(10), .stepBarBox-item:first-child:nth-last-child(10) ~ .stepBarBox-item {
+  min-width: 168px;
+}
+.stepBarBox-item:first-child:nth-last-child(10) .stepBarBox-item_title, .stepBarBox-item:first-child:nth-last-child(10) ~ .stepBarBox-item .stepBarBox-item_title {
   -webkit-clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%);
           clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%);
 }

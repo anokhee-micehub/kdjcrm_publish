@@ -77,6 +77,12 @@
 .infoBox-inner_full .infoBox-info .inputBox_input.full {
   max-width: unset;
 }
+.infoBox-inner_full.dateSection .infoBox-info_form {
+  width: auto;
+}
+.infoBox-inner_full.dateSection .inputBox_input {
+  max-width: 150px;
+}
 .infoBox-inner_full_col {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -147,6 +153,10 @@
   height: 35px;
   border: 1px solid #D2D2D2;
 }
+.infoBox-info_form .inputBox .input_text.noneBorder {
+  border: none;
+  padding: 0;
+}
 .infoBox-info_form .inputBox .input_date {
   font-size: 0.9333333333rem;
   color: #727272;
@@ -154,6 +164,33 @@
 .infoBox-info_form .inputBox .input_date:disabled {
   background-color: transparent;
   border: none;
+}
+.infoBox-info_form .inputUpload {
+  padding: 8px 10px;
+  font-size: 0.8666666667rem;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.infoBox-info_form .inputUpload input[type=file] {
+  display: none;
+}
+.infoBox-info_form .inputUpload + .fileName {
+  font-size: 13px;
+}
+.infoBox-info_form.st {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 10px;
+}
+.infoBox-info_form.dayChk .inputBox {
+  border: 1px solid #D2D2D2;
+  border-radius: 3px;
+  padding: 8px 10px;
+}
+.infoBox-info_form.dayChk .input_date {
+  width: calc(100% - 30px);
 }
 .infoBox-info.offInput .customSelectBox_wrap {
   width: calc(100% - 30px);
@@ -268,7 +305,7 @@
 .customSelectBox-btn_value::after {
   content: "\f078";
   color: #BCBCBC;
-  font-family: fontAwesome;
+  font-family: "Font Awesome 6 Pro";
   font-size: 10px;
   font-weight: 600;
 }
@@ -405,6 +442,17 @@
   padding: 1.0666666667rem;
   overflow-y: auto;
   overflow-x: hidden;
+  padding-right: 5px;
+}
+.timelineBox::-webkit-scrollbar {
+  width: 5px;
+}
+.timelineBox::-webkit-scrollbar-thumb {
+  background-color: #FF6202;
+  border-radius: 5px;
+}
+.timelineBox::-webkit-scrollbar-track {
+  background-color: #fff;
 }
 .timelineBox-title {
   display: -webkit-inline-box;
@@ -616,6 +664,11 @@
   grid-template-columns: repeat(auto-fit, minmax(0, auto));
   gap: 0.8666666667rem;
 }
+.tabWrapBox.lastIssue .arrowBtns:nth-last-child(-n+2) {
+  border-radius: 3px;
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 100% 100%, 0% 100%) !important;
+          clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 100% 100%, 0% 100%) !important;
+}
 
 .arrowBtns {
   height: 2.8666666667rem;
@@ -695,4 +748,129 @@
 
 .textBox-desc ~ .textBox-desc {
   margin-top: 0.3333333333rem;
+}
+
+.mergeForm {
+  padding: 2.3333333333rem 2rem;
+  gap: 35px;
+}
+.mergeForm-inner {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  min-width: calc(50% - 20px);
+  padding: 0;
+}
+
+.scrollList {
+  padding: 0px 5px;
+  max-height: 800px;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+.scrollList::-webkit-scrollbar {
+  width: 5px;
+}
+.scrollList::-webkit-scrollbar-thumb {
+  background-color: #FF6202;
+  border-radius: 5px;
+}
+.scrollList::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+
+.lnb-inner {
+  width: 100%;
+}
+.lnb-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: 1px solid #D2D2D2;
+  border-right: 1px solid #D2D2D2;
+  border-left: 1px solid #D2D2D2;
+}
+.lnb-header .cate {
+  font-weight: 900;
+  background-color: #ebebeb;
+}
+.lnb-header .cate_1 {
+  width: calc(60% - 20px);
+  padding: 10px;
+}
+.lnb-header .cate_2 {
+  width: 40%;
+  padding: 10px;
+  border-left: 1px solid #D2D2D2;
+}
+
+.depth_1_inner .commonDepthInner-textBox::before, .depth_2_inner .commonDepthInner-textBox::before {
+  content: "+";
+  font-family: "Font Awesome 6 Pro";
+  color: #000;
+  font-size: 0.8666666667rem;
+  padding-left: 5px;
+}
+.depth_1_inner .commonDepthInner-textBox.on::before, .depth_2_inner .commonDepthInner-textBox.on::before {
+  content: "\f068";
+}
+.depth_2_inner .commonDepthInner-textBox {
+  padding-left: 30px;
+}
+.depth_3_inner .commonDepthInner-textBox {
+  padding-left: 55px;
+}
+.depth_2, .depth_3 {
+  display: none;
+}
+
+.depthEm {
+  font-weight: 600;
+  color: #FF6202;
+}
+
+.commonDepthInner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #D2D2D2;
+  border-right: 1px solid #D2D2D2;
+  border-left: 1px solid #D2D2D2;
+}
+.commonDepthInner i {
+  font-size: 0.7333333333rem;
+}
+.commonDepthInner-textBox {
+  width: 60%;
+  padding: 10px;
+  padding-left: 35px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 10px;
+}
+.commonDepthInner-btnBox {
+  width: 40%;
+  padding: 10px;
+  border-left: 1px solid #D2D2D2;
+}
+
+.rentInfoBox {
+  display: none;
+}
+.rentInfoBox.isActive {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }

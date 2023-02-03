@@ -43,7 +43,23 @@
           align-items: flex-end;
 }
 .searchBox_extension .searchBox_head {
-  border-radius: 0 0 10px 10px;
+  position: relative;
+  padding: 40px 0 0 0;
+  margin-top: 5px;
+}
+.searchBox_extension .searchBox_head::after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+}
+.searchBox_extension .selectlocationBox {
+  border-radius: 10px;
 }
 .searchBox .inputBox_select .select {
   min-width: 140px;
@@ -74,6 +90,9 @@
 .inputGroup-line ~ .inputGroup-line {
   margin-top: 0.5333333333rem;
 }
+.inputGroup-line.gap20 {
+  gap: 1.3333333333rem;
+}
 .inputGroup .input_text,
 .inputGroup .input_date,
 .inputGroup .select {
@@ -94,17 +113,6 @@
 }
 .selectlocationBox.isActive {
   display: block;
-}
-.selectlocationBox::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  width: calc(100% - 42px);
-  height: 1px;
-  background-color: #fff;
 }
 .selectlocationBox-tabBtns {
   display: -webkit-inline-box;

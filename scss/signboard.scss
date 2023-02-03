@@ -13,12 +13,33 @@
 * @ 상태(ex:isActive)
 */
 
+// 간판+네임카드 박스
+.signboadWrapBox {
+  padding-bottom: 10px;
+  overflow-x: scroll;
+  &::-webkit-scrollbar {
+    height: 5px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $main;
+    border-radius: 5px;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: #fff;
+  }
+}
+
 // 스탭바(간판) - 드래그앤드롭용
 $colors: (#F7B401, #F89E00, #FF9000, #FF6201, #E83E0B);
 .stepBarBox {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(0, auto));
   gap: rem(38px);
+
+  &_test {
+    // min-width: auto;
+  }
+  // gap: rem(15px);
   @each $color in $colors {
     $idx : index($colors, $color);
     & > &-item:nth-child(#{$idx}) {
@@ -56,6 +77,43 @@ $colors: (#F7B401, #F89E00, #FF9000, #FF6201, #E83E0B);
         clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%);
       }
     }
+    // 테스트
+    &:first-child:nth-last-child(6),
+    &:first-child:nth-last-child(6) ~ & {
+      min-width: 290px;
+      .stepBarBox-item_title {
+        clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%);
+      }
+    }
+    &:first-child:nth-last-child(7),
+    &:first-child:nth-last-child(7) ~ & {
+      min-width: 248px;
+      .stepBarBox-item_title {
+        clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%);
+      }
+    }
+    &:first-child:nth-last-child(8),
+    &:first-child:nth-last-child(8) ~ & {
+      min-width: 213px;
+      .stepBarBox-item_title {
+        clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%);
+      }
+    }
+    &:first-child:nth-last-child(9),
+    &:first-child:nth-last-child(9) ~ & {
+      min-width: 190px;
+      .stepBarBox-item_title {
+        clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%);
+      }
+    }
+    &:first-child:nth-last-child(10),
+    &:first-child:nth-last-child(10) ~ & {
+      min-width: 168px;
+      .stepBarBox-item_title {
+        clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%);
+      }
+    }
+    // 테스트끝
     &:last-child {
       .stepBarBox-item_title {
         clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 100% 100%, 0% 100%) !important;
@@ -84,7 +142,3 @@ $colors: (#F7B401, #F89E00, #FF9000, #FF6201, #E83E0B);
   }
 }
 
-// 간판+네임카드 박스
-.signboadWrapBox {
-  // padding-top: rem(15px);
-}

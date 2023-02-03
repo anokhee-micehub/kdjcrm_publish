@@ -61,9 +61,11 @@
     }
   }
   &_depth2 {
+    @include inline-flex;
+    min-width: 170px;
+    padding: rem(12px) 0;
     font-size: rem(16px);
     color: #555555;
-    padding: rem(12px) rem(70px);
     &.isActive {
       background-color: #FF6102;
       color: #fff;

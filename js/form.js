@@ -42,3 +42,12 @@ $('.customSelectBox-options > button').click(function() {
 $('.cardToggle').click(function() {
   $(this).toggleClass('isActive');
 });
+
+/**
+ * 파일 업로드시 파일명 표기
+ */
+$('input[type="file"]').change(function() {
+  var fileValue = $(this).val().split("\\");
+  var fileName = fileValue[fileValue.length-1]; // 파일명
+  $('#fileName').text(fileName);
+})

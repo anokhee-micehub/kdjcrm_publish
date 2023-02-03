@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=1980">
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/search.css">
+  <link rel="stylesheet" href="../css/form.css">
+  <link rel="stylesheet" href="../css/popup.css">
+  <link rel="stylesheet" href="../assets/fontawesome/css/fontawesome.css">
+  <link rel="stylesheet" href="../assets/fontawesome/css/brands.css">
+  <link rel="stylesheet" href="../assets/fontawesome/css/solid.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="../js/commonJs.js" defer></script>
+  <title>edit_center</title>
+</head>
+<body>
+  <div class="wrap">
+    <header class="header">
+      <h1 class="logo">
+        <img src="../assets/logo.png" alt="로고">
+      </h1>
+      <ul class="gnb gnb_depth1">
+        <li>
+          <a href="#" class="gnb-link gnb-link_depth1 isActive"><i class="fa-solid fa-user"></i> 고객</a>
+          <ul class="gnb gnb_depth2">
+            <li><a href="#" class="gnb-link gnb-link_depth2 isActive">보고</a></li>
+            <li><a href="#" class="gnb-link gnb-link_depth2">잠재</a></li>
+            <li><a href="#" class="gnb-link gnb-link_depth2">고객</a></li>
+            <li><a href="#" class="gnb-link gnb-link_depth2">기회</a></li>
+            <li><a href="#" class="gnb-link gnb-link_depth2">참관객</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="gnb-link gnb-link_depth1"><i class="fa-solid fa-megaphone"></i> 마케팅</a>
+          <ul class="gnb gnb_depth2">
+            <li><a href="#" class="gnb-link gnb-link_depth2">보고</a></li>
+            <li><a href="#" class="gnb-link gnb-link_depth2">캠페인</a></li>
+            <li><a href="#" class="gnb-link gnb-link_depth2">메시지</a></li>
+            <li><a href="#" class="gnb-link gnb-link_depth2">대화</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="gnb-link gnb-link_depth1"><i class="fa-solid fa-location-plus"></i> 대관</a>
+          <ul class="gnb gnb_depth2">
+            <li><a href="#" class="gnb-link gnb-link_depth2">보고</a></li>
+            <li><a href="#" class="gnb-link gnb-link_depth2">전시장</a></li>
+            <li><a href="#" class="gnb-link gnb-link_depth2">행사장</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="gnb-link gnb-link_depth1"><i class="fa-solid fa-calendar-check"></i> 행사</a>
+          <ul class="gnb gnb_depth2">
+            <li><a href="#" class="gnb-link gnb-link_depth2">보고</a></li>
+            <li><a href="#" class="gnb-link gnb-link_depth2">전시등록</a></li>
+            <li><a href="#" class="gnb-link gnb-link_depth2">행사등록</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="gnb-link gnb-link_depth1"><i class="fa-solid fa-list-check"></i> 관리</a>
+          <ul class="gnb gnb_depth2">
+            <li><a href="#" class="gnb-link gnb-link_depth2">회원</a></li>
+            <li><a href="#" class="gnb-link gnb-link_depth2">분류</a></li>
+            <li><a href="#" class="gnb-link gnb-link_depth2">시설</a></li>
+            <li><a href="#" class="gnb-link gnb-link_depth2">기기</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="header-userInfo">
+        <span>안녕하세요! 홍길동님</span>
+        <button type="button"><i class="fa-solid fa-arrow-right-from-bracket"></i></button>
+      </div>
+    </header>
+    <main class="main">
+      <section class="main-inner">
+        <article class="commonPageBox_ly">
+          <div class="detailBox flex_jc_ct">
+            <div class="detailBox-half detailBox-half_left maxWidth50">
+              <div class="box innerBox">
+                <div class="subTitleBox subTitleBox_bt sectionTitle">
+                  <h3 class="subTitleBox-subTitle">
+                    잠재고객 정보
+                  </h3>
+                  <div class="subTitleBox_st">
+                    <button type="button" class="btn btn_m btn_m_primary">수정</button>
+                    <button type="button" class="btn btn_m btn_m_back">이력</button>
+                    <button type="button" class="btn btn_m btn_m_back">삭제</button>
+                  </div>
+                </div>
+                <div class="sectionBox">
+                  <div class="subTitleBox subTitleBox_st">
+                    <div class="subTitleBox-inner">
+                      <h3 class="subTitleBox-subTitle">
+                        고객정보
+                      </h3>
+                    </div>
+                  </div>
+                  <!-- disabled가 제거되면 인풋 활성화 -->
+                  <ul class="infoBox">
+                    <li class="infoBox-inner infoBox-inner_full">
+                      <strong class="infoBox-cate">이름</strong>
+                      <div class="infoBox-info infoBox-info_form">
+                        <div class="inputBox inputBox_input">
+                          <input class="input_text input_text_formInput" type="text" value="홍길동" disabled="">
+                        </div>
+                      </div>
+                    </li>
+                    <li class="infoBox-inner infoBox-inner_half">
+                      <strong class="infoBox-cate">이름</strong>
+                      <div class="infoBox-info infoBox-info_form">
+                        <div class="inputBox inputBox_input">
+                          <input class="input_text input_text_formInput" type="text" value="홍길동" disabled="">
+                        </div>
+                      </div>
+                    </li>
+                    <li class="infoBox-inner infoBox-inner_half">
+                      <strong class="infoBox-cate">이름</strong>
+                      <div class="infoBox-info infoBox-info_form">
+                        <div class="inputBox inputBox_input">
+                          <input class="input_text input_text_formInput" type="text" value="홍길동" disabled="">
+                        </div>
+                      </div>
+                    </li>
+                    <li class="infoBox-inner infoBox-inner_half">
+                      <strong class="infoBox-cate">라디오버튼</strong>
+                      <div class="infoBox-info infoBox-info_form">
+                        <div class="inputBox inputBox_input">
+                          <div class="radioBox">
+                            <label class="label label_form" for="val1">
+                              <input class="input_radio" type="radio" id="val1" name="type1" checked="">
+                              <span class="radioChk"></span>
+                              전시 참가
+                            </label>
+                          </div>
+                          <div class="radioBox">
+                            <label class="label label_form" for="val2">
+                              <input class="input_radio" type="radio" id="val2" name="type1">
+                              <span class="radioChk"></span>
+                              시설 예약
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="infoBox-inner infoBox-inner_half">
+                      <strong class="infoBox-cate">날짜</strong>
+                      <div class="infoBox-info infoBox-info_form">
+                        <div class="inputBox inputBox_input">
+                          <input class="input_date input_date_time" type="datetime-local">
+                        </div>
+                      </div>
+                    </li>
+                    <li class="infoBox-inner infoBox-inner_half">
+                      <strong class="infoBox-cate">인풋</strong>
+                      <div class="infoBox-info infoBox-info_form">
+                        <div class="inputBox inputBox_input">
+                          <input class="input_text" type="text">
+                        </div>
+                      </div>
+                    </li>
+                    <li class="infoBox-inner infoBox-inner_half">
+                      <strong class="infoBox-cate">인풋</strong>
+                      <div class="infoBox-info infoBox-info_form">
+                        <div class="inputBox inputBox_input">
+                          <input class="input_text" type="text" value="주식회사 마이스허브" disabled="">
+                        </div>
+                      </div>
+                    </li>
+                    <li class="infoBox-inner infoBox-inner_full">
+                      <strong class="infoBox-cate">셀렉박스</strong>
+                      <div class="infoBox-info infoBox-info_form">
+                        <div class="inputBox inputBox_select">
+                          <select class="select select_formSelect" name="" id="">
+                            <option value="">잠재 단계</option>
+                            <option value="value1">value1</option>
+                            <option value="value2">value2</option>
+                          </select>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="infoBox-inner infoBox-inner_half">
+                      <strong class="infoBox-cate">셀렉박스</strong>
+                      <div class="infoBox-info infoBox-info_form">
+                        <div class="inputBox inputBox_select">
+                          <select class="select select_formSelect" name="" id="">
+                            <option value="">잠재 단계</option>
+                            <option value="value1">value1</option>
+                            <option value="value2">value2</option>
+                          </select>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="infoBox-inner infoBox-inner_half">
+                      <strong class="infoBox-cate">텍스트</strong>
+                      <div class="infoBox-info">홍길동</div>
+                    </li>
+                    <li class="infoBox-inner infoBox-inner_half">
+                      <strong class="infoBox-cate em">강조</strong>
+                      <div class="infoBox-info">사원</div>
+                    </li>
+                    <li class="infoBox-inner infoBox-inner_half">
+                      <strong class="infoBox-cate">휴대전화</strong>
+                      <div class="infoBox-info">010-1234-5678</div>
+                    </li>
+                    <li class="infoBox-inner infoBox-inner_half">
+                      <strong class="infoBox-cate">이메일</strong>
+                      <div class="infoBox-info">hong@mail.com</div>
+                    </li>
+                    <li class="infoBox-inner infoBox-inner_half">
+                      <strong class="infoBox-cate">소속</strong>
+                      <div class="infoBox-info">주식회사 마이스허브</div>
+                    </li>
+                    <li class="infoBox-inner infoBox-inner_full infoBox-inner_full_row">
+                      <strong class="infoBox-cate">소속</strong>
+                      <div class="infoBox-info">주식회사 마이스허브</div>
+                    </li>
+                    <li class="infoBox-inner infoBox-inner_full infoBox-inner_full_row">
+                      <strong class="infoBox-cate">텍스트박스</strong>
+                      <div class="infoBox-info">
+                        <div class="inputBox inputBox_textarea">
+                          <textarea class="input_textarea"></textarea>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="sectionBox">
+                  <div class="subTitleBox subTitleBox_st">
+                    <div class="subTitleBox-inner">
+                      <h3 class="subTitleBox-subTitle">
+                        정보 수집
+                      </h3>
+                    </div>
+                  </div>
+                  <!-- infoBox에 addDelBtn클래스가 추가되면 삭제버튼이 생김 -->
+                  <ul class="infoBox addDelBtn">
+                    <!-- 폼셀렉트 disabled 효과 추가 -->
+                    <li class="infoBox-inner infoBox-inner_full">
+                      <strong class="infoBox-cate">수집 경로</strong>
+                      <div class="infoBox-info infoBox-info_form">
+                        <div class="inputBox inputBox_select">
+                          <select class="select select_formSelect" name="" id="" disabled="">
+                            <option value="">미디어</option>
+                            <option value="value1">value1</option>
+                            <option value="value2">value2</option>
+                          </select>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="infoBox-inner infoBox-inner_half">
+                      <strong class="infoBox-cate">수집 경로</strong>
+                      <div class="infoBox-info infoBox-info_form">
+                        <div class="inputBox inputBox_select">
+                          <select class="select select_formSelect" name="" id="" disabled="">
+                            <option value="">미디어</option>
+                            <option value="value1">value1</option>
+                            <option value="value2">value2</option>
+                          </select>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="infoBox-inner infoBox-inner_half">
+                      <strong class="infoBox-cate">수집 경로</strong>
+                      <div class="infoBox-info infoBox-info_form">
+                        <div class="inputBox inputBox_select">
+                          <select class="select select_formSelect" name="" id="" disabled="">
+                            <option value="">미디어</option>
+                            <option value="value1">value1</option>
+                            <option value="value2">value2</option>
+                          </select>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="infoBox-inner infoBox-inner_half">
+                      <strong class="infoBox-cate">셀렉박스</strong>
+                      <div class="infoBox-info infoBox-info_form">
+                        <div class="inputBox inputBox_select">
+                          <select class="select select_formSelect" name="" id="">
+                            <option value="">잠재 단계</option>
+                            <option value="value1">value1</option>
+                            <option value="value2">value2</option>
+                          </select>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="infoBox-inner infoBox-inner_half">
+                      <strong class="infoBox-cate">셀렉박스</strong>
+                      <div class="infoBox-info infoBox-info_form">
+                        <div class="inputBox inputBox_select">
+                          <select class="select select_formSelect" name="" id="">
+                            <option value="">잠재 단계</option>
+                            <option value="value1">value1</option>
+                            <option value="value2">value2</option>
+                          </select>
+                        </div>
+                        <button class="btn btn_s btn_s_del start">삭제</button>
+                      </div>
+                    </li>
+                    <li class="infoBox-inner infoBox-inner_half">
+                      <strong class="infoBox-cate">셀렉박스</strong>
+                      <div class="infoBox-info infoBox-info_form">
+                        <div class="inputBox inputBox_select">
+                          <select class="select select_formSelect" name="" id="">
+                            <option value="">잠재 단계</option>
+                            <option value="value1">value1</option>
+                            <option value="value2">value2</option>
+                          </select>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="infoBox-inner infoBox-inner_half">
+                      <strong class="infoBox-cate">셀렉박스</strong>
+                      <div class="infoBox-info infoBox-info_form">
+                        <div class="inputBox inputBox_select">
+                          <select class="select select_formSelect" name="" id="">
+                            <option value="">잠재 단계</option>
+                            <option value="value1">value1</option>
+                            <option value="value2">value2</option>
+                          </select>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="infoBox-inner infoBox-inner_half">
+                      <strong class="infoBox-cate">셀렉박스</strong>
+                      <div class="infoBox-info infoBox-info_form">
+                        <div class="inputBox inputBox_select">
+                          <select class="select select_formSelect" name="" id="">
+                            <option value="">잠재 단계</option>
+                            <option value="value1">value1</option>
+                            <option value="value2">value2</option>
+                          </select>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="infoBox-inner infoBox-inner_half">
+                      <strong class="infoBox-cate">셀렉박스</strong>
+                      <div class="infoBox-info infoBox-info_form">
+                        <div class="inputBox inputBox_select">
+                          <select class="select select_formSelect" name="" id="">
+                            <option value="">잠재 단계</option>
+                            <option value="value1">value1</option>
+                            <option value="value2">value2</option>
+                          </select>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="infoBox-inner infoBox-inner_full infoBox-inner_full_row">
+                      <strong class="infoBox-cate">체크박스</strong>
+                      <div class="infoBox-info">
+                        <div class="inputBox flex_wrap">
+                          <div class="inputLabelGroupBox">
+                            <label for="chk11">
+                              <input class="input_checkbox" type="checkbox" id="chk11" checked="">
+                              <span class="checkboxChk"></span>
+                              초청장
+                            </label>
+                          </div>
+                          <div class="inputLabelGroupBox">
+                            <label for="chk22">
+                              <input class="input_checkbox" type="checkbox" id="chk22">
+                              <span class="checkboxChk"></span>
+                              초청장
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                  <ul class="infoBox addDelBtn">
+                    <li class="infoBox-inner infoBox-inner_half">
+                      <strong class="infoBox-cate">셀렉박스</strong>
+                      <div class="infoBox-info infoBox-info_form">
+                        <div class="inputBox inputBox_select">
+                          <select class="select select_formSelect" name="" id="">
+                            <option value="">잠재 단계</option>
+                            <option value="value1">value1</option>
+                            <option value="value2">value2</option>
+                          </select>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="infoBox-inner infoBox-inner_half">
+                      <strong class="infoBox-cate">셀렉박스</strong>
+                      <div class="infoBox-info infoBox-info_form">
+                        <div class="inputBox inputBox_select">
+                          <select class="select select_formSelect" name="" id="">
+                            <option value="">잠재 단계</option>
+                            <option value="value1">value1</option>
+                            <option value="value2">value2</option>
+                          </select>
+                        </div>
+                        <button class="btn btn_s btn_s_del start">삭제</button>
+                      </div>
+                    </li>
+                    <li class="infoBox-inner infoBox-inner_half">
+                      <strong class="infoBox-cate">셀렉박스</strong>
+                      <div class="infoBox-info infoBox-info_form">
+                        <div class="inputBox inputBox_select">
+                          <select class="select select_formSelect" name="" id="">
+                            <option value="">잠재 단계</option>
+                            <option value="value1">value1</option>
+                            <option value="value2">value2</option>
+                          </select>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="infoBox-inner infoBox-inner_half">
+                      <strong class="infoBox-cate">셀렉박스</strong>
+                      <div class="infoBox-info infoBox-info_form">
+                        <div class="inputBox inputBox_select">
+                          <select class="select select_formSelect" name="" id="">
+                            <option value="">잠재 단계</option>
+                            <option value="value1">value1</option>
+                            <option value="value2">value2</option>
+                          </select>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="infoBox-inner infoBox-inner_half">
+                      <strong class="infoBox-cate">셀렉박스</strong>
+                      <div class="infoBox-info infoBox-info_form">
+                        <div class="inputBox inputBox_select">
+                          <select class="select select_formSelect" name="" id="">
+                            <option value="">잠재 단계</option>
+                            <option value="value1">value1</option>
+                            <option value="value2">value2</option>
+                          </select>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="infoBox-inner infoBox-inner_half">
+                      <strong class="infoBox-cate">셀렉박스</strong>
+                      <div class="infoBox-info infoBox-info_form">
+                        <div class="inputBox inputBox_select">
+                          <select class="select select_formSelect" name="" id="">
+                            <option value="">잠재 단계</option>
+                            <option value="value1">value1</option>
+                            <option value="value2">value2</option>
+                          </select>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="infoBox-inner infoBox-inner_full infoBox-inner_full_row">
+                      <strong class="infoBox-cate">체크박스</strong>
+                      <div class="infoBox-info">
+                        <div class="inputBox flex_wrap">
+                          <div class="inputLabelGroupBox">
+                            <label for="chk33">
+                              <input class="input_checkbox" type="checkbox" id="chk33" checked="">
+                              <span class="checkboxChk"></span>
+                              초청장
+                            </label>
+                          </div>
+                          <div class="inputLabelGroupBox">
+                            <label for="chk44">
+                              <input class="input_checkbox" type="checkbox" id="chk44">
+                              <span class="checkboxChk"></span>
+                              초청장
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                  <button type="button" class="btn btn_full addForm mt20">+ 추가</button>
+                </div>
+                <div class="sectionBox">
+                  <div class="subTitleBox subTitleBox_st">
+                    <div class="subTitleBox-inner">
+                      <h3 class="subTitleBox-subTitle">
+                        정보 수집
+                      </h3>
+                    </div>
+                  </div>
+                  <ul class="codeListBox flex_wrap">
+                    <li>SWEET 2022</li>
+                    <li>SWEET 2022</li>
+                    <li>SWEET 2022</li>
+                  </ul>
+                  <ul class="infoBox">
+                    <li class="infoBox-inner infoBox-inner_half">
+                      <strong class="infoBox-cate">이메일</strong>
+                      <div class="infoBox-info">hong@mail.com</div>
+                    </li>
+                    <li class="infoBox-inner infoBox-inner_half">
+                      <strong class="infoBox-cate">이메일</strong>
+                      <div class="infoBox-info">hong@mail.com</div>
+                    </li>
+                    <li class="infoBox-inner infoBox-inner_half">
+                      <strong class="infoBox-cate">이메일</strong>
+                      <div class="infoBox-info">hong@mail.com</div>
+                    </li>
+                    <li class="infoBox-inner infoBox-inner_half">
+                      <strong class="infoBox-cate">이메일</strong>
+                      <div class="infoBox-info">hong@mail.com</div>
+                    </li>
+                  </ul>
+                </div>
+                <!-- hidden 클래스가 생성되면 사라짐 -->
+                <div class="subTitleBox_st mt40">
+                  <button type="button" class="btn btn_m btn_m_primary">저장</button>
+                  <button type="button" class="btn btn_m btn_m_cancel">취소</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+    <footer class="footer">
+      <p>Copyright © <strong>2022 김대중컨벤션센터</strong> All rights reserved.</p>
+    </footer>
+  </div>
+</body>
+</html>

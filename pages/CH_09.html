@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=1980">
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/search.css">
+  <link rel="stylesheet" href="../css/calendar.css">
+  <link rel="stylesheet" href="../css/form.css">
+  <link rel="stylesheet" href="../css/popup.css">
+  <link rel="stylesheet" href="../assets/fontawesome/css/fontawesome.css">
+  <link rel="stylesheet" href="../assets/fontawesome/css/brands.css">
+  <link rel="stylesheet" href="../assets/fontawesome/css/solid.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="../js/commonJs.js" defer></script>
+  <title>CH_09</title>
+</head>
+<body>
+  <div class="wrap">
+    <header class="header">
+      <h1 class="logo">
+        <img src="../assets/logo.png" alt="로고">
+      </h1>
+      <ul class="gnb gnb_depth1">
+        <li>
+          <a href="#" class="gnb-link gnb-link_depth1 isActive"><i class="fa-solid fa-user"></i> 고객</a>
+          <ul class="gnb gnb_depth2">
+            <li><a href="#" class="gnb-link gnb-link_depth2 isActive">보고</a></li>
+            <li><a href="#" class="gnb-link gnb-link_depth2">잠재</a></li>
+            <li><a href="#" class="gnb-link gnb-link_depth2">고객</a></li>
+            <li><a href="#" class="gnb-link gnb-link_depth2">기회</a></li>
+            <li><a href="#" class="gnb-link gnb-link_depth2">참관객</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="gnb-link gnb-link_depth1"><i class="fa-solid fa-megaphone"></i> 마케팅</a>
+          <ul class="gnb gnb_depth2">
+            <li><a href="#" class="gnb-link gnb-link_depth2">보고</a></li>
+            <li><a href="#" class="gnb-link gnb-link_depth2">캠페인</a></li>
+            <li><a href="#" class="gnb-link gnb-link_depth2">메시지</a></li>
+            <li><a href="#" class="gnb-link gnb-link_depth2">대화</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="gnb-link gnb-link_depth1"><i class="fa-solid fa-location-plus"></i> 대관</a>
+          <ul class="gnb gnb_depth2">
+            <li><a href="#" class="gnb-link gnb-link_depth2">보고</a></li>
+            <li><a href="#" class="gnb-link gnb-link_depth2">전시장</a></li>
+            <li><a href="#" class="gnb-link gnb-link_depth2">행사장</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="gnb-link gnb-link_depth1"><i class="fa-solid fa-calendar-check"></i> 행사</a>
+          <ul class="gnb gnb_depth2">
+            <li><a href="#" class="gnb-link gnb-link_depth2">보고</a></li>
+            <li><a href="#" class="gnb-link gnb-link_depth2">전시등록</a></li>
+            <li><a href="#" class="gnb-link gnb-link_depth2">행사등록</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="gnb-link gnb-link_depth1"><i class="fa-solid fa-list-check"></i> 관리</a>
+          <ul class="gnb gnb_depth2">
+            <li><a href="#" class="gnb-link gnb-link_depth2">회원</a></li>
+            <li><a href="#" class="gnb-link gnb-link_depth2">분류</a></li>
+            <li><a href="#" class="gnb-link gnb-link_depth2">시설</a></li>
+            <li><a href="#" class="gnb-link gnb-link_depth2">기기</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="header-userInfo">
+        <span>안녕하세요! 홍길동님</span>
+        <button type="button"><i class="fa-solid fa-arrow-right-from-bracket"></i></button>
+      </div>
+    </header>
+    <main class="main">
+      <section class="main-inner">
+        <article class="commonPageBox_ly">
+          <div class="popupBox open">
+            <div class="popupBox-contents popupBox-contents_xl">
+              <div class="popup-title">
+                <div class="subTitleBox subTitleBox_unset subTitleBox_bt">
+                  <div class="popup-tabBox subTitleBox_bt">
+                    <button type="button" data-val="tab1" class="btn btn_tab isActive">회의실</button>
+                    <button type="button" data-val="tab2" class="btn btn_tab">전시장</button>
+                  </div>
+                  <button class="btn btn_pop close_popup"><i class="fa-light fa-xmark"></i></button>
+                </div>
+              </div>
+              <div class="popup-detail">
+                <div class="searchBox searchBox_head">
+                  <div class="inputGroup">
+                    <div class="inputGroup-line gap20">
+                      <div class="inputBox inputBox_calendar setFontStyle">
+                        <label class="label">예약상태 : </label>
+                        <div class="inputLabelGroupBox inputLabelGroupBox_s">
+                          <label for="chk22">
+                            <input class="input_checkbox" type="checkbox" id="chk22">
+                            <span class="checkboxChk"></span>
+                            가예약
+                          </label>
+                        </div>
+                        <div class="inputLabelGroupBox inputLabelGroupBox_s">
+                          <label for="chk33">
+                            <input class="input_checkbox" type="checkbox" id="chk33">
+                            <span class="checkboxChk"></span>
+                            계약진행
+                          </label>
+                        </div>
+                        <div class="inputLabelGroupBox inputLabelGroupBox_s">
+                          <label for="chk44">
+                            <input class="input_checkbox" type="checkbox" id="chk44">
+                            <span class="checkboxChk"></span>
+                            계약완료
+                          </label>
+                        </div>
+                        <div class="inputLabelGroupBox inputLabelGroupBox_s">
+                          <label for="chk55">
+                            <input class="input_checkbox" type="checkbox" id="chk55">
+                            <span class="checkboxChk"></span>
+                            계약취소
+                          </label>
+                        </div>
+                      </div>
+                      <div class="inputBox inputBox_calendar setFontStyle">
+                        <label class="label">전시종류 : </label>
+                        <div class="inputLabelGroupBox inputLabelGroupBox_s">
+                          <label for="chk66">
+                            <input class="input_checkbox" type="checkbox" id="chk66">
+                            <span class="checkboxChk"></span>
+                            일반전시
+                          </label>
+                        </div>
+                        <div class="inputLabelGroupBox inputLabelGroupBox_s">
+                          <label for="chk77">
+                            <input class="input_checkbox" type="checkbox" id="chk77">
+                            <span class="checkboxChk"></span>
+                            산업전시
+                          </label>
+                        </div>
+                        <div class="inputLabelGroupBox inputLabelGroupBox_s">
+                          <label for="chk88">
+                            <input class="input_checkbox" type="checkbox" id="chk88">
+                            <span class="checkboxChk"></span>
+                            일반/산업
+                          </label>
+                        </div>
+                        <div class="inputLabelGroupBox inputLabelGroupBox_s">
+                          <label for="chk99">
+                            <input class="input_checkbox" type="checkbox" id="chk99">
+                            <span class="checkboxChk"></span>
+                            이벤트
+                          </label>
+                        </div>
+                      </div>
+                      <div class="inputBox inputBox_calendar setFontStyle">
+                        <label class="label">유치성격 : </label>
+                        <div class="inputLabelGroupBox inputLabelGroupBox_s">
+                          <label for="chk1010">
+                            <input class="input_checkbox" type="checkbox" id="chk1010">
+                            <span class="checkboxChk"></span>
+                            순수유치
+                          </label>
+                        </div>
+                        <div class="inputLabelGroupBox inputLabelGroupBox_s">
+                          <label for="chk1111">
+                            <input class="input_checkbox" type="checkbox" id="chk1111">
+                            <span class="checkboxChk"></span>
+                            공동개최
+                          </label>
+                        </div>
+                        <div class="inputLabelGroupBox inputLabelGroupBox_s">
+                          <label for="chk1212">
+                            <input class="input_checkbox" type="checkbox" id="chk1212">
+                            <span class="checkboxChk"></span>
+                            자체전시
+                          </label>
+                        </div>
+                      </div>
+                      <div class="inputBox inputBox_calendar setFontStyle">
+                        <label class="label">행사성격 : </label>
+                        <div class="inputLabelGroupBox inputLabelGroupBox_s">
+                          <label for="chk1313">
+                            <input class="input_checkbox" type="checkbox" id="chk1313">
+                            <span class="checkboxChk"></span>
+                            산업
+                          </label>
+                        </div>
+                        <div class="inputLabelGroupBox inputLabelGroupBox_s">
+                          <label for="chk1414">
+                            <input class="input_checkbox" type="checkbox" id="chk1414">
+                            <span class="checkboxChk"></span>
+                            퍼블릭
+                          </label>
+                        </div>
+                        <div class="inputLabelGroupBox inputLabelGroupBox_s">
+                          <label for="chk1515">
+                            <input class="input_checkbox" type="checkbox" id="chk1515">
+                            <span class="checkboxChk"></span>
+                            이벤트
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="inputGroup-line mt20">
+                      <div class="inputBox inputBox_calendar">
+                        <input class="input_date" type="date" value="2023-01-10"> ~
+                        <input class="input_date" type="date" value="2023-01-10">
+                      </div>
+                      <div class="inputBox inputBox_select">
+                        <select class="select" name="" id="">
+                          <option value="">행사명</option>
+                          <option value="value1">value1</option>
+                          <option value="value2">value2</option>
+                        </select>
+                      </div>
+                      <div class="inputBox inputBox_input">
+                        <input class="input_text" type="text">
+                        <button type="button" class="btn btn_m btn_m_search">
+                          <i class="fa-solid fa-magnifying-glass"></i>
+                          검색
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="buttonGroup">
+                    <button type="button" class="btn btn_m btn_m_secondary">
+                      <i class="fa-light fa-plus"></i>
+                      대관 등록
+                    </button>
+                  </div>
+                </div>
+                <div class="captionBox mt10">
+                  <div class="colorChipBox">
+                    <i class="colorChip"></i>
+                    가예약
+                  </div>
+                  <div class="colorChipBox">
+                    <i class="colorChip"></i>
+                    계약진행
+                  </div>
+                  <div class="colorChipBox">
+                    <i class="colorChip"></i>
+                    계약완료
+                  </div>
+                  <div class="colorChipBox">
+                    <i class="colorChip"></i>
+                    계약취소
+                  </div>
+                </div>
+                <div class="tableWrapBox tableWrapBox_tab tab1 isActive">
+                  <!-- Box_@ 각월 숫자 -->
+                  <div class="tableCalendarBox tableCalendarBox_1">
+                    <div class="tableCalendarBox-head commonGrid">
+                      <!-- !!!!!!!cal-text 요소의 갯수가 월에 관계없이 31개여야함!!!!!!!!!!! -->
+                      <div class="cal-text cal-title commonWidth">01월</div>
+                      <div class="cal-text cal-num sun">01 일</div>
+                      <div class="cal-text cal-num">02 일</div>
+                      <div class="cal-text cal-num">03 일</div>
+                      <div class="cal-text cal-num">04 일</div>
+                      <div class="cal-text cal-num">05 일</div>
+                      <div class="cal-text cal-num">06 일</div>
+                      <div class="cal-text cal-num sat">07 일</div>
+                      <div class="cal-text cal-num sun">08 일</div>
+                      <div class="cal-text cal-num">09 일</div>
+                      <div class="cal-text cal-num">10 일</div>
+                      <div class="cal-text cal-num">11 일</div>
+                      <div class="cal-text cal-num">12 일</div>
+                      <div class="cal-text cal-num">13 일</div>
+                      <div class="cal-text cal-num sat">14 일</div>
+                      <div class="cal-text cal-num sun">15 일</div>
+                      <div class="cal-text cal-num">16 일</div>
+                      <div class="cal-text cal-num">17 일</div>
+                      <div class="cal-text cal-num">18 일</div>
+                      <div class="cal-text cal-num">19 일</div>
+                      <div class="cal-text cal-num">20 일</div>
+                      <div class="cal-text cal-num sat">21 일</div>
+                      <div class="cal-text cal-num sun">22 일</div>
+                      <div class="cal-text cal-num">23 일</div>
+                      <div class="cal-text cal-num">24 일</div>
+                      <div class="cal-text cal-num">25 일</div>
+                      <div class="cal-text cal-num">26 일</div>
+                      <div class="cal-text cal-num">27 일</div>
+                      <div class="cal-text cal-num sat">28 일</div>
+                      <div class="cal-text cal-num sun">29 일</div>
+                      <div class="cal-text cal-num">30 일</div>
+                      <div class="cal-text cal-num">31 일</div>
+                    </div>
+                    <div class="tableCalendarBox-body">
+                      <div class="tableCalendarBox-body_row commonGrid row1">
+                        <!-- area-common 요소의 갯수가 월에 관계없이 31개여야함 -->
+                        <div class="area-common area-title commonWidth">콘코스 - A구역</div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <!-- 행사요소 : 각 행사요소는 행사장 row@ 박스 안으로 들어와야함 -->
+                        <!-- y@ : 세로축 시작위치 1/2/3, 클래스 full이 추가되면 한칸을 다 차지함 -->
+                        <!-- d@ : day(1일, 2일...)일자별 x축 시작위치 -->
+                        <!-- t@ : 행사일수 -->
+                        <div class="eventBox blue y1 d3 t1" title="2023 XXXXXXX 콘서트 2023-01-06 ~ 01-11">
+                          <h6 class="eventBox-desc">
+                            2023 XXXXXXX 콘서트<br/>
+                            <span class="eventBox-date">2023-01-06 ~ 01-11</span>
+                          </h6>
+                        </div>
+                        <div class="eventBox green y2 d1 t2" title="2023 XXXXXXX 콘서트 2023-01-06 ~ 01-11">
+                          <h6 class="eventBox-desc">
+                            2023 XXXXXXX 콘서트<br/>
+                            <span class="eventBox-date">2023-01-06 ~ 01-11</span>
+                          </h6>
+                        </div>
+                        <div class="eventBox red y3 d1 t20" title="2023 XXXXXXX 콘서트 2023-01-06 ~ 01-11">
+                          <h6 class="eventBox-desc">
+                            2023 XXXXXXX 콘서트<br/>
+                            <span class="eventBox-date">2023-01-06 ~ 01-11</span>
+                          </h6>
+                        </div>
+                        <div class="eventBox red y2 d4 t1" title="2023 XXXXXXX 콘서트 2023-01-06 ~ 01-11">
+                          <h6 class="eventBox-desc">
+                            2023 XXXXXXX 콘서트<br/>
+                            <span class="eventBox-date">2023-01-06 ~ 01-11</span>
+                          </h6>
+                        </div>
+                        <div class="eventBox green y2 d10 t5" title="2023 XXXXXXX 콘서트 2023-01-06 ~ 01-11">
+                          <h6 class="eventBox-desc">
+                            2023 XXXXXXX 콘서트<br/>
+                            <span class="eventBox-date">2023-01-06 ~ 01-11</span>
+                          </h6>
+                        </div>
+                      </div>
+                      <div class="tableCalendarBox-body_row commonGrid row2">
+                        <div class="area-common area-title commonWidth">콘코스 - B구역</div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <!-- 행사요소 : 각 행사요소는 행사장 row@ 박스 안으로 들어와야함 -->
+                        <!-- y : 세로축 시작위치 1/2/3, 클래스 full이 추가되면 한칸을 다 차지함 -->
+                        <!-- d : day(1일, 2일...)일자별 x축 시작위치 -->
+                        <!-- t : 토탈일수 -->
+                        <div class="eventBox blue y1 d3 t1" title="2023 XXXXXXX 콘서트 2023-01-06 ~ 01-11">
+                          <h6 class="eventBox-desc">
+                            2023 XXXXXXX 콘서트<br/>
+                            <span class="eventBox-date">2023-01-06 ~ 01-11</span>
+                          </h6>
+                        </div>
+                        <div class="eventBox green y2 d1 t2" title="2023 XXXXXXX 콘서트 2023-01-06 ~ 01-11">
+                          <h6 class="eventBox-desc">
+                            2023 XXXXXXX 콘서트<br/>
+                            <span class="eventBox-date">2023-01-06 ~ 01-11</span>
+                          </h6>
+                        </div>
+                        <div class="eventBox gray y3 d2 t1" title="2023 XXXXXXX 콘서트 2023-01-06 ~ 01-11">
+                          <h6 class="eventBox-desc">
+                            2023 XXXXXXX 콘서트<br/>
+                            <span class="eventBox-date">2023-01-06 ~ 01-11</span>
+                          </h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tableCalendarBox tableCalendarBox_2">
+                    <div class="tableCalendarBox-head commonGrid">
+                      <div class="cal-text cal-title commonWidth">02월</div>
+                      <div class="cal-text cal-num sun">01 일</div>
+                      <div class="cal-text cal-num">02 일</div>
+                      <div class="cal-text cal-num">03 일</div>
+                      <div class="cal-text cal-num">04 일</div>
+                      <div class="cal-text cal-num">05 일</div>
+                      <div class="cal-text cal-num">06 일</div>
+                      <div class="cal-text cal-num sat">07 일</div>
+                      <div class="cal-text cal-num sun">08 일</div>
+                      <div class="cal-text cal-num">09 일</div>
+                      <div class="cal-text cal-num">10 일</div>
+                      <div class="cal-text cal-num">11 일</div>
+                      <div class="cal-text cal-num">12 일</div>
+                      <div class="cal-text cal-num">13 일</div>
+                      <div class="cal-text cal-num sat">14 일</div>
+                      <div class="cal-text cal-num sun">15 일</div>
+                      <div class="cal-text cal-num">16 일</div>
+                      <div class="cal-text cal-num">17 일</div>
+                      <div class="cal-text cal-num">18 일</div>
+                      <div class="cal-text cal-num">19 일</div>
+                      <div class="cal-text cal-num">20 일</div>
+                      <div class="cal-text cal-num sat">21 일</div>
+                      <div class="cal-text cal-num sun">22 일</div>
+                      <div class="cal-text cal-num">23 일</div>
+                      <div class="cal-text cal-num">24 일</div>
+                      <div class="cal-text cal-num">25 일</div>
+                      <div class="cal-text cal-num">26 일</div>
+                      <div class="cal-text cal-num">27 일</div>
+                      <div class="cal-text cal-num sat">28 일</div>
+                      <div class="cal-text cal-num disable"></div>
+                      <div class="cal-text cal-num disable"></div>
+                      <div class="cal-text cal-num disable"></div>
+                    </div>
+                    <div class="tableCalendarBox-body">
+                      <div class="tableCalendarBox-body_row commonGrid row1">
+                        <div class="area-common area-title commonWidth">콘코스 - A구역</div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content disable"></div>
+                        <div class="area-common area-content disable"></div>
+                        <div class="area-common area-content disable"></div>
+                        <!-- 행사요소 : 각 행사요소는 행사장 row@ 박스 안으로 들어와야함 -->
+                        <!-- y : 세로축 시작위치 1/2/3, 클래스 full이 추가되면 한칸을 다 차지함 -->
+                        <!-- d : day(1일, 2일...)일자별 x축 시작위치 -->
+                        <!-- t : 토탈일수 -->
+                        <div class="eventBox blue y3 d3 t1" title="2023 XXXXXXX 콘서트 2023-01-06 ~ 01-11">
+                          <h6 class="eventBox-desc">
+                            2023 XXXXXXX 콘서트<br/>
+                            <span class="eventBox-date">2023-01-06 ~ 01-11</span>
+                          </h6>
+                        </div>
+                        <div class="eventBox green y2 d1 t2" title="2023 XXXXXXX 콘서트 2023-01-06 ~ 01-11">
+                          <h6 class="eventBox-desc">
+                            2023 XXXXXXX 콘서트<br/>
+                            <span class="eventBox-date">2023-01-06 ~ 01-11</span>
+                          </h6>
+                        </div>
+                        <div class="eventBox red y3 d2 t1" title="2023 XXXXXXX 콘서트 2023-01-06 ~ 01-11">
+                          <h6 class="eventBox-desc">
+                            2023 XXXXXXX 콘서트<br/>
+                            <span class="eventBox-date">2023-01-06 ~ 01-11</span>
+                          </h6>
+                        </div>
+                        <div class="eventBox red y3 d4 t1" title="2023 XXXXXXX 콘서트 2023-01-06 ~ 01-11">
+                          <h6 class="eventBox-desc">
+                            2023 XXXXXXX 콘서트<br/>
+                            <span class="eventBox-date">2023-01-06 ~ 01-11</span>
+                          </h6>
+                        </div>
+                        <div class="eventBox red y3 d5 t1" title="2023 XXXXXXX 콘서트 2023-01-06 ~ 01-11">
+                          <h6 class="eventBox-desc">
+                            2023 XXXXXXX 콘서트<br/>
+                            <span class="eventBox-date">2023-01-06 ~ 01-11</span>
+                          </h6>
+                        </div>
+                        <div class="eventBox red y2 d4 t1" title="2023 XXXXXXX 콘서트 2023-01-06 ~ 01-11">
+                          <h6 class="eventBox-desc">
+                            2023 XXXXXXX 콘서트<br/>
+                            <span class="eventBox-date">2023-01-06 ~ 01-11</span>
+                          </h6>
+                        </div>
+                        <div class="eventBox red y2 d1 t28" title="2023 XXXXXXX 콘서트 2023-01-06 ~ 01-11">
+                          <h6 class="eventBox-desc">
+                            2023 XXXXXXX 콘서트<br/>
+                            <span class="eventBox-date">2023-01-06 ~ 01-11</span>
+                          </h6>
+                        </div>
+                      </div>
+                      <div class="tableCalendarBox-body_row commonGrid row2">
+                        <div class="area-common area-title commonWidth">콘코스 - B구역</div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content disable"></div>
+                        <div class="area-common area-content disable"></div>
+                        <div class="area-common area-content disable"></div>
+                        <!-- 행사요소 -->
+                        <!-- y : 세로축 시작위치 1/2/3 , 클래스 full이 추가되면 한칸을 다 차지함 -->
+                        <!-- d : day(1일, 2일...)일자별 x축 시작위치 -->
+                        <!-- t : 토탈일수 -->
+                        <div class="eventBox blue y1 full d3 t1" title="2023 XXXXXXX 콘서트 2023-01-06 ~ 01-11">
+                          <h6 class="eventBox-desc">
+                            2023 XXXXXXX 콘서트<br/>
+                            <span class="eventBox-date">2023-01-06 ~ 01-11</span>
+                          </h6>
+                        </div>
+                        <div class="eventBox green y2 d1 t2" title="2023 XXXXXXX 콘서트 2023-01-06 ~ 01-11">
+                          <h6 class="eventBox-desc">
+                            2023 XXXXXXX 콘서트<br/>
+                            <span class="eventBox-date">2023-01-06 ~ 01-11</span>
+                          </h6>
+                        </div>
+                        <div class="eventBox gray y3 d2 t1" title="2023 XXXXXXX 콘서트 2023-01-06 ~ 01-11">
+                          <h6 class="eventBox-desc">
+                            2023 XXXXXXX 콘서트<br/>
+                            <span class="eventBox-date">2023-01-06 ~ 01-11</span>
+                          </h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tableWrapBox tableWrapBox_tab tab2 box">
+                  <!-- Box_@ 각월 숫자 -->
+                  <div class="tableCalendarBox tableCalendarBox_1">
+                    <div class="tableCalendarBox-head commonGrid">
+                      <!-- !!!!!!!cal-text 요소의 갯수가 월에 관계없이 31개여야함!!!!!!!!!!! -->
+                      <div class="cal-text cal-title commonWidth">01월</div>
+                      <div class="cal-text cal-num sun">01 일</div>
+                      <div class="cal-text cal-num">02 일</div>
+                      <div class="cal-text cal-num">03 일</div>
+                      <div class="cal-text cal-num">04 일</div>
+                      <div class="cal-text cal-num">05 일</div>
+                      <div class="cal-text cal-num">06 일</div>
+                      <div class="cal-text cal-num sat">07 일</div>
+                      <div class="cal-text cal-num sun">08 일</div>
+                      <div class="cal-text cal-num">09 일</div>
+                      <div class="cal-text cal-num">10 일</div>
+                      <div class="cal-text cal-num">11 일</div>
+                      <div class="cal-text cal-num">12 일</div>
+                      <div class="cal-text cal-num">13 일</div>
+                      <div class="cal-text cal-num sat">14 일</div>
+                      <div class="cal-text cal-num sun">15 일</div>
+                      <div class="cal-text cal-num">16 일</div>
+                      <div class="cal-text cal-num">17 일</div>
+                      <div class="cal-text cal-num">18 일</div>
+                      <div class="cal-text cal-num">19 일</div>
+                      <div class="cal-text cal-num">20 일</div>
+                      <div class="cal-text cal-num sat">21 일</div>
+                      <div class="cal-text cal-num sun">22 일</div>
+                      <div class="cal-text cal-num">23 일</div>
+                      <div class="cal-text cal-num">24 일</div>
+                      <div class="cal-text cal-num">25 일</div>
+                      <div class="cal-text cal-num">26 일</div>
+                      <div class="cal-text cal-num">27 일</div>
+                      <div class="cal-text cal-num sat">28 일</div>
+                      <div class="cal-text cal-num sun">29 일</div>
+                      <div class="cal-text cal-num">30 일</div>
+                      <div class="cal-text cal-num">31 일</div>
+                    </div>
+                    <div class="tableCalendarBox-body">
+                      <div class="tableCalendarBox-body_row commonGrid row1">
+                        <!-- area-common 요소의 갯수가 월에 관계없이 31개여야함 -->
+                        <div class="area-common area-title commonWidth">콘코스 - A구역</div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <!-- 행사요소 : 각 행사요소는 행사장 row@ 박스 안으로 들어와야함 -->
+                        <!-- y@ : 세로축 시작위치 1/2/3, 클래스 full이 추가되면 한칸을 다 차지함 -->
+                        <!-- d@ : day(1일, 2일...)일자별 x축 시작위치 -->
+                        <!-- t@ : 행사일수 -->
+                        <div class="eventBox blue y1 d3 t1" title="2023 XXXXXXX 콘서트 2023-01-06 ~ 01-11">
+                          <h6 class="eventBox-desc">
+                            2023 XXXXXXX 콘서트<br/>
+                            <span class="eventBox-date">2023-01-06 ~ 01-11</span>
+                          </h6>
+                        </div>
+                        <div class="eventBox green y2 d1 t2" title="2023 XXXXXXX 콘서트 2023-01-06 ~ 01-11">
+                          <h6 class="eventBox-desc">
+                            2023 XXXXXXX 콘서트<br/>
+                            <span class="eventBox-date">2023-01-06 ~ 01-11</span>
+                          </h6>
+                        </div>
+                        <div class="eventBox red y3 d1 t31" title="2023 XXXXXXX 콘서트 2023-01-06 ~ 01-11">
+                          <h6 class="eventBox-desc">
+                            2023 XXXXXXX 콘서트<br/>
+                            <span class="eventBox-date">2023-01-06 ~ 01-11</span>
+                          </h6>
+                        </div>
+                        <div class="eventBox red y2 d4 t1" title="2023 XXXXXXX 콘서트 2023-01-06 ~ 01-11">
+                          <h6 class="eventBox-desc">
+                            2023 XXXXXXX 콘서트<br/>
+                            <span class="eventBox-date">2023-01-06 ~ 01-11</span>
+                          </h6>
+                        </div>
+                        <div class="eventBox green y2 d1 t25" title="2023 XXXXXXX 콘서트 2023-01-06 ~ 01-11">
+                          <h6 class="eventBox-desc">
+                            2023 XXXXXXX 콘서트<br/>
+                            <span class="eventBox-date">2023-01-06 ~ 01-11</span>
+                          </h6>
+                        </div>
+                      </div>
+                      <div class="tableCalendarBox-body_row commonGrid row2">
+                        <div class="area-common area-title commonWidth">콘코스 - B구역</div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <div class="area-common area-content"></div>
+                        <!-- 행사요소 : 각 행사요소는 행사장 row@ 박스 안으로 들어와야함 -->
+                        <!-- y : 세로축 시작위치 1/2/3, 클래스 full이 추가되면 한칸을 다 차지함 -->
+                        <!-- d : day(1일, 2일...)일자별 x축 시작위치 -->
+                        <!-- t : 토탈일수 -->
+                        <div class="eventBox blue y1 d3 t1" title="2023 XXXXXXX 콘서트 2023-01-06 ~ 01-11">
+                          <h6 class="eventBox-desc">
+                            2023 XXXXXXX 콘서트<br/>
+                            <span class="eventBox-date">2023-01-06 ~ 01-11</span>
+                          </h6>
+                        </div>
+                        <div class="eventBox green y2 d1 t2" title="2023 XXXXXXX 콘서트 2023-01-06 ~ 01-11">
+                          <h6 class="eventBox-desc">
+                            2023 XXXXXXX 콘서트<br/>
+                            <span class="eventBox-date">2023-01-06 ~ 01-11</span>
+                          </h6>
+                        </div>
+                        <div class="eventBox gray y3 d2 t1" title="2023 XXXXXXX 콘서트 2023-01-06 ~ 01-11">
+                          <h6 class="eventBox-desc">
+                            2023 XXXXXXX 콘서트<br/>
+                            <span class="eventBox-date">2023-01-06 ~ 01-11</span>
+                          </h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+    <footer class="footer">
+      <p>Copyright © <strong>2022 김대중컨벤션센터</strong> All rights reserved.</p>
+    </footer>
+  </div>
+</body>
+</html>

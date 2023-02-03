@@ -80,9 +80,19 @@
   color: #B5B5B5;
 }
 .gnb-link_depth2 {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-width: 170px;
+  padding: 0.8rem 0;
   font-size: 1.0666666667rem;
   color: #555555;
-  padding: 0.8rem 4.6666666667rem;
 }
 .gnb-link_depth2.isActive {
   background-color: #FF6102;
