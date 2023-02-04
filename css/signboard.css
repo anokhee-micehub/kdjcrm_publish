@@ -117,11 +117,10 @@
   -webkit-clip-path: polygon(0% 0%, 93% 0%, 100% 50%, 93% 100%, 0% 100%);
           clip-path: polygon(0% 0%, 93% 0%, 100% 50%, 93% 100%, 0% 100%);
 }
-.stepBarBox-item:last-child .stepBarBox-item_title {
+.stepBarBox-item:nth-last-child(-n+2) .stepBarBox-item_title {
+  border-radius: 5px !important;
   -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 100% 100%, 0% 100%) !important;
           clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 100% 100%, 0% 100%) !important;
-  border-radius: 5px 15px 15px 5px;
-  width: unset;
 }
 .stepBarBox-item_title {
   display: -webkit-box;

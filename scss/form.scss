@@ -511,11 +511,11 @@
 .tabWrapBox {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(0, auto));
-  gap: rem(13px);
+  gap: rem(5px);
   &.lastIssue {
     .arrowBtns {
       &:nth-last-child(-n+2) {
-        border-radius: 3px;
+        border-radius: 3px !important;
         clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 100% 100%, 0% 100%) !important;
       }
     }
@@ -525,13 +525,12 @@
 $colors: (#F7B401, #F89E00, #FF9000, #FF6201, #E83E0B);
 .arrowBtns {
   height: rem(43px);
-  padding-left: rem(23px);
   box-sizing: border-box;
-  justify-content: flex-start;
-  font-size: rem(18px);
+  justify-content: center;
+  font-size: rem(16px);
   font-weight: 600;
   box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.1);
-  clip-path: polygon(0% 0%, 96% 0%, 100% 50%, 96% 100%, 0% 100%);
+  clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%);
   border-radius: 3px 0 0 3px;
   @each $color in $colors {
     $idx : index($colors, $color);
@@ -545,10 +544,10 @@ $colors: (#F7B401, #F89E00, #FF9000, #FF6201, #E83E0B);
     background-color: #f4f4f4;
     box-shadow: none;
   }
-  &:last-child {
-    clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 100% 100%, 0% 100%) !important;
-    border-radius: 5px 15px 15px 5px;
-  }
+  // &:last-child {
+  //   clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 100% 100%, 0% 100%) !important;
+  //   border-radius: 5px 15px 15px 5px;
+  // }
 }
 
 // 탭버튼 하단 텍스트박스

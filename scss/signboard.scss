@@ -33,7 +33,6 @@
 $colors: (#F7B401, #F7B402, #F89E00, #F89E01, #FF9000, #FF9001, #FF6201, #FF6202, #E83E0B, #727272);
 .stepBarBox {
   display: flex;
-  // grid-template-columns: repeat(auto-fit, minmax(355px, 355px));
   gap: rem(20px);
   @each $color in $colors {
     $idx : index($colors, $color);
@@ -49,67 +48,63 @@ $colors: (#F7B401, #F7B402, #F89E00, #F89E01, #FF9000, #FF9001, #FF6201, #FF6202
     flex-shrink: 0;
     &:first-child:nth-last-child(3),
     &:first-child:nth-last-child(3) ~ & {
-      // min-width: 574px;
       .stepBarBox-item_title {
         clip-path: polygon(0% 0%, 97% 0%, 100% 50%, 97% 100%, 0% 100%);
       }
     }
     &:first-child:nth-last-child(4),
     &:first-child:nth-last-child(4) ~ & {
-      // min-width: 408px;
       .stepBarBox-item_title {
         clip-path: polygon(0% 0%, 97% 0%, 100% 50%, 97% 100%, 0% 100%);
       }
     }
     &:first-child:nth-last-child(5),
     &:first-child:nth-last-child(5) ~ & {
-      // min-width: 334px;
       .stepBarBox-item_title {
         clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%);
       }
     }
-    // 테스트
     &:first-child:nth-last-child(6),
     &:first-child:nth-last-child(6) ~ & {
-      // min-width: 290px;
       .stepBarBox-item_title {
         clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%);
       }
     }
     &:first-child:nth-last-child(7),
     &:first-child:nth-last-child(7) ~ & {
-      // min-width: 248px;
       .stepBarBox-item_title {
         clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%);
       }
     }
     &:first-child:nth-last-child(8),
     &:first-child:nth-last-child(8) ~ & {
-      // min-width: 213px;
       .stepBarBox-item_title {
         clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%);
       }
     }
     &:first-child:nth-last-child(9),
     &:first-child:nth-last-child(9) ~ & {
-      // min-width: 190px;
       .stepBarBox-item_title {
         clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%);
       }
     }
     &:first-child:nth-last-child(10),
     &:first-child:nth-last-child(10) ~ & {
-      // min-width: 168px;
       .stepBarBox-item_title {
         clip-path: polygon(0% 0%, 93% 0%, 100% 50%, 93% 100%, 0% 100%);
       }
     }
-    // 테스트끝
-    &:last-child {
+    // &:last-child {
+    //   .stepBarBox-item_title {
+    //     clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 100% 100%, 0% 100%) !important;
+    //     border-radius: 5px 15px 15px 5px;
+    //     width: unset;
+    //   }
+    // }
+    &:nth-last-child(-n+2) {
       .stepBarBox-item_title {
+        border-radius: 5px !important;
         clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 100% 100%, 0% 100%) !important;
-        border-radius: 5px 15px 15px 5px;
-        width: unset;
       }
     }
     // &:not(:last-child) {

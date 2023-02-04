@@ -93,7 +93,12 @@
   .arrowBtns {
     padding-left: 0;
     justify-content: center;
-    font-size: rem(15px);
+    font-size: rem(11px);
+    clip-path: polygon(0% 0%, 85% 0%, 100% 50%, 85% 100%, 0% 100%);
+    &:nth-last-child(-n+2) {
+      border-radius: 3px;
+      clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 100% 100%, 0% 100%) !important;
+    }
   }
 
   // 팝업창용 툴팁 위치

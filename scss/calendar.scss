@@ -20,6 +20,23 @@
   overflow-x: hidden;
 }
 
+.calScrollArea {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: calc(100vh - 387px);
+  padding-right: 5px;
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $main;
+    border-radius: 5px;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: #fff;
+  }
+}
+
 .popupBox-contents_xl {
   min-height: calc(100% - 50px);
   .popup-detail {
@@ -32,23 +49,41 @@
     gap: 10px;
   }
 }
+// 전시장
+$ex_ye: #FFD748; // 홍보
+$ex_pk: #FF6DCE; // 문의
+$ex_bl: #0088D6; // 가예약
+$ex_gn: #22B896; // 계약진행
+$ex_rd: #ED4859; // 계약완료
+$ex_gy: #656565; // 계약취소
 
-$blue : #0087D7;
-$green : #24B89A;
-$red : #ED4A56;
-$gray : #666666;
+// 회의실
+$me_ln: #B1F9B1; // 기업회의
+$me_pk: #FFCCFF; // 학술회의
+$me_sk: #FFCC99; // 주관회의
+$me_gn: #99CC00; // 연회
 
 $disabled : #ededed;
 
-$colorChips : ($blue, $green, $red, $gray);
-@each $color in $colorChips {
-  $idx : index($colorChips, $color);
+$colorChips_ex : ($ex_ye, $ex_pk, $ex_bl, $ex_gn, $ex_rd, $ex_gy);
+@each $color in $colorChips_ex {
+  $idx : index($colorChips_ex, $color);
   .colorChipBox:nth-child(#{$idx}) {
-    .colorChip {
+    .colorChip.ex {
       background-color: $color;
     }
   }
 }
+$colorChips_me : ($me_ln, $me_pk, $me_sk, $me_gn);
+@each $color in $colorChips_me {
+  $idx : index($colorChips_me, $color);
+  .colorChipBox:nth-child(#{$idx}) {
+    .colorChip.me {
+      background-color: $color;
+    }
+  }
+}
+
 .colorChipBox {
   @include inline-flex;
   gap: 5px;
@@ -140,28 +175,64 @@ $colorChips : ($blue, $green, $red, $gray);
     font-weight: 300;
     @include ellipsis;
   }
-  &.blue {
-    background-color: $blue;
+  &.ex_ye {
+    background-color: $ex_ye;
     &:hover {
-      background-color: lighten($blue, 5%);
+      background-color: lighten($ex_ye, 5%);
     }
   }
-  &.green {
-    background-color: $green;
+  &.ex_pk {
+    background-color: $ex_pk;
     &:hover {
-      background-color: lighten($green, 5%);
+      background-color: lighten($ex_pk, 5%);
     }
   }
-  &.red {
-    background-color: $red;
+  &.ex_bl {
+    background-color: $ex_bl;
     &:hover {
-      background-color: lighten($red, 5%);
+      background-color: lighten($ex_bl, 5%);
     }
   }
-  &.gray {
-    background-color: $gray;
+  &.ex_gn {
+    background-color: $ex_gn;
     &:hover {
-      background-color: lighten($gray, 5%);
+      background-color: lighten($ex_gn, 5%);
+    }
+  }
+  &.ex_rd {
+    background-color: $ex_rd;
+    &:hover {
+      background-color: lighten($ex_rd, 5%);
+    }
+  }
+  &.ex_gy {
+    background-color: $ex_gy;
+    &:hover {
+      background-color: lighten($ex_gy, 5%);
+    }
+  }
+  &.me_ln {
+    background-color: $me_ln;
+    &:hover {
+      background-color: lighten($me_ln, 5%);
+    }
+  }
+  &.me_pk {
+    background-color: $me_pk;
+    &:hover {
+      background-color: lighten($me_pk, 5%);
+    }
+  }
+  &.me_sk {
+    background-color: $me_sk;
+    &:hover {
+      background-color: lighten($me_sk, 5%);
+    }
+  }
+  &.me_gn {
+    background-color: $me_gn;
+    &:hover {
+      background-color: lighten($me_gn, 5%);
     }
   }
 

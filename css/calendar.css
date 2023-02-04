@@ -17,6 +17,23 @@
           box-sizing: border-box;
 }
 
+.calScrollArea {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: calc(100vh - 387px);
+  padding-right: 5px;
+}
+.calScrollArea::-webkit-scrollbar {
+  width: 10px;
+}
+.calScrollArea::-webkit-scrollbar-thumb {
+  background-color: #FF6202;
+  border-radius: 5px;
+}
+.calScrollArea::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+
 .popupBox-contents_xl {
   min-height: calc(100% - 50px);
 }
@@ -37,20 +54,44 @@
   gap: 10px;
 }
 
-.colorChipBox:nth-child(1) .colorChip {
-  background-color: #0087D7;
+.colorChipBox:nth-child(1) .colorChip.ex {
+  background-color: #FFD748;
 }
 
-.colorChipBox:nth-child(2) .colorChip {
-  background-color: #24B89A;
+.colorChipBox:nth-child(2) .colorChip.ex {
+  background-color: #FF6DCE;
 }
 
-.colorChipBox:nth-child(3) .colorChip {
-  background-color: #ED4A56;
+.colorChipBox:nth-child(3) .colorChip.ex {
+  background-color: #0088D6;
 }
 
-.colorChipBox:nth-child(4) .colorChip {
-  background-color: #666666;
+.colorChipBox:nth-child(4) .colorChip.ex {
+  background-color: #22B896;
+}
+
+.colorChipBox:nth-child(5) .colorChip.ex {
+  background-color: #ED4859;
+}
+
+.colorChipBox:nth-child(6) .colorChip.ex {
+  background-color: #656565;
+}
+
+.colorChipBox:nth-child(1) .colorChip.me {
+  background-color: #B1F9B1;
+}
+
+.colorChipBox:nth-child(2) .colorChip.me {
+  background-color: #FFCCFF;
+}
+
+.colorChipBox:nth-child(3) .colorChip.me {
+  background-color: #FFCC99;
+}
+
+.colorChipBox:nth-child(4) .colorChip.me {
+  background-color: #99CC00;
 }
 
 .colorChipBox {
@@ -169,29 +210,65 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.eventBox.blue {
-  background-color: #0087D7;
+.eventBox.ex_ye {
+  background-color: #FFD748;
 }
-.eventBox.blue:hover {
-  background-color: #0097f1;
+.eventBox.ex_ye:hover {
+  background-color: #ffdd62;
 }
-.eventBox.green {
-  background-color: #24B89A;
+.eventBox.ex_pk {
+  background-color: #FF6DCE;
 }
-.eventBox.green:hover {
-  background-color: #28cdac;
+.eventBox.ex_pk:hover {
+  background-color: #ff87d7;
 }
-.eventBox.red {
-  background-color: #ED4A56;
+.eventBox.ex_bl {
+  background-color: #0088D6;
 }
-.eventBox.red:hover {
-  background-color: #ef616c;
+.eventBox.ex_bl:hover {
+  background-color: #0098f0;
 }
-.eventBox.gray {
-  background-color: #666666;
+.eventBox.ex_gn {
+  background-color: #22B896;
 }
-.eventBox.gray:hover {
-  background-color: #737373;
+.eventBox.ex_gn:hover {
+  background-color: #26cea8;
+}
+.eventBox.ex_rd {
+  background-color: #ED4859;
+}
+.eventBox.ex_rd:hover {
+  background-color: #ef5f6e;
+}
+.eventBox.ex_gy {
+  background-color: #656565;
+}
+.eventBox.ex_gy:hover {
+  background-color: #727272;
+}
+.eventBox.me_ln {
+  background-color: #B1F9B1;
+}
+.eventBox.me_ln:hover {
+  background-color: #c9fbc9;
+}
+.eventBox.me_pk {
+  background-color: #FFCCFF;
+}
+.eventBox.me_pk:hover {
+  background-color: #ffe6ff;
+}
+.eventBox.me_sk {
+  background-color: #FFCC99;
+}
+.eventBox.me_sk:hover {
+  background-color: #ffd9b3;
+}
+.eventBox.me_gn {
+  background-color: #99CC00;
+}
+.eventBox.me_gn:hover {
+  background-color: #ace600;
 }
 .eventBox.d1 {
   left: calc(52.96px * (1 + 1) - (1px + 6px));
