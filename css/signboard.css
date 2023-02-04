@@ -14,7 +14,7 @@
   overflow-x: scroll;
 }
 .signboadWrapBox::-webkit-scrollbar {
-  height: 5px;
+  height: 10px;
 }
 .signboadWrapBox::-webkit-scrollbar-thumb {
   background-color: #FF6202;
@@ -25,120 +25,97 @@
 }
 
 .stepBarBox {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(0, auto));
-  gap: 2.5333333333rem;
-}
-.stepBarBox > .stepBarBox-item:nth-child(1) button {
-  border: none;
-  width: 100%;
-  text-align: left;
-  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.3333333333rem;
 }
 .stepBarBox > .stepBarBox-item:nth-child(1) .stepBarBox-item_title {
   background-color: #F7B401;
   -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
 }
-.stepBarBox > .stepBarBox-item:nth-child(2) button {
-  border: none;
-  width: 100%;
-  text-align: left;
-  cursor: pointer;
-}
 .stepBarBox > .stepBarBox-item:nth-child(2) .stepBarBox-item_title {
+  background-color: #F7B402;
+  -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+}
+.stepBarBox > .stepBarBox-item:nth-child(3) .stepBarBox-item_title {
   background-color: #F89E00;
   -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
 }
-.stepBarBox > .stepBarBox-item:nth-child(3) button {
-  border: none;
-  width: 100%;
-  text-align: left;
-  cursor: pointer;
+.stepBarBox > .stepBarBox-item:nth-child(4) .stepBarBox-item_title {
+  background-color: #F89E01;
+  -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
 }
-.stepBarBox > .stepBarBox-item:nth-child(3) .stepBarBox-item_title {
+.stepBarBox > .stepBarBox-item:nth-child(5) .stepBarBox-item_title {
   background-color: #FF9000;
   -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
 }
-.stepBarBox > .stepBarBox-item:nth-child(4) button {
-  border: none;
-  width: 100%;
-  text-align: left;
-  cursor: pointer;
+.stepBarBox > .stepBarBox-item:nth-child(6) .stepBarBox-item_title {
+  background-color: #FF9001;
+  -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
 }
-.stepBarBox > .stepBarBox-item:nth-child(4) .stepBarBox-item_title {
+.stepBarBox > .stepBarBox-item:nth-child(7) .stepBarBox-item_title {
   background-color: #FF6201;
   -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
 }
-.stepBarBox > .stepBarBox-item:nth-child(5) button {
-  border: none;
-  width: 100%;
-  text-align: left;
-  cursor: pointer;
+.stepBarBox > .stepBarBox-item:nth-child(8) .stepBarBox-item_title {
+  background-color: #FF6202;
+  -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
 }
-.stepBarBox > .stepBarBox-item:nth-child(5) .stepBarBox-item_title {
+.stepBarBox > .stepBarBox-item:nth-child(9) .stepBarBox-item_title {
   background-color: #E83E0B;
   -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
 }
-.stepBarBox-item:first-child:nth-last-child(3), .stepBarBox-item:first-child:nth-last-child(3) ~ .stepBarBox-item {
-  min-width: 574px;
+.stepBarBox > .stepBarBox-item:nth-child(10) .stepBarBox-item_title {
+  background-color: #727272;
+  -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+}
+.stepBarBox-item {
+  width: 355px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 .stepBarBox-item:first-child:nth-last-child(3) .stepBarBox-item_title, .stepBarBox-item:first-child:nth-last-child(3) ~ .stepBarBox-item .stepBarBox-item_title {
   -webkit-clip-path: polygon(0% 0%, 97% 0%, 100% 50%, 97% 100%, 0% 100%);
           clip-path: polygon(0% 0%, 97% 0%, 100% 50%, 97% 100%, 0% 100%);
 }
-.stepBarBox-item:first-child:nth-last-child(4), .stepBarBox-item:first-child:nth-last-child(4) ~ .stepBarBox-item {
-  min-width: 408px;
-}
 .stepBarBox-item:first-child:nth-last-child(4) .stepBarBox-item_title, .stepBarBox-item:first-child:nth-last-child(4) ~ .stepBarBox-item .stepBarBox-item_title {
   -webkit-clip-path: polygon(0% 0%, 97% 0%, 100% 50%, 97% 100%, 0% 100%);
           clip-path: polygon(0% 0%, 97% 0%, 100% 50%, 97% 100%, 0% 100%);
-}
-.stepBarBox-item:first-child:nth-last-child(5), .stepBarBox-item:first-child:nth-last-child(5) ~ .stepBarBox-item {
-  min-width: 334px;
 }
 .stepBarBox-item:first-child:nth-last-child(5) .stepBarBox-item_title, .stepBarBox-item:first-child:nth-last-child(5) ~ .stepBarBox-item .stepBarBox-item_title {
   -webkit-clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%);
           clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%);
 }
-.stepBarBox-item:first-child:nth-last-child(6), .stepBarBox-item:first-child:nth-last-child(6) ~ .stepBarBox-item {
-  min-width: 290px;
-}
 .stepBarBox-item:first-child:nth-last-child(6) .stepBarBox-item_title, .stepBarBox-item:first-child:nth-last-child(6) ~ .stepBarBox-item .stepBarBox-item_title {
   -webkit-clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%);
           clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%);
-}
-.stepBarBox-item:first-child:nth-last-child(7), .stepBarBox-item:first-child:nth-last-child(7) ~ .stepBarBox-item {
-  min-width: 248px;
 }
 .stepBarBox-item:first-child:nth-last-child(7) .stepBarBox-item_title, .stepBarBox-item:first-child:nth-last-child(7) ~ .stepBarBox-item .stepBarBox-item_title {
   -webkit-clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%);
           clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%);
 }
-.stepBarBox-item:first-child:nth-last-child(8), .stepBarBox-item:first-child:nth-last-child(8) ~ .stepBarBox-item {
-  min-width: 213px;
-}
 .stepBarBox-item:first-child:nth-last-child(8) .stepBarBox-item_title, .stepBarBox-item:first-child:nth-last-child(8) ~ .stepBarBox-item .stepBarBox-item_title {
   -webkit-clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%);
           clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%);
-}
-.stepBarBox-item:first-child:nth-last-child(9), .stepBarBox-item:first-child:nth-last-child(9) ~ .stepBarBox-item {
-  min-width: 190px;
 }
 .stepBarBox-item:first-child:nth-last-child(9) .stepBarBox-item_title, .stepBarBox-item:first-child:nth-last-child(9) ~ .stepBarBox-item .stepBarBox-item_title {
   -webkit-clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%);
           clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%);
 }
-.stepBarBox-item:first-child:nth-last-child(10), .stepBarBox-item:first-child:nth-last-child(10) ~ .stepBarBox-item {
-  min-width: 168px;
-}
 .stepBarBox-item:first-child:nth-last-child(10) .stepBarBox-item_title, .stepBarBox-item:first-child:nth-last-child(10) ~ .stepBarBox-item .stepBarBox-item_title {
-  -webkit-clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%);
-          clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%);
+  -webkit-clip-path: polygon(0% 0%, 93% 0%, 100% 50%, 93% 100%, 0% 100%);
+          clip-path: polygon(0% 0%, 93% 0%, 100% 50%, 93% 100%, 0% 100%);
 }
 .stepBarBox-item:last-child .stepBarBox-item_title {
   -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 100% 100%, 0% 100%) !important;
@@ -146,20 +123,36 @@
   border-radius: 5px 15px 15px 5px;
   width: unset;
 }
-.stepBarBox-item:not(:last-child) .stepBarBox-item_title {
-  width: calc(100% - 7px);
-}
 .stepBarBox-item_title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 9px;
+  height: 45px;
   position: relative;
   padding: 0.6666666667rem;
   font-size: 1.0666666667rem;
   font-weight: 600;
   color: #fff;
   border-radius: 5px 0 0 5px;
-  -webkit-clip-path: polygon(0% 0%, 94% 0%, 100% 50%, 94% 100%, 0% 100%);
-          clip-path: polygon(0% 0%, 94% 0%, 100% 50%, 94% 100%, 0% 100%);
+  -webkit-clip-path: polygon(0% 0%, 93% 0%, 100% 50%, 93% 100%, 0% 100%);
+          clip-path: polygon(0% 0%, 93% 0%, 100% 50%, 93% 100%, 0% 100%);
 }
 .stepBarBox-item_title.disable {
   color: #666;
   background-color: #f4f4f4 !important;
+}
+.stepBarBox-item_title .sizeControl {
+  width: 14px;
+  height: 14px;
+  line-height: 14px;
+  color: #fff;
+  font-size: 0.9333333333rem;
+  border: 1px solid #fff;
 }

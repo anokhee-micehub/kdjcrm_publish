@@ -7,7 +7,12 @@ dragula([
   document.getElementById("cardWrapBox2"),
   document.getElementById("cardWrapBox3"),
   document.getElementById("cardWrapBox4"),
-  document.getElementById("cardWrapBox5")
+  document.getElementById("cardWrapBox5"),
+  document.getElementById("cardWrapBox6"),
+  document.getElementById("cardWrapBox7"),
+  document.getElementById("cardWrapBox8"),
+  document.getElementById("cardWrapBox9"),
+  document.getElementById("cardWrapBox10")
 ]);
 // function disableselect(e) {return false;}
 document.onselectstart = new Function ();

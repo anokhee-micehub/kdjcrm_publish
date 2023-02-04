@@ -34,18 +34,38 @@ $('.close_popup').click(function() {
   $('body').css('overflow', 'auto');
 });
 
-// $('document').on('load', '.stepBarBox', function() {
-//   console.log($(this));
-// })
-
+/**
+ * 화면 로드시 기회단계카드 갯수대로 width값 설정하기
+ */
 $(window).on('load', function() {
-  const stepBarBoxWidth = $('.stepBarBox_test')
+  const stepBarBox = $('.stepBarBox');
   const stepBarBoxItemLength = $('.stepBarBox-item').length;
-  // console.log(stepBarBoxItem.length);
-  // console.log($('.stepBarBox_test').width());
-  if(stepBarBoxItemLength >= 6) {
-    stepBarBoxWidth.width(250 * stepBarBoxItemLength + 'px');
+  const stepBarBoxItemWidth = $('.stepBarBox-item').width();
+
+  stepBarBox.width((stepBarBoxItemWidth + 20) * stepBarBoxItemLength + 'px');
+});
+
+/**
+ * 기회단계카드 사이즈 컨트롤하기(크기를 줄이면 스크롤도 같이 줄어듦)
+ */
+$('.sizeControl').click(function() {
+  const stepBarBox = $('.stepBarBox');
+  const stepBarBoxItemLength = $('.stepBarBox-item').length;
+  const thisText = $(this).text();
+
+  if(thisText === '-') {
+    $(this)
+    .text('+')
+    .parents('.stepBarBox-item')
+    .addClass('shrink')
+    .css('width', '162px');
+
+    stepBarBox.width(162 * stepBarBoxItemLength + 'px');
   } else {
-    $('.signboadWrapBox').css('overflow-x', 'hidden');
+    $(this)
+    .text('-')
+    .parents('.stepBarBox-item')
+    .removeClass('shrink')
+    .css('width', '355px');
   }
 });
